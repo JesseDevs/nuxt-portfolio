@@ -1,9 +1,10 @@
 <template>
 	THis is an index
-	<OtherLayout />
+	<StandardLayout />
 </template>
 
 <script setup>
+	import StandardLayout from '~/layouts/StandardLayout.vue';
 	import OtherLayout from '~/layouts/OtherLayout.vue';
 
 	// onBeforeMount(async () => {

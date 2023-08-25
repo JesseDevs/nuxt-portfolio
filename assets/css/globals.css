@@ -56,7 +56,6 @@ body {
 body {
 	color: var(--text);
 	background: var(--background);
-	background-color: red;
 }
 
 a {

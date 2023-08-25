@@ -1,0 +1,16 @@
+{
+	"id": "home",
+	"title": "Landing",
+	"intro": "Welcome to my personal site! Here you can find a little about me, my work, my personality, and a way to get in contact.",
+	"metaImage": "https://jessedevs.net/images/details/laptop.jpg",
+	"sections": [
+		{
+			"module": "landing-heading",
+			"heading": "Jesse Felix",
+			"intro": "Front End - Web&nbsp;Developer",
+			"details": "I’m a Web Developer located in Los Angeles, California. I have a passion for crafting cool digital experiences. Maybe with you?",
+			"image": "images/details/comp.webp",
+			"big-image": "images/large-workspace.jpg"
+		}
+	]
+}

@@ -20,5 +20,5 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ['~/assets/css/globals.css'],
-	components: true,
+	components: { dirs: ['~/components/modules'] },
 });

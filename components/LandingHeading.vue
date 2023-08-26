@@ -1,13 +1,13 @@
 <template>
 	<big-heading>
-		<h1 class="roar-voice">{{ pageData.heading }}</h1>
-		<p class="intro">{{ pageData.intro }}</p>
+		<h1 class="roar-voice">{{ moduleData.heading }}</h1>
+		<p class="intro">{{ moduleData.intro }}</p>
 	</big-heading>
 </template>
 
 <script setup>
 	const props = defineProps({
-		pageData: Object,
+		moduleData: Object,
 	});
 </script>
 

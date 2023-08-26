@@ -3,6 +3,7 @@
 export default defineNuxtConfig({
 	pages: true,
 	devtools: { enabled: true },
+	modules: ['nuxt-icon', '@pinia/nuxt'],
 	vue: {
 		compilerOptions: {
 			// treat all tags with a dash as custom elements
@@ -20,5 +21,5 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ['~/assets/css/globals.css'],
-	components: { dirs: ['~/components/modules'] },
+	components: true,
 });

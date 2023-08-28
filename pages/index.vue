@@ -1,5 +1,6 @@
 <template>
 	<SiteNav />
+	<MenuModal />
 	<StandardLayout />
 	<div class="bottom-fade-out"></div>
 </template>
@@ -21,6 +22,6 @@
 <style lang="scss">
 	.bottom-fade-out {
 		height: 200px;
-		background: linear-gradient(180deg, var(--background), var(--brand));
+		background: linear-gradient(180deg, var(--background), rgb(var(--brand-rgb) / 0.5));
 	}
 </style>

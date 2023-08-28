@@ -1,7 +1,7 @@
 <template>
 	<section-header :class="sectionHeaderClass">
 		<div class="line"></div>
-		<h2 class="attention-voice">
+		<h2 class="loud-voice">
 			<span class="title"> {{ title }}<span>.</span> </span>
 		</h2>
 	</section-header>

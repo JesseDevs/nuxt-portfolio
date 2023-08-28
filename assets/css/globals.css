@@ -4,15 +4,25 @@
 
 
 :root {
-	--step--2: clamp(0.64rem, calc(0.62rem + 0.12vw), 0.72rem);
-	--step--1: clamp(0.80rem, calc(0.77rem + 0.15vw), 0.90rem);
-	--step-0: clamp(1.00rem, calc(0.96rem + 0.19vw), 1.13rem);
-	--step-1: clamp(1.25rem, calc(1.20rem + 0.23vw), 1.41rem);
-	--step-2: clamp(1.56rem, calc(1.50rem + 0.29vw), 1.76rem);
-	--step-3: clamp(1.95rem, calc(1.88rem + 0.36vw), 2.20rem);
-	--step-4: clamp(2.44rem, calc(2.35rem + 0.45vw), 2.75rem);
-	--step-5: clamp(3.05rem, calc(2.94rem + 0.56vw), 3.43rem);
-	--step-6: clamp(3.80rem, calc(3.67rem + 0.71vw), 4.29rem);
+	--step--2: clamp(0.74rem, calc(0.70rem + 0.20vw), 0.84rem);
+	--step--1: clamp(0.89rem, calc(0.82rem + 0.32vw), 1.05rem);
+	--step-0: clamp(1.06rem, calc(0.97rem + 0.48vw), 1.31rem);
+	--step-1: clamp(1.28rem, calc(1.13rem + 0.70vw), 1.64rem);
+	--step-2: clamp(1.53rem, calc(1.33rem + 1.00vw), 2.05rem);
+	--step-3: clamp(1.84rem, calc(1.56rem + 1.40vw), 2.56rem);
+	--step-4: clamp(2.20rem, calc(1.82rem + 1.93vw), 3.20rem);
+	--step-5: clamp(2.64rem, calc(2.12rem + 2.63vw), 4.01rem);
+}
+
+:root {
+	--background: rgb(17, 17, 17);
+	--bg-opaque: rgb(17, 17, 17, 0.25);
+	--background-light: rgb(35, 35, 35);
+	--background-dark: rgb(8, 8, 8);
+
+	--text: rgb(235, 236, 243);
+	--brand: rgb(169, 10, 255);
+	--brand-rgb: 169 10 255
 }
 
 html,
@@ -26,35 +36,22 @@ body {
 	color: var(--text);
 	background: var(--background);
 	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	line-height: 1.2;
+	font-weight: 200;
+	line-height: 1.1;
+	font-style: normal;
 }
 
-
-:root {
-	--background: rgb(17, 17, 17);
-	--bg-opaque: rgb(17, 17, 17, 0.25);
-	--background-light: rgb(35, 35, 35);
-	--background-dark: rgb(8, 8, 8);
-
-	--text: rgb(235, 236, 243);
-	--brand: rgb(169, 10, 255);
-
-	/* font-size: 62.5%;
-
-	--text-vs: 1.4rem;
-	--text-xs: 1.6rem;
-	--text-sm: 1.8rem;
-	--text-md: 2.2rem;
-	--text-lg: 3.6rem;
-	--text-xl: 5.6rem;
-	--text-2xl: 9.6rem; */
-}
-
-.loud-voice {
+.roar-voice {
 	font-size: var(--step-5);
 	text-transform: uppercase;
 	font-weight: 900;
+	line-height: .9;
+	letter-spacing: -.1px;
+}
+
+.loud-voice {
+	font-size: var(--step-4);
+	font-weight: 700;
 }
 
 .attention-voice {
@@ -74,18 +71,12 @@ p,
 li,
 a,
 button {
-
-	font-size: var(--step-0);
-
+	font-size: var(--step-0)
 }
 
 small,
 .small-voice {
 	font-size: var(--step--1);
-}
-
-.tiny-voice {
-	font-size: var(--step--2);
 }
 
 :is(.calm-voice, p, li) em {
@@ -114,12 +105,16 @@ a {
 }
 
 p {
-	line-height: 1.4;
+	line-height: 1.5;
 	max-width: 60ch;
 }
 
 p a {
 	cursor: pointer;
+}
+
+ul, ol, li {
+	list-style: none;
 }
 
 img, picture, video, canvas, svg {
@@ -145,6 +140,7 @@ input, button, textarea, select {
 	opacity: 0;
 	pointer-events: none;
 }
+
 
 code {
 	font-family: monospace;

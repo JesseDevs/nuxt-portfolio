@@ -11,7 +11,18 @@ export const useInterfaceStore = defineStore('interface', function () {
 
 	const closeMenu = () => {
 		mainMenuOpen.value = false;
+		bodyRef.classList.remove('my-custom-class');
 	};
+
+	useHead({
+		bodyAttrs: {
+			class: computed(() => {
+				if (mainMenuOpen.value) return 'overflow';
+
+				return '';
+			}),
+		},
+	});
 
 	return {
 		mainMenuOpen,

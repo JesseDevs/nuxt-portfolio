@@ -1,6 +1,6 @@
 <template>
-	<div class="modal-container">
-		<menu-modal :class="ui.menuClass">
+	<div :class="`modal-container ${ui.menuClass}`">
+		<menu-modal>
 			<div class="modal-content">
 				<nav class="main-menu">
 					{{ ui.menuClass }}
@@ -10,8 +10,48 @@
 				</nav>
 
 				<ul class="nav-container">
-					<li><a href="https://twitter.com">Hi</a></li>
+					<li>
+						<a href="/" @click="ui.closeMenu">
+							<Icon name="material-symbols:other-houses" size="21" color="#fff" />
+							<span>Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="#AboutCard" @click="ui.closeMenu">
+							<Icon name="material-symbols:person" size="21" color="#fff" />
+							<span>About</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com" @click="ui.closeMenu">
+							<Icon
+								name="streamline:interface-content-book-open-content-books-book-open"
+								size="21"
+								color="#fff"
+							/>
+							<span>Writing</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" @click="ui.closeMenu">
+							<Icon name="lucide:layout-grid" size="21" color="#fff" />
+							<span>Layout</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" @click="ui.closeMenu">
+							<Icon name="icon-park-outline:form-one" size="21" color="#fff" />
+							<span>Forms</span>
+						</a>
+					</li>
+					<li>
+						<a href="#ContactPage" @click="ui.closeMenu">
+							<Icon name="mdi:message-reply" size="21" color="#fff" />
+							<span>Contact</span>
+						</a>
+					</li>
 				</ul>
+				<div class="line"></div>
 			</div>
 		</menu-modal>
 	</div>
@@ -32,12 +72,18 @@
 		flex: 1 1 0%;
 		height: 100%;
 		top: 0;
+		left: -100%;
 		display: flex;
 		flex-direction: column;
 		background: rgba(62, 61, 61, 0.32);
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(0.3px);
 		pointer-events: none;
+		transition: left 0.3s ease;
+	}
+
+	.modal-container.menu-open {
+		left: 0;
 	}
 
 	menu-modal {
@@ -63,8 +109,14 @@
 	}
 
 	ul.nav-container {
+		padding-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
 		a {
-			display: block;
+			display: flex;
+			align-items: center;
+			gap: 10px;
 			padding: 8px 10px;
 			border-radius: 0.375rem;
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -78,7 +130,11 @@
 		}
 	}
 
-	.menu-open {
-		background-color: blue;
+	.line {
+		margin-top: 30px;
+		width: 100%;
+		height: 1px;
+		background: var(--text);
+		opacity: 0.3;
 	}
 </style>

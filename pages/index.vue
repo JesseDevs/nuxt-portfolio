@@ -1,11 +1,11 @@
 <template>
-	THis is an index
+	<SiteNav />
 	<StandardLayout />
+	<div class="bottom-fade-out"></div>
 </template>
 
 <script setup>
 	import StandardLayout from '~/layouts/StandardLayout.vue';
-	import OtherLayout from '~/layouts/OtherLayout.vue';
 
 	// onBeforeMount(async () => {
 	// 	try {
@@ -17,3 +17,10 @@
 	// 	}
 	// });
 </script>
+
+<style lang="scss">
+	.bottom-fade-out {
+		height: 200px;
+		background: linear-gradient(180deg, var(--background), var(--brand));
+	}
+</style>

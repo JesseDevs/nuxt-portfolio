@@ -9,9 +9,14 @@ export const useInterfaceStore = defineStore('interface', function () {
 		mainMenuOpen.value = !mainMenuOpen.value;
 	};
 
+	const closeMenu = () => {
+		mainMenuOpen.value = false;
+	};
+
 	return {
 		mainMenuOpen,
 		menuClass,
 		toggleMainMenu,
+		closeMenu,
 	};
 });

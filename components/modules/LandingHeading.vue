@@ -1,7 +1,7 @@
 <template>
 	<landing-heading class="grid-template">
 		<text-content class="title">
-			<h1 class="loud-voice">{{ moduleData.heading }}</h1>
+			<h1 class="roar-voice">{{ moduleData.heading }}</h1>
 
 			<p class="intro">{{ moduleData.intro }}</p>
 
@@ -21,6 +21,7 @@
 		position: relative;
 		place-items: center;
 		height: 40vh;
+		margin-bottom: 4.8rem;
 
 		text-content {
 			grid-row: 1;
@@ -38,10 +39,6 @@
 
 	@media (min-width: 500px) {
 		landing-heading {
-			.roar-voice {
-				font-size: var(--step-6);
-			}
-
 			p.details {
 				max-width: 700px;
 			}

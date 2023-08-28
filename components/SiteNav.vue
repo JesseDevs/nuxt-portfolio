@@ -2,9 +2,8 @@
 	<header class="main-tool-bar site-header">
 		<inner-column>
 			<nav class="main-menu">
-				{{ ui.menuClass }}
-				<button class="hamburger-button" @click="ui.toggleMainMenu">
-					<Icon name="grommet-icons:menu" size="20" color="#fff" />
+				<button class="hamburger-button icon-button" @click="ui.toggleMainMenu">
+					<Icon name="grommet-icons:menu" size="21" color="#fff" />
 				</button>
 			</nav>
 		</inner-column>
@@ -17,9 +16,9 @@
 	const ui = useInterfaceStore();
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	header inner-column {
-		padding: 1rem 2rem;
+		padding: 1.5rem 2rem;
 	}
 
 	.main-menu {
@@ -27,7 +26,7 @@
 		flex-direction: row-reverse;
 	}
 
-	button {
+	.icon-button {
 		outline: none;
 		border: none;
 		background-color: var(--background);

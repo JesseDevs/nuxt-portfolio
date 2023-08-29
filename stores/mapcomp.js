@@ -6,7 +6,6 @@ import ContactPage from '~/components/modules/ContactPage.vue';
 
 export const useComponentMap = defineStore('compMap', function () {
 	const getComponent = (moduleName) => {
-		console.log(moduleName);
 		return componentMap[moduleName] || null;
 	};
 

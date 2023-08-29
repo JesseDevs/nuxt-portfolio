@@ -2,7 +2,7 @@
 
 export default defineNuxtConfig({
 	pages: true,
-	devtools: { enabled: true },
+	devtools: { enabled: false },
 	modules: ['nuxt-icon', '@pinia/nuxt'],
 	vue: {
 		compilerOptions: {

@@ -2,6 +2,7 @@
 	<header class="main-tool-bar site-header">
 		<inner-column>
 			<nav class="main-menu">
+				<CubeBlock />
 				<button class="hamburger-button icon-button" @click="ui.toggleMainMenu">
 					<Icon name="grommet-icons:menu" size="21" color="#fff" />
 				</button>
@@ -23,7 +24,9 @@
 
 	.main-menu {
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.icon-button {

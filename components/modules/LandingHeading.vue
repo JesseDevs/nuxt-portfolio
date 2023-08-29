@@ -24,7 +24,9 @@
 		margin-bottom: 4.8rem;
 
 		text-content {
-			grid-row: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
 			width: 100%;
 			z-index: 2;
 			animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.8s backwards;

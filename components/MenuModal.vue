@@ -3,7 +3,7 @@
 		<menu-modal>
 			<div class="modal-content">
 				<nav class="main-menu">
-					{{ ui.menuClass }}
+					<CubeBlock />
 					<button class="icon-button x" @click="ui.closeMenu">
 						<Icon name="ep:close" size="21" color="#fff" />
 					</button>
@@ -52,6 +52,7 @@
 					</li>
 				</ul>
 				<div class="line"></div>
+				<ThemeToggle />
 			</div>
 		</menu-modal>
 	</div>
@@ -79,7 +80,7 @@
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(0.3px);
 		pointer-events: none;
-		transition: left 0.3s ease;
+		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	}
 
 	.modal-container.menu-open {

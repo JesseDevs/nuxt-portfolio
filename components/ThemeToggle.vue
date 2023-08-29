@@ -4,15 +4,6 @@
 		selectedTheme.value = theme;
 	};
 
-	import { useSpring } from '@vueuse/motion';
-
-	const spring = useSpring({
-		type: 'spring',
-		damping: 15,
-		stiffness: 250,
-		immediate: true, // Add this line to trigger the animation immediately
-	});
-
 	useHead({
 		bodyAttrs: {
 			class: computed(() => {
@@ -32,9 +23,7 @@
 			<Icon name="material-symbols:dark-mode-outline" size="21" color="#fff" />
 			<span class="relative z-10">Dark</span>
 		</button>
-		<div :class="showSelection">
-			<span v-m="spring" class="spring" />
-		</div>
+		<div :class="showSelection"></div>
 	</div>
 </template>
 

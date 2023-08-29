@@ -37,11 +37,15 @@
 	</project-section>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 	article-grid {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 2.4rem;
+		gap: 3.2rem;
+
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	article.project {

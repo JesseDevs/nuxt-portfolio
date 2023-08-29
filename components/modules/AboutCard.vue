@@ -3,7 +3,7 @@
 		<text-content>
 			<SectionHeader :title="moduleData.heading" dir="rr" />
 
-			<p class="intro">{{ moduleData.intro }}</p>
+			<h5 class="strict-voice">{{ moduleData.intro }}</h5>
 
 			<p v-for="detail in moduleData.details" :key="detail">{{ detail }}</p>
 		</text-content>

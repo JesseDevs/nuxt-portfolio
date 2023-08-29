@@ -3,7 +3,7 @@
 		<text-content class="title">
 			<h1 class="roar-voice">{{ moduleData.heading }}</h1>
 
-			<p class="intro">{{ moduleData.intro }}</p>
+			<h5 class="strict-voice">{{ moduleData.intro }}</h5>
 
 			<p class="details">{{ moduleData.details }}</p>
 		</text-content>

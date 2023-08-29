@@ -4,7 +4,7 @@
 			<nav class="main-menu">
 				<CubeBlock />
 				<button class="hamburger-button icon-button" @click="ui.toggleMainMenu">
-					<Icon name="grommet-icons:menu" size="21" color="#fff" />
+					<Icon name="grommet-icons:menu" size="21" color="var(--text)" />
 				</button>
 			</nav>
 		</inner-column>
@@ -32,7 +32,7 @@
 	.icon-button {
 		outline: none;
 		border: none;
-		background-color: var(--background);
+		background-color: transparent;
 		border-radius: 4px;
 		padding: 4px;
 		transition: background-color 0.2s ease-in-out;

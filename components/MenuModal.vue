@@ -5,20 +5,24 @@
 				<nav class="main-menu">
 					<CubeBlock />
 					<button class="icon-button x" @click="ui.closeMenu">
-						<Icon name="ep:close" size="21" color="#fff" />
+						<Icon name="ep:close" size="21" color="var(--white)" />
 					</button>
 				</nav>
 
 				<ul class="nav-container">
 					<li>
 						<a href="/" @click="ui.closeMenu">
-							<Icon name="material-symbols:other-houses" size="21" color="#fff" />
+							<Icon
+								name="material-symbols:other-houses"
+								size="21"
+								color="var(--white)"
+							/>
 							<span>Home</span>
 						</a>
 					</li>
 					<li>
 						<a href="#AboutCard" @click="ui.closeMenu">
-							<Icon name="material-symbols:person" size="21" color="#fff" />
+							<Icon name="material-symbols:person" size="21" color="var(--white)" />
 							<span>About</span>
 						</a>
 					</li>
@@ -27,26 +31,30 @@
 							<Icon
 								name="streamline:interface-content-book-open-content-books-book-open"
 								size="21"
-								color="#fff"
+								color="var(--white)"
 							/>
 							<span>Writing</span>
 						</a>
 					</li>
 					<li>
 						<a href="#" @click="ui.closeMenu">
-							<Icon name="lucide:layout-grid" size="21" color="#fff" />
+							<Icon name="lucide:layout-grid" size="21" color="var(--white)" />
 							<span>Layout</span>
 						</a>
 					</li>
 					<li>
 						<a href="#" @click="ui.closeMenu">
-							<Icon name="icon-park-outline:form-one" size="21" color="#fff" />
+							<Icon
+								name="icon-park-outline:form-one"
+								size="21"
+								color="var(--white)"
+							/>
 							<span>Forms</span>
 						</a>
 					</li>
 					<li>
 						<a href="#ContactPage" @click="ui.closeMenu">
-							<Icon name="mdi:message-reply" size="21" color="#fff" />
+							<Icon name="mdi:message-reply" size="21" color="var(--white)" />
 							<span>Contact</span>
 						</a>
 					</li>
@@ -80,11 +88,14 @@
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(0.3px);
 		pointer-events: none;
-		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+			backdrop-filter 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		backdrop-filter: blur(5px);
 	}
 
 	.modal-container.menu-open {
 		left: 0;
+		backdrop-filter: blur(0);
 	}
 
 	menu-modal {

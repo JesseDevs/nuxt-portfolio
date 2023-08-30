@@ -13,25 +13,23 @@
 
 		<article-grid>
 			<article v-for="(project, index) in projects" :key="index" class="project">
-				<div class="projectImage">
+				<picture class="projectImage">
 					<img :src="project.imgSrc" />
-				</div>
-				<div class="projectCopy">
-					<!-- Render project information -->
-					<div class="projectTitle">
-						<h4>{{ project.title }}</h4>
-						<div class="projectTitleLine" />
+				</picture>
+				<!-- Render project information -->
 
-						<a :href="project.code" target="_blank" rel="nofollow">
-							<Icon name="grommet-icons:github" size="20" />
-						</a>
-
-						<a :href="project.projectLink" target="_blank" rel="nofollow">
-							<Icon name="grommet-icons:github" size="20" />
-						</a>
-					</div>
-					<!-- ... other project content ... -->
+				<div class="project-container">
+					<h4 class="strict-voice">{{ project.title }}</h4>
+					<div class="projectTitleLine" />
 				</div>
+
+				<p class="projectDescription">
+					{{ project.description }}
+					<span @click="openProjectModal"
+						>Learn more
+						<Icon name="material-symbols:arrow-right-alt" size="25" />
+					</span>
+				</p>
 			</article>
 		</article-grid>
 	</project-section>
@@ -51,12 +49,13 @@
 	article.project {
 		display: grid;
 		grid-template-columns: 1fr;
+		row-gap: 1.2rem;
 	}
 
 	.projectImage {
 		width: 100%;
 		aspect-ratio: 16 / 9;
-		background: var(--background-light);
+		background: rgb(var(--brand-rgb) / 0.2);
 		cursor: pointer;
 		position: relative;
 		border-radius: 0.8rem;
@@ -73,28 +72,28 @@
 
 			border-radius: 0.4rem;
 		}
+
+		&:hover {
+			img {
+				scale: 1.1;
+				translate: -50% 15%;
+			}
+		}
 	}
 
-	.projectCopy {
-		margin: 1.6rem 0;
-	}
-
-	.projectTitle {
+	.project-container {
 		display: flex;
 		align-items: center;
-		gap: 1.2rem;
+		gap: 0.6rem;
 
 		h4 {
-			font-weight: bold;
-			font-size: var(--text-md);
 			flex-shrink: 0;
-
-			max-width: calc(100% - 150px);
 		}
 
 		a {
 			opacity: 0.75;
 			transition: 0.25s opacity;
+			flex-grow: 1;
 		}
 
 		a:hover {
@@ -110,12 +109,9 @@
 	}
 
 	.projectDescription {
-		font-weight: 200;
-
 		span {
 			display: inline-block;
 
-			font-size: var(--text-xs);
 			font-weight: 400;
 			color: var(--brand);
 

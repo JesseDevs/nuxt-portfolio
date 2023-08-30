@@ -1,5 +1,5 @@
 <template>
-	<div :class="`modal-container ${ui.menuClass}`">
+	<div @click="handleModalContainerClick" :class="`modal-container ${ui.menuClass}`">
 		<menu-modal>
 			<div class="modal-content">
 				<nav class="main-menu">
@@ -21,6 +21,12 @@
 						</a>
 					</li>
 					<li>
+						<a href="#ProjectSection" @click="ui.closeMenu">
+							<Icon name="iconoir:design-pencil" size="21" color="var(--white)" />
+							<span>Projects</span>
+						</a>
+					</li>
+					<li>
 						<a href="#AboutCard" @click="ui.closeMenu">
 							<Icon name="material-symbols:person" size="21" color="var(--white)" />
 							<span>About</span>
@@ -36,13 +42,13 @@
 							<span>Writing</span>
 						</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#" @click="ui.closeMenu">
 							<Icon name="lucide:layout-grid" size="21" color="var(--white)" />
 							<span>Layout</span>
 						</a>
-					</li>
-					<li>
+					</li> -->
+					<!-- <li>
 						<a href="#" @click="ui.closeMenu">
 							<Icon
 								name="icon-park-outline:form-one"
@@ -51,7 +57,7 @@
 							/>
 							<span>Forms</span>
 						</a>
-					</li>
+					</li> -->
 					<li>
 						<a href="#ContactPage" @click="ui.closeMenu">
 							<Icon name="mdi:message-reply" size="21" color="var(--white)" />
@@ -70,6 +76,12 @@
 	import { useInterfaceStore } from '~/stores/interface';
 
 	const ui = useInterfaceStore();
+
+	const handleModalContainerClick = (event) => {
+		if (!event.target.closest('menu-modal')) {
+			ui.closeMenu();
+		}
+	};
 </script>
 
 <style lang="scss" scoped>
@@ -87,7 +99,6 @@
 		background: rgba(62, 61, 61, 0.32);
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(0.3px);
-		pointer-events: none;
 		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955),
 			backdrop-filter 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 		backdrop-filter: blur(5px);
@@ -101,20 +112,12 @@
 	menu-modal {
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
 		width: 100vw;
 		max-width: 28rem;
 		flex: 1 1 0%;
 		pointer-events: all;
 		background-color: rgb(24 24 27);
-
-		// position: fixed;
-		// height: 0px;
-		// padding: 0px;
-		// overflow: hidden;
-		// clip: rect(0px, 0px, 0px, 0px);
-		// white-space: nowrap;
-		// border-width: 0px;
-
 		.modal-content {
 			padding: 1.5rem;
 		}
@@ -134,6 +137,10 @@
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 			font-weight: 500;
 			color: rgb(181, 177, 177);
+
+			svg {
+				pointer-events: none;
+			}
 
 			&:hover {
 				background-color: rgba(121, 118, 118, 0.38);

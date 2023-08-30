@@ -5,30 +5,30 @@
 @import 'reset.scss';
 
 :root {
-	--step--2: clamp(0.74rem, calc(0.70rem + 0.20vw), 0.84rem);
-	--step--1: clamp(0.89rem, calc(0.82rem + 0.32vw), 1.05rem);
-	--step-0: clamp(1.06rem, calc(0.97rem + 0.48vw), 1.31rem);
-	--step-1: clamp(1.28rem, calc(1.13rem + 0.70vw), 1.64rem);
-	--step-2: clamp(1.53rem, calc(1.33rem + 1.00vw), 2.05rem);
-	--step-3: clamp(1.84rem, calc(1.56rem + 1.40vw), 2.56rem);
-	--step-4: clamp(2.20rem, calc(1.82rem + 1.93vw), 3.20rem);
-	--step-5: clamp(2.64rem, calc(2.12rem + 2.63vw), 4.01rem);
+	--step--2: clamp(0.70rem, calc(0.81rem + -0.15vw), 0.78rem);
+	--step--1: clamp(0.94rem, calc(0.94rem + 0.00vw), 0.94rem);
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.23rem + 0.61vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.39rem + 1.16vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.55rem + 1.96vw), 2.96rem);
+	--step-4: clamp(2.33rem, calc(1.71rem + 3.11vw), 3.95rem);
+	--step-5: clamp(2.80rem, calc(1.85rem + 4.74vw), 5.26rem);
 }
 
 :root {
-	--background: rgb(17, 17, 17);
+	--background: #111111;
 	--bg-opaque: rgba(46, 45, 45, 0.322);
 	--background-light: rgba(189, 184, 184, 0.724);
 	--background-dark: rgb(8, 8, 8);
 
 	--text: rgb(235, 236, 243);
-	--brand: rgb(169, 10, 255);
-	--brand-rgb: 169 10 255;
+	--brand: rgb(146, 209, 164);
+	--brand-rgb: 146 209 164;
 	--white: #f4f0f0;
 }
 
 body.light {
-	--background: rgb(228, 217, 236);
+	--background: rgb(238, 237, 244);
 	--bg-opaque: rgba(209, 210, 210, 0.856);
 	--background-light: rgba(66, 71, 71, 0.724);
 	--background-dark: rgb(247, 247, 247);
@@ -52,6 +52,12 @@ body {
 	font-weight: 200;
 	line-height: 1.1;
 	font-style: normal;
+}
+
+@media(min-width:550px) {
+	body {
+		font-weight: 300;
+	}
 }
 
 .roar-voice {
@@ -172,7 +178,7 @@ inner-column {
 	z-index: 10;
 	max-width: 1150px;
 	margin: auto;
-	padding: 9.6rem 9rem;
+	padding: 9.6rem 7rem;
 	overflow: hidden;
 }
 

@@ -8,6 +8,23 @@
 <script setup>
 	import StandardLayout from '~/layouts/StandardLayout.vue';
 
+	const initial = {
+		x: -100,
+		opacity: 0,
+		transition: {
+			stiffness: 100,
+		},
+	};
+
+	const enter = {
+		x: 0,
+		opacity: 1,
+		transition: {
+			stiffness: 100,
+			ease: 'easeInOut',
+		},
+	};
+
 	// onBeforeMount(async () => {
 	// 	try {
 	// 		isLoading.value = true;

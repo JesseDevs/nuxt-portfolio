@@ -18,8 +18,14 @@
 </script>
 
 <style lang="scss">
-	header inner-column {
-		padding: 1.5rem 2rem;
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: var(--background);
+		inner-column {
+			padding: 1.5rem 2rem;
+		}
 	}
 
 	.main-menu {

@@ -58,17 +58,6 @@
 		}
 	}
 
-	.showSelection {
-		display: flex;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: 0;
-		border-radius: 9999px;
-	}
-
 	.theme-toggle.dark {
 		.dark-button {
 			background-color: var(--brand);

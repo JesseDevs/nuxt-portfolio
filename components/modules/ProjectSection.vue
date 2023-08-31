@@ -1,10 +1,21 @@
 <script setup>
 	import { useProjectStore } from '~/stores/projects.js';
+	import { useInterfaceStore } from '~/stores/interface';
+
+	const ui = useInterfaceStore();
 	const projects = useProjectStore().projects;
 
 	const props = defineProps({
 		moduleData: Object,
 	});
+
+	const openModal = (project) => {
+		project.isActive = !project.isActive;
+	};
+	const handleProjectModalClick = (project) => {
+		openModal(project);
+		ui.toggleProjectModal;
+	};
 </script>
 
 <template>
@@ -20,16 +31,18 @@
 
 				<div class="project-container">
 					<h4 class="strict-voice">{{ project.title }}</h4>
-					<div class="projectTitleLine" />
+					<div class="project-title-line" />
 				</div>
 
-				<p class="projectDescription">
+				<p class="project-description">
 					{{ project.description }}
-					<span @click="openProjectModal"
+					<span @click="handleProjectModalClick"
 						>Learn more
 						<Icon name="material-symbols:arrow-right-alt" size="25" />
 					</span>
 				</p>
+
+				<ProjectModal v-if="project.isActive" :project="project" />
 			</article>
 		</article-grid>
 	</project-section>
@@ -66,7 +79,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 50%;
-			translate: -50% 20%;
+			translate: -50% 0%;
 
 			transition: 0.25s all;
 
@@ -76,7 +89,7 @@
 		&:hover {
 			img {
 				scale: 1.1;
-				translate: -50% 15%;
+				translate: -50% -5%;
 			}
 		}
 	}
@@ -101,14 +114,14 @@
 		}
 	}
 
-	.projectTitleLine {
+	.project-title-line {
 		width: 100%;
 		height: 1px;
 		background: var(--text);
 		opacity: 0.3;
 	}
 
-	.projectDescription {
+	.project-description {
 		span {
 			display: inline-block;
 
@@ -121,16 +134,5 @@
 		span:hover {
 			text-decoration: underline;
 		}
-	}
-
-	.projectTech {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.2rem;
-
-		font-size: var(--text-xs);
-		color: var(--brand);
-
-		margin: 0.8rem 0;
 	}
 </style>

@@ -2,7 +2,6 @@ import { defineStore } from 'pinia';
 
 export const useInterfaceStore = defineStore('interface', function () {
 	const mainMenuOpen = ref(false);
-
 	const menuClass = computed(() => (mainMenuOpen.value ? 'menu-open' : 'menu-close'));
 
 	const toggleMainMenu = () => {
@@ -13,10 +12,22 @@ export const useInterfaceStore = defineStore('interface', function () {
 		mainMenuOpen.value = false;
 	};
 
+	const projectModal = ref(false);
+	const projectClass = computed(() =>
+		projectModal.value ? 'project-modal-open' : 'project-modal-close',
+	);
+	const toggleProjectModal = () => {
+		projectModal.value = !projectModal.value;
+	};
+
+	const closeProjectModal = () => {
+		projectModal.value = false;
+	};
+
 	useHead({
 		bodyAttrs: {
 			class: computed(() => {
-				if (mainMenuOpen.value) return 'overflow';
+				if (mainMenuOpen.value || projectModal.value) return 'overflow';
 
 				return '';
 			}),
@@ -26,7 +37,11 @@ export const useInterfaceStore = defineStore('interface', function () {
 	return {
 		mainMenuOpen,
 		menuClass,
+		projectClass,
 		toggleMainMenu,
 		closeMenu,
+		toggleProjectModal,
+		projectModal,
+		closeProjectModal,
 	};
 });

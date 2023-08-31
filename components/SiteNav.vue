@@ -21,8 +21,9 @@
 	header {
 		position: sticky;
 		top: 0;
-		z-index: 49;
+		z-index: 20;
 		background-color: var(--background);
+
 		inner-column {
 			padding: 1.5rem 2rem;
 		}

@@ -1,6 +1,8 @@
 <template>
 	<SiteNav />
+
 	<MenuModal />
+
 	<StandardLayout />
 	<div class="bottom-fade-out"></div>
 </template>

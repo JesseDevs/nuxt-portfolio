@@ -85,41 +85,28 @@
 </script>
 
 <style lang="scss" scoped>
-	.modal-container {
-		position: fixed;
-		overflow-y: auto;
-		z-index: 50;
-		width: 100vw;
-		flex: 1 1 0%;
-		height: 100%;
-		top: 0;
-		left: -100%;
-		display: flex;
-		flex-direction: column;
-		background: rgba(62, 61, 61, 0.32);
-		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(0.3px);
-		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955),
-			backdrop-filter 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-		backdrop-filter: blur(5px);
-	}
-
-	.modal-container.menu-open {
-		left: 0;
-		backdrop-filter: blur(0);
-	}
-
 	menu-modal {
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
 		width: 100vw;
+		height: 100%;
 		max-width: 28rem;
 		flex: 1 1 0%;
 		pointer-events: all;
 		background-color: rgb(24 24 27);
+		position: fixed;
+		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.3s ease-in-out;
+
+		left: -100%;
 		.modal-content {
 			padding: 1.5rem;
+		}
+	}
+
+	.modal-container.menu-open {
+		menu-modal {
+			left: 0;
 		}
 	}
 

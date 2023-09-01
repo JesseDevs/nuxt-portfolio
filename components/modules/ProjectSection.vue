@@ -9,12 +9,16 @@
 		moduleData: Object,
 	});
 
-	const openModal = (project) => {
-		project.isActive = !project.isActive;
-	};
-	const handleProjectModalClick = (project) => {
-		openModal(project);
-		ui.toggleProjectModal;
+	const selectedProject = ref(null);
+
+	const toggleProjectModal = (index) => {
+		projects.forEach((project) => {
+			project.isActive = false;
+		});
+
+		projects[index].isActive = !projects[index].isActive;
+
+		ui.projectModal = projects[index].isActive;
 	};
 </script>
 
@@ -24,7 +28,7 @@
 
 		<article-grid>
 			<article v-for="(project, index) in projects" :key="index" class="project">
-				<picture class="projectImage">
+				<picture class="projectImage" @click="toggleProjectModal(index)">
 					<img :src="project.imgSrc" />
 				</picture>
 				<!-- Render project information -->
@@ -36,12 +40,11 @@
 
 				<p class="project-description">
 					{{ project.description }}
-					<span @click="handleProjectModalClick"
+					<span @click="toggleProjectModal(index)"
 						>Learn more
 						<Icon name="material-symbols:arrow-right-alt" size="25" />
 					</span>
 				</p>
-
 				<ProjectModal v-if="project.isActive" :project="project" />
 			</article>
 		</article-grid>

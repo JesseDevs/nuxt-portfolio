@@ -1,14 +1,15 @@
 import { defineStore } from 'pinia';
 
 export const useProjectStore = defineStore('projectStore', function () {
-	const projects = [
+	let projects = [
 		{
 			title: 'Management Systems',
 			imgSrc: 'project-imgs/cms-image.jpg',
 			oneLiner: 'Simplify Management',
 			code: 'https://www.github.com',
 			projectLink: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
-			tech: ['Flutter', 'MUI', 'Python', 'FastAPI'],
+			tech: [''],
+			isActive: false,
 			description:
 				'From lean files to big databases, a timeline of scaling projects to handle ever growing complexities.',
 			modalContent: {
@@ -50,19 +51,14 @@ export const useProjectStore = defineStore('projectStore', function () {
 			oneLiner: 'Organized and Productive',
 			code: 'https://www.github.com',
 			projectLink: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
-			tech: ['Flutter', 'MUI', 'Python', 'FastAPI'],
+			tech: [''],
+			isActive: false,
 			description:
 				'Small websites interactions to full scale interactive projects. Making button clicks work and moving screens slide.',
 			modalContent: {
 				overview:
 					"<span class='first-words'>Javascript is</span> the most widely used programming language and has become a vital tool for developers. Although it is primarily a frontend language, there have been evolutions to make backends like Node and entire Frameworks on which projects can run. This timeline demonstrates the scaling of ideas and the process of understanding what is needed to make a website properly.",
 				files: [
-					{
-						title: 'Javascript Forms',
-						git: 'https://github.com/JesseDevs/pe-projects/blob/main/scripts/file.js',
-						link: 'https://jessedevs.net/?page=forms',
-						p: 'There are some forms available for user input in my <em>Forms</em> tab on my personal site. These forms were based on challenges from ‘Exercises for Programmers’ and were initially made purely with PHP server-side rendering. By using JavaScript, I can showcase a few more tricks on the frontend when the user interacts with these items. For example, submitting a form saves a position on the screen to scroll to again.',
-					},
 					{
 						title: 'Workout App',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/workout-app//',
@@ -93,7 +89,8 @@ export const useProjectStore = defineStore('projectStore', function () {
 			oneLiner: 'Design',
 			code: 'https://www.github.com',
 			projectLink: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
-			tech: ['Flutter', 'MUI', 'Python', 'FastAPI'],
+			tech: [''],
+			isActive: false,
 			description:
 				'A collection of responsive layouts. Building out the internet is complicated... so let’s start a module at a time.',
 			modalContent: {
@@ -125,11 +122,6 @@ export const useProjectStore = defineStore('projectStore', function () {
 			},
 		},
 	];
-
-	projects.map((project) => ({
-		...project,
-		isActive: false,
-	}));
 
 	return {
 		projects,

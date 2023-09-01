@@ -16,9 +16,6 @@ export const useInterfaceStore = defineStore('interface', function () {
 	const projectClass = computed(() =>
 		projectModal.value ? 'project-modal-open' : 'project-modal-close',
 	);
-	const toggleProjectModal = () => {
-		projectModal.value = !projectModal.value;
-	};
 
 	const closeProjectModal = () => {
 		projectModal.value = false;
@@ -40,7 +37,6 @@ export const useInterfaceStore = defineStore('interface', function () {
 		projectClass,
 		toggleMainMenu,
 		closeMenu,
-		toggleProjectModal,
 		projectModal,
 		closeProjectModal,
 	};

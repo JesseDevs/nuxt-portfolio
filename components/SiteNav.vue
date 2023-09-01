@@ -8,6 +8,8 @@
 				</button>
 			</nav>
 		</inner-column>
+
+		<MenuModal />
 	</header>
 </template>
 

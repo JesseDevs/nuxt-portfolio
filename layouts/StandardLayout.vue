@@ -14,11 +14,6 @@
 	const mapcomp = useComponentMap();
 	const getComponent = mapcomp.getComponent;
 
-	const pageData = ref({
-		heading: 'Your Heading',
-		intro: 'Your Introduction',
-	});
-
 	const sections = ref([
 		{
 			module: 'LandingHeading',

@@ -61,14 +61,14 @@
 	.theme-toggle.dark {
 		.dark-button {
 			background-color: var(--brand);
-			color: var(--text);
+			color: var(--background);
 		}
 	}
 
 	.theme-toggle.light {
 		.light-button {
 			background-color: var(--brand);
-			color: var(--text);
+			color: var(--background);
 		}
 	}
 </style>

@@ -7,23 +7,28 @@
 
 <script setup>
 	import StandardLayout from '~/layouts/StandardLayout.vue';
+	import { useProjectStore } from '~/stores/projects.js';
+	import { useInterfaceStore } from '~/stores/interface';
 
-	const initial = {
-		x: -100,
-		opacity: 0,
-		transition: {
-			stiffness: 100,
-		},
-	};
+	const ui = useInterfaceStore();
+	const projects = useProjectStore().projects;
 
-	const enter = {
-		x: 0,
-		opacity: 1,
-		transition: {
-			stiffness: 100,
-			ease: 'easeInOut',
-		},
-	};
+	// const initial = {
+	// 	x: -100,
+	// 	opacity: 0,
+	// 	transition: {
+	// 		stiffness: 100,
+	// 	},
+	// };
+
+	// const enter = {
+	// 	x: 0,
+	// 	opacity: 1,
+	// 	transition: {
+	// 		stiffness: 100,
+	// 		ease: 'easeInOut',
+	// 	},
+	// };
 
 	// onBeforeMount(async () => {
 	// 	try {
@@ -37,8 +42,8 @@
 </script>
 
 <style lang="scss">
-	.bottom-fade-out {
-		height: 200px;
-		background: linear-gradient(180deg, var(--background), rgb(var(--brand-rgb) / 0.5));
+	inner-column.project-modal-open {
+		z-index: -100;
+		position: relative;
 	}
 </style>

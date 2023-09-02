@@ -18,7 +18,7 @@
 		{
 			module: 'LandingHeading',
 			heading: 'Jesse Felix',
-			intro: 'Frontend Developer',
+			intro: 'Front-End Developer',
 			details:
 				'I’m a Web Developer located in Los Angeles, California. I have a passion for crafting cool digital experiences. Maybe with you?',
 			image: 'images/details/comp.webp',
@@ -35,7 +35,10 @@
 			heading: 'About',
 			intro: 'Here is a little more...',
 			details: [
-				"From business finance to creative frontend web development, I've found my true passion. With the guidance of Perpetual Education, I'm constantly exploring new skills and challenging myself to do amazing things. Join me on my journey of discovery and growth in the world of coding and design.",
+				"I'm a graduate with a Bachelor's degree in Business Finance, but my true passion lies in the world of computers and web development.",
+				"Right now, I'm lucky enough to be under the mentorship of <a href='https://perpetual.education/' target='_blank'>Perpetual Education</a> where I'm experimenting with a wide range of coding and design disciplines. I'm constantly pushing myself to learn and grow, and I'm excited to see where this journey will take me.",
+				"But hey, I'm not all about work! When I'm not busy coding, you'll find me indulging in my other passions. I love playing games, hitting the gym to stay active, and checking out the latest music.",
+				'Let’s connect! Check out some of my links.',
 			],
 			images: [
 				'images/details/methree.jpg',
@@ -47,7 +50,7 @@
 		{
 			module: 'ContactPage',
 			heading: 'Contact',
-			text: 'Shoot me an email if you want to connect! You can also find me on <a href="https://www.linkedin.com" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://www.twitter.com" target="_blank" rel="nofollow">Twitter</a> if that&apos;s more your speed.',
+			text: 'Shoot me an email if you want to connect! You can also find me on <a href="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://twitter.com/Jesse_Devs" target="_blank" rel="nofollow">Twitter</a> if that&apos;s more your speed.',
 		},
 	]);
 </script>

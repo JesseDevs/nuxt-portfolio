@@ -3,11 +3,10 @@ import { defineStore } from 'pinia';
 export const useProjectStore = defineStore('projectStore', function () {
 	let projects = [
 		{
+			slug: 'systems',
 			title: 'Management Systems',
-			imgSrc: 'project-imgs/cms-image.jpg',
+			imgSrc: '/project-imgs/cms-image.jpg',
 			oneLiner: 'Simplify Management',
-			code: 'https://www.github.com',
-			projectLink: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
 			tech: [''],
 			isActive: false,
 			description:
@@ -46,11 +45,10 @@ export const useProjectStore = defineStore('projectStore', function () {
 			},
 		},
 		{
+			slug: 'interfaces',
 			title: 'Javascript Interfaces',
-			imgSrc: 'project-imgs/layout-image.jpg',
+			imgSrc: '/project-imgs/layout-image.jpg',
 			oneLiner: 'Organized and Productive',
-			code: 'https://www.github.com',
-			projectLink: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
 			tech: [''],
 			isActive: false,
 			description:
@@ -84,11 +82,10 @@ export const useProjectStore = defineStore('projectStore', function () {
 			},
 		},
 		{
+			slug: 'design-garden',
 			title: 'Layout Garden',
-			imgSrc: 'project-imgs/testing-image.jpg',
+			imgSrc: '/project-imgs/testing-image.jpg',
 			oneLiner: 'Design',
-			code: 'https://www.github.com',
-			projectLink: 'https://www.youtube.com/watch?v=4xDzrJKXOOY',
 			tech: [''],
 			isActive: false,
 			description:

@@ -22,10 +22,10 @@
 								<p class="calm-voice">{{ file.title }}</p>
 								<div class="line" />
 								<div>
-									<a :href="file.github">
+									<a :href="file.github" target="_blank">
 										<Icon name="mdi:github" color="var(--white)" size="30" />
 									</a>
-									<a :href="file.link">
+									<a :href="file.link" target="_blank">
 										<Icon name="bxs:send" color="var(--white)" size="30"
 									/></a>
 								</div>
@@ -59,12 +59,13 @@
 		backdrop-filter: blur(1px);
 		opacity: 1;
 		pointer-events: all;
+		z-index: 9999;
 	}
 
 	.modal-container.project-modal-open {
 		project-modal {
 			bottom: auto;
-			top: 15%;
+			top: 5%;
 		}
 	}
 
@@ -106,6 +107,7 @@
 		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 		cursor: auto;
+		z-index: 9999;
 
 		bottom: -100%;
 

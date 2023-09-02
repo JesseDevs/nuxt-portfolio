@@ -40,12 +40,10 @@
 
 				<p class="project-description">
 					{{ project.description }}
-					<span @click="toggleProjectModal(index)"
-						>Learn more
-						<Icon name="material-symbols:arrow-right-alt" size="25" />
-					</span>
+					<NuxtLink :to="`/projects/${project.slug}`"
+						>Learn More<Icon name="material-symbols:arrow-right-alt" size="25"
+					/></NuxtLink>
 				</p>
-				<ProjectModal v-if="project.isActive" :project="project" />
 			</article>
 		</article-grid>
 	</project-section>
@@ -125,7 +123,7 @@
 	}
 
 	.project-description {
-		span {
+		a {
 			display: inline-block;
 
 			font-weight: 400;
@@ -134,7 +132,7 @@
 			cursor: pointer;
 		}
 
-		span:hover {
+		a:hover {
 			text-decoration: underline;
 		}
 	}

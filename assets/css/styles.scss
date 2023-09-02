@@ -2,3 +2,17 @@
 	display: grid;
 	grid-template-columns: 1fr;
 }
+
+p a {
+	color: var(--brand);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.bottom-fade-out {
+	height: 100px;
+	background: linear-gradient(180deg, var(--background), rgb(var(--brand-rgb) / 0.5));
+	filter: blur(1px) opacity(0.5);
+}

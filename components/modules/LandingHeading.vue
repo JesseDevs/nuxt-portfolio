@@ -7,6 +7,7 @@
 
 			<p class="details">{{ moduleData.details }}</p>
 		</text-content>
+		<CubeBlock />
 	</landing-heading>
 </template>
 

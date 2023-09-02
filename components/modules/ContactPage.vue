@@ -12,7 +12,7 @@
 		</text-content>
 
 		<div class="contactEmail">
-			<a href="jessemerge2@gmail.com">
+			<a href="mailto:jessemerge2@gmail.com" target="_blank">
 				<Icon name="material-symbols:mail" size="30" />
 				<span class="strict-voice">jessemerge2@gmail.com</span>
 			</a>
@@ -37,7 +37,7 @@
 	.heading-container {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		gap: 1.3rem;
 		padding-bottom: 2rem;
 
 		span {
@@ -48,6 +48,12 @@
 		margin: 0 auto;
 		margin-top: 3rem;
 		max-width: fit-content;
+
+		@media (max-width: 500px) {
+			span {
+				font-size: var(--step-0);
+			}
+		}
 
 		a {
 			display: flex;
@@ -83,12 +89,6 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-		}
-		p a {
-			color: var(--brand);
-			&:hover {
-				text-decoration: underline;
-			}
 		}
 	}
 </style>

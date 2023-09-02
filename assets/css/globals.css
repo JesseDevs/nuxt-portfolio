@@ -4,19 +4,20 @@
 
 @import 'reset.scss';
 
+
 :root {
-	--step--2: clamp(0.70rem, calc(0.81rem + -0.15vw), 0.78rem);
-	--step--1: clamp(0.94rem, calc(0.94rem + 0.00vw), 0.94rem);
-	--step-0: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
-	--step-1: clamp(1.35rem, calc(1.23rem + 0.61vw), 1.67rem);
-	--step-2: clamp(1.62rem, calc(1.39rem + 1.16vw), 2.22rem);
-	--step-3: clamp(1.94rem, calc(1.55rem + 1.96vw), 2.96rem);
-	--step-4: clamp(2.33rem, calc(1.71rem + 3.11vw), 3.95rem);
-	--step-5: clamp(2.80rem, calc(1.85rem + 4.74vw), 5.26rem);
+	--step--2: clamp(0.70rem, calc(0.72rem + -0.02vw), 0.72rem);
+	--step--1: clamp(0.86rem, calc(0.83rem + 0.15vw), 0.94rem);
+	--step-0: clamp(1.03rem, calc(0.95rem + 0.42vw), 1.25rem);
+	--step-1: clamp(1.24rem, calc(1.07rem + 0.83vw), 1.67rem);
+	--step-2: clamp(1.49rem, calc(1.20rem + 1.42vw), 2.22rem);
+	--step-3: clamp(1.78rem, calc(1.33rem + 2.27vw), 2.96rem);
+	--step-4: clamp(2.14rem, calc(1.44rem + 3.49vw), 3.95rem);
+	--step-5: clamp(2.57rem, calc(1.53rem + 5.19vw), 5.26rem);
 }
 
 :root {
-	--background: #111111;
+	--background: #191919;
 	--bg-opaque: rgba(46, 45, 45, 0.322);
 	--background-light: rgba(189, 184, 184, 0.724);
 	--background-dark: rgb(8, 8, 8);
@@ -28,7 +29,7 @@
 }
 
 body.light {
-	--background: rgb(238, 237, 244);
+	--background: #e9e3d3;
 	--bg-opaque: rgba(46, 45, 45, 0.322);
 	--background-light: rgba(189, 184, 184, 0.724);
 	--background-dark: rgb(8, 8, 8);
@@ -53,6 +54,9 @@ body {
 	font-style: normal;
 }
 
+section {
+	overflow-x: hidden;
+}
 
 @media(min-width:550px) {
 	body {
@@ -179,7 +183,7 @@ inner-column {
 	max-width: 1150px;
 	margin: auto;
 	padding: 9.6rem 7rem;
-	overflow: hidden;
+	z-index: 1;
 }
 
 @media (max-width: 768px) {

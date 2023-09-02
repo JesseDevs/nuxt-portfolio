@@ -1,6 +1,6 @@
 <template>
 	<div class="box-container">
-		<a href="/">
+		<NuxtLink to="/" @click="ui.closeMenu">
 			<div class="cube">
 				<div class="face top"></div>
 				<div class="face bottom"></div>
@@ -9,11 +9,15 @@
 				<div class="face front"></div>
 				<div class="face back"></div>
 			</div>
-		</a>
+		</NuxtLink>
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+	import { useInterfaceStore } from '~/stores/interface';
+
+	const ui = useInterfaceStore();
+</script>
 
 <style lang="scss" scoped>
 	@keyframes turn {
@@ -29,6 +33,12 @@
 		width: 30px;
 		height: 30px;
 		cursor: auto;
+		position: relative;
+		position: absolute;
+		scale: 6;
+		right: 20%;
+		top: 10%;
+		transition: 1s scale ease-in-out;
 
 		a {
 			cursor: auto;
@@ -42,15 +52,15 @@
 		transform-style: preserve-3d;
 		animation: turn 5s linear infinite;
 	}
-	.cube:hover {
-		animation-play-state: paused;
-	}
+	// .cube:hover {
+	// 	animation-play-state: paused;
+	// }
 
 	.face {
 		width: 25px;
 		height: 25px;
-		background: rgb(var(--brand-rgb) / 0.5);
-		border: 3px solid var(--brand);
+		background: rgb(var(--brand-rgb) / 0.6);
+		border: 3px solid var(--bg-opaque);
 		position: absolute;
 		opacity: 0.5;
 		display: flex;
@@ -62,26 +72,26 @@
 	}
 
 	.front {
-		transform: translateZ(12px);
+		transform: translateZ(12.5px);
 	}
 
 	.back {
-		transform: translateZ(-12px) rotateY(180deg);
+		transform: translateZ(-12.5px) rotateY(180deg);
 	}
 
 	.left {
-		transform: translateX(-12px) rotateY(-90deg);
+		transform: translateX(-12.5px) rotateY(-90deg);
 	}
 
 	.right {
-		transform: translateX(12px) rotateY(90deg);
+		transform: translateX(12.5px) rotateY(90deg);
 	}
 
 	.top {
-		transform: translateY(-12px) rotateX(90deg);
+		transform: translateY(-12.5px) rotateX(90deg);
 	}
 
 	.bottom {
-		transform: translateY(12px) rotateX(-90deg);
+		transform: translateY(12.5px) rotateX(-90deg);
 	}
 </style>

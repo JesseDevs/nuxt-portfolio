@@ -11,14 +11,14 @@
 
 				<ul class="nav-container">
 					<li>
-						<a href="/" @click="ui.closeMenu">
+						<NuxtLink to="/" @click="ui.closeMenu">
 							<Icon
 								name="material-symbols:other-houses"
 								size="21"
 								color="var(--white)"
 							/>
 							<span>Home</span>
-						</a>
+						</NuxtLink>
 					</li>
 					<li>
 						<a href="#ProjectSection" @click="ui.closeMenu">
@@ -33,7 +33,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="https://twitter.com" @click="ui.closeMenu">
+						<a href="https://twitter.com" target="_blank" @click="ui.closeMenu">
 							<Icon
 								name="streamline:interface-content-book-open-content-books-book-open"
 								size="21"
@@ -128,6 +128,18 @@
 		left: -100%;
 		.modal-content {
 			padding: 1.5rem;
+		}
+
+		.main-menu {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			.box-container {
+				scale: 1;
+				position: static;
+			}
 		}
 	}
 

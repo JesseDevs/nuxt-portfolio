@@ -2,7 +2,7 @@
 	<header class="main-tool-bar site-header">
 		<inner-column>
 			<nav class="main-menu">
-				<CubeBlock />
+				<MyLinks />
 				<button class="hamburger-button icon-button" @click="ui.toggleMainMenu">
 					<Icon name="grommet-icons:menu" size="21" color="var(--text)" />
 				</button>
@@ -25,17 +25,18 @@
 		top: 0;
 		z-index: 20;
 		background-color: var(--background);
+		box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.5);
 
 		inner-column {
 			padding: 1.5rem 2rem;
-		}
-	}
 
-	.main-menu {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+			.main-menu {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
 	}
 
 	.icon-button {

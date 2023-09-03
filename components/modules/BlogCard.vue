@@ -2,23 +2,20 @@
 	<blog-card>
 		<picture class="blog-thumbnail">
 			<img :src="content.thumbnail" alt="blog-image" loading="lazy" />
+			<h4 class="title chant-voice" v-html="content.title"></h4>
 		</picture>
 
 		<text-content>
-			<h4 class="title chant-voice" v-html="content.title"></h4>
-			<p class="strict-voice">{{ content.intro }}</p>
-
 			<p v-if="content.podcast" class="small podcast">Podcast Special</p>
+
+			<blockquote class="blockquote">
+				<Icon name="fa6-solid:quote-left" size="24" />
+				<p>{{ content.quote }}</p>
+				<Icon name="fa6-solid:quote-right" size="24" />
+			</blockquote>
+
+			<a class="standardButton" :href="content.link" target="_blank">Read More</a>
 		</text-content>
-
-		<blockquote class="blockquote">
-			<Icon name="fa6-solid:quote-left" size="24" />
-			<p>{{ content.quote }}</p>
-			<Icon name="fa6-solid:quote-right" size="24" />
-		</blockquote>
-
-		<a class="standardButton" :href="content.link" target="_blank">Read More</a>
-		<support-bar></support-bar>
 	</blog-card>
 </template>
 
@@ -30,44 +27,54 @@
 
 <style lang="scss" scoped>
 	blog-card {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 
 		.standardButton {
 			outline: none;
 			border: none;
 			cursor: pointer;
+			display: block;
 
 			padding: 1rem 2rem;
+			margin-top: 15px;
 			font-weight: 500;
+			max-width: fit-content;
 
 			background: var(--brand);
 			color: var(--background-dark);
 			font-size: var(--step-0);
 			border-radius: 4px;
 
-			position: relative;
-			z-index: 20;
-
-			overflow: hidden;
-
 			transition: 0.2s opacity;
 
 			&:hover {
-				opacity: 0.9;
+				opacity: 0.8;
 			}
 		}
 
 		picture {
 			position: relative;
-			background-color: var(--black-mute);
+			background-color: var(--background-dark);
 			overflow: hidden;
-			box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.2);
+			box-shadow: 10px 10px 30px 5px rgba(27, 26, 26, 0.2);
 
 			img {
-				opacity: 0.25;
+				opacity: 0.8;
 				transition: filter 1s;
 			}
+		}
+
+		h4 {
+			position: absolute;
+			z-index: 50;
+			left: 0;
+			bottom: 0;
+			font-weight: 500;
+			width: 100%;
+			padding: 1rem;
+			background-color: rgb(var(--black-rgb) / 0.7);
 		}
 
 		text-content {
@@ -76,76 +83,56 @@
 			top: 0;
 			left: 0;
 			color: white;
-			padding: 15px;
+			padding-top: 20px;
 			background-color: transparent;
-
-			h4 {
-				font-weight: 500;
-				margin-bottom: 20px;
-			}
 		}
 
 		.blockquote {
 			padding: 15px;
 			display: flex;
 			gap: 1.3rem;
-			padding-bottom: 3rem;
+
+			p {
+				padding-top: 15px;
+			}
 
 			svg {
 				flex-shrink: 0;
 			}
 		}
 
-		@media (min-width: 750px) {
-			picture.blog-thumbnail {
-				grid-column: 1 / span 2;
-				aspect-ratio: 4/3;
+		@media (min-width: 980px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 1.3rem;
+
+			picture {
+				grid-row: 1/-1;
+				align-self: center;
 			}
 
-			support-bar {
-				bottom: 46px;
-				top: initial;
-				height: var(--thick);
-				width: 100%;
-			}
-		}
-	}
-
-	@media (min-width: 750px) {
-		grid-blog li:nth-of-type(even) {
-			blockquote {
-				grid-column: 1 / span 2;
-				grid-row: 1;
+			a {
+				height: fit-content;
+				margin-left: auto;
 			}
 
-			picture.blog-thumbnail {
-				grid-column: 3 / span 1;
+			text-content {
+				padding-top: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 			}
 
-			a.action-link {
-				grid-column: 1 / span 2;
+			.blockquote {
+				padding: 0;
 			}
 		}
 	}
 
 	.podcast {
-		color: var(--grey);
+		color: var(--brand);
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
-		padding-top: 40px;
-	}
-
-	.quote {
-		font-size: 1.4rem;
-		max-width: 400px;
-		line-height: 1.4;
-		font-style: italic;
-	}
-
-	.author {
-		float: right;
-		font-size: 1.1rem;
-		font-weight: bold;
 	}
 
 	.blog-thumbnail {

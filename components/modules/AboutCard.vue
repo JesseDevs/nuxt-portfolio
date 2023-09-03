@@ -1,5 +1,5 @@
 <template>
-	<about-card class="grid-template">
+	<about-card>
 		<text-content>
 			<SectionHeader :title="moduleData.heading" dir="rr" />
 
@@ -55,6 +55,11 @@
 </script>
 
 <style lang="scss" scoped>
+	about-card {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
 	text-content p {
 		padding-bottom: 1.3rem;
 	}

@@ -30,6 +30,7 @@
 		grid-template-columns: 1fr;
 		place-items: center;
 		min-height: 40vh;
+		width: 100%;
 
 		text-content {
 			display: flex;

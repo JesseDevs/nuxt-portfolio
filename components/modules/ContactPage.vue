@@ -1,5 +1,5 @@
 <template>
-	<contact-page class="grid-template">
+	<contact-page>
 		<div class="heading-container">
 			<div class="line"></div>
 			<h2 class="loud-voice">{{ moduleData.heading }}<span>.</span></h2>
@@ -27,6 +27,11 @@
 </script>
 
 <style lang="scss">
+	contact-page {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
 	.line {
 		width: 100%;
 		height: 1px;

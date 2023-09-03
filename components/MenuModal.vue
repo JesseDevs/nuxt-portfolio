@@ -21,26 +21,26 @@
 						</NuxtLink>
 					</li>
 					<li>
-						<a href="#ProjectSection" @click="ui.closeMenu">
+						<a href="/#ProjectSection" @click="ui.closeMenu">
 							<Icon name="iconoir:design-pencil" size="21" color="var(--white)" />
 							<span>Projects</span>
 						</a>
 					</li>
 					<li>
-						<a href="#AboutCard" @click="ui.closeMenu">
+						<a href="/#AboutCard" @click="ui.closeMenu">
 							<Icon name="material-symbols:person" size="21" color="var(--white)" />
 							<span>About</span>
 						</a>
 					</li>
 					<li>
-						<a href="https://twitter.com" target="_blank" @click="ui.closeMenu">
+						<NuxtLink href="writing" @click="ui.closeMenu">
 							<Icon
 								name="streamline:interface-content-book-open-content-books-book-open"
 								size="21"
 								color="var(--white)"
 							/>
 							<span>Writing</span>
-						</a>
+						</NuxtLink>
 					</li>
 					<!-- <li>
 						<a href="#" @click="ui.closeMenu">

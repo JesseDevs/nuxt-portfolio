@@ -5,6 +5,7 @@
 
 p a {
 	color: var(--brand);
+	font-weight: 400;
 
 	&:hover {
 		text-decoration: underline;
@@ -15,4 +16,8 @@ p a {
 	height: 100px;
 	background: linear-gradient(180deg, var(--background), rgb(var(--brand-rgb) / 0.5));
 	filter: blur(1px) opacity(0.5);
+}
+
+.brand-highlight {
+	color: var(--brand);
 }

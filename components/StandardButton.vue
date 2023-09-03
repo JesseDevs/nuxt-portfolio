@@ -8,7 +8,7 @@
 	const { onClick } = defineProps(['onClick']);
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.standardButton {
 		outline: none;
 		border: none;

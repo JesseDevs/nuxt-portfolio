@@ -21,8 +21,8 @@
 
 <style lang="scss">
 	header {
-		position: sticky;
-		top: 0;
+		// position: sticky;
+		// top: 0;
 		z-index: 20;
 		background-color: var(--background);
 		box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.5);

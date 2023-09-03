@@ -3,7 +3,7 @@
 		<text-content class="title">
 			<h1 class="roar-voice">{{ moduleData.heading }}</h1>
 
-			<h5 class="strict-voice">{{ moduleData.intro }}</h5>
+			<h3 class="chant-voice">{{ moduleData.intro }}</h3>
 
 			<p class="details" v-for="(detail, index) in moduleData.details" :key="index">
 				{{ detail }}
@@ -33,25 +33,20 @@
 		text-content {
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
+			gap: 1.3rem;
 			width: 100%;
 			z-index: 2;
 			animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.8s backwards;
+		}
+
+		h3 {
+			font-weight: 500;
 		}
 
 		a {
 			margin-top: 20px;
 			grid-column: 2/-1;
 			animation: image-in 0.6s cubic-bezier(0.5, 0, 0.1, 1) 1.2s both;
-		}
-	}
-
-	@media (min-width: 500px) {
-		landing-heading {
-			p.details {
-				max-width: 700px;
-				padding-bottom: 1.3rem;
-			}
 		}
 	}
 

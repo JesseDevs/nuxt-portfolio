@@ -51,27 +51,25 @@
 
 		@media (max-width: 500px) {
 			span {
-				font-size: var(--step-0);
+				font-size: var(--step-1);
 			}
 		}
 
 		a {
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			gap: 0.8rem;
 			width: fit-content;
 			margin: auto;
-			padding: 10px 20px;
-
 			transition: 0.25s color;
 		}
 
-		@media (max-width: 500px) {
+		@media (min-width: 430px) {
 			a {
-				flex-direction: column;
+				flex-direction: row;
 				gap: 0.6rem;
-				padding: 10px;
 			}
 		}
 	}
@@ -81,7 +79,7 @@
 	}
 
 	contact-page {
-		margin-top: 5rem;
+		margin-bottom: 3rem;
 		text-align: center;
 
 		text-content {

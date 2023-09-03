@@ -17,7 +17,7 @@
 }
 
 :root {
-	--background: #191919;
+	--background: rgb(25, 25, 25);
 	--bg-opaque: rgba(46, 45, 45, 0.322);
 	--background-light: rgba(189, 184, 184, 0.724);
 	--background-dark: rgb(8, 8, 8);
@@ -26,6 +26,7 @@
 	--brand: rgb(146, 209, 164);
 	--brand-rgb: 146 209 164;
 	--white: #f4f0f0;
+	--black-rgb: 25 25 25;
 }
 
 body.light {
@@ -49,19 +50,13 @@ body {
 	color: var(--text);
 	background: var(--background);
 	font-family: 'Poppins', sans-serif;
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 1.1;
 	font-style: normal;
 }
 
 section {
 	overflow-x: hidden;
-}
-
-@media(min-width:550px) {
-	body {
-		font-weight: 300;
-	}
 }
 
 .roar-voice {
@@ -130,7 +125,7 @@ a {
 
 p {
 	line-height: 1.5;
-	max-width: 60ch;
+	max-width: 57ch;
 }
 
 p a {

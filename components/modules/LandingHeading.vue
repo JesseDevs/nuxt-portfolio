@@ -5,7 +5,13 @@
 
 			<h5 class="strict-voice">{{ moduleData.intro }}</h5>
 
-			<p class="details">{{ moduleData.details }}</p>
+			<p class="details" v-for="(detail, index) in moduleData.details" :key="index">
+				{{ detail }}
+				<a v-if="index === 2" href="#ContactPage">
+					Connect
+					<Icon name="material-symbols:arrow-right-alt" size="25" />
+				</a>
+			</p>
 		</text-content>
 		<CubeBlock />
 	</landing-heading>
@@ -44,6 +50,7 @@
 		landing-heading {
 			p.details {
 				max-width: 700px;
+				padding-bottom: 1.3rem;
 			}
 		}
 	}

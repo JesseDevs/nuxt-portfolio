@@ -2,7 +2,7 @@
 	<SiteNav />
 
 	<main class="page-content">
-		<section>
+		<section id="project-modal">
 			<inner-column>
 				<project-modal>
 					<picture class="project-thumbnail">

@@ -40,7 +40,7 @@
 
 				<p class="project-description">
 					{{ project.description }}
-					<NuxtLink :to="`/projects/${project.slug}`"
+					<NuxtLink :to="`/projects/${project.slug}/#project-modal`"
 						>Learn More<Icon name="material-symbols:arrow-right-alt" size="25"
 					/></NuxtLink>
 				</p>

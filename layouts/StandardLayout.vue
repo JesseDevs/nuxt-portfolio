@@ -19,8 +19,13 @@
 			module: 'LandingHeading',
 			heading: 'Jesse Felix',
 			intro: 'Front-End Developer',
-			details:
-				'I’m a Web Developer located in Los Angeles, California. I have a passion for crafting cool digital experiences. Maybe with you?',
+			details: [
+				'I’m a Front-End Developer based in Los Angeles, California. My journey in web development has been fueled by a genuine passion for creating seamless online experiences.',
+
+				'From coding elegant designs to bringing user-friendly interfaces to life, I’ve honed my skills.',
+
+				'Feel free to reach out – I’m always up for a new challenge!',
+			],
 			image: 'images/details/comp.webp',
 		},
 		{
@@ -50,7 +55,7 @@
 		{
 			module: 'ContactPage',
 			heading: 'Contact',
-			text: 'Shoot me an email if you want to connect! You can also find me on <a href="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://twitter.com/Jesse_Devs" target="_blank" rel="nofollow">Twitter</a> if that&apos;s more your speed.',
+			text: 'You can also find me on <a href="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://twitter.com/Jesse_Devs" target="_blank" rel="nofollow">Twitter</a>. Shoot me an email if you’d rather connect directly! ',
 		},
 	]);
 </script>

@@ -1,5 +1,5 @@
 <template>
-	<landing-heading class="grid-template">
+	<landing-heading>
 		<text-content class="title">
 			<h1 class="roar-voice">{{ moduleData.heading }}</h1>
 
@@ -26,9 +26,10 @@
 <style scoped lang="scss">
 	landing-heading {
 		position: relative;
+		display: grid;
+		grid-template-columns: 1fr;
 		place-items: center;
-		height: 40vh;
-		margin-bottom: 4.8rem;
+		min-height: 40vh;
 
 		text-content {
 			display: flex;
@@ -36,7 +37,6 @@
 			gap: 1.3rem;
 			width: 100%;
 			z-index: 2;
-			animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 0.8s backwards;
 		}
 
 		h3 {
@@ -46,7 +46,6 @@
 		a {
 			margin-top: 20px;
 			grid-column: 2/-1;
-			animation: image-in 0.6s cubic-bezier(0.5, 0, 0.1, 1) 1.2s both;
 		}
 	}
 

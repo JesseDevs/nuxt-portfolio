@@ -11,32 +11,32 @@
 
 				<ul class="nav-container">
 					<li>
-						<NuxtLink to="/" @click="ui.closeMenu">
+						<NuxtLink to="/" @click="ui.closeMenu" class="strict-voice">
 							<Icon
 								name="material-symbols:other-houses"
-								size="21"
+								size="28"
 								color="var(--white)"
 							/>
 							<span>Home</span>
 						</NuxtLink>
 					</li>
 					<li>
-						<a href="/#ProjectSection" @click="ui.closeMenu">
-							<Icon name="iconoir:design-pencil" size="21" color="var(--white)" />
+						<a href="/#ProjectSection" @click="ui.closeMenu" class="strict-voice">
+							<Icon name="iconoir:design-pencil" size="28" color="var(--white)" />
 							<span>Projects</span>
 						</a>
 					</li>
 					<li>
-						<a href="/#AboutCard" @click="ui.closeMenu">
-							<Icon name="material-symbols:person" size="21" color="var(--white)" />
+						<a href="/#AboutCard" @click="ui.closeMenu" class="strict-voice">
+							<Icon name="material-symbols:person" size="28" color="var(--white)" />
 							<span>About</span>
 						</a>
 					</li>
 					<li>
-						<NuxtLink href="writing" @click="ui.closeMenu">
+						<NuxtLink href="writing" @click="ui.closeMenu" class="strict-voice">
 							<Icon
 								name="streamline:interface-content-book-open-content-books-book-open"
-								size="21"
+								size="28"
 								color="var(--white)"
 							/>
 							<span>Writing</span>
@@ -44,7 +44,7 @@
 					</li>
 					<!-- <li>
 						<a href="#" @click="ui.closeMenu">
-							<Icon name="lucide:layout-grid" size="21" color="var(--white)" />
+							<Icon name="lucide:layout-grid" size="28" color="var(--white)" />
 							<span>Layout</span>
 						</a>
 					</li> -->
@@ -52,15 +52,15 @@
 						<a href="#" @click="ui.closeMenu">
 							<Icon
 								name="icon-park-outline:form-one"
-								size="21"
+								size="28"
 								color="var(--white)"
 							/>
 							<span>Forms</span>
 						</a>
 					</li> -->
 					<li>
-						<a href="#ContactPage" @click="ui.closeMenu">
-							<Icon name="mdi:message-reply" size="21" color="var(--white)" />
+						<a href="#ContactPage" @click="ui.closeMenu" class="strict-voice">
+							<Icon name="mdi:message-reply" size="28" color="var(--white)" />
 							<span>Contact</span>
 						</a>
 					</li>
@@ -158,7 +158,7 @@
 			display: flex;
 			align-items: center;
 			gap: 10px;
-			padding: 8px 10px;
+			padding: 10px 15px;
 			border-radius: 0.375rem;
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 			font-weight: 500;

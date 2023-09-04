@@ -92,6 +92,15 @@
 			flex-direction: column;
 			width: 100%;
 			gap: 1.3rem;
+
+			picture {
+				aspect-ratio: 6/4;
+				img {
+					object-fit: cover;
+					width: 100%;
+					height: 100%;
+				}
+			}
 		}
 	}
 </style>

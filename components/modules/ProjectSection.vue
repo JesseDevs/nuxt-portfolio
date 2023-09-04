@@ -53,7 +53,7 @@
 	article-grid {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 3.2rem;
+		gap: 5rem;
 
 		@media (min-width: 768px) {
 			grid-template-columns: 1fr 1fr;

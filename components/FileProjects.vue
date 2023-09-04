@@ -1,18 +1,27 @@
 <template>
-	<ul class="pfiles-container" v-for="(file, index) in project.modalContent.files">
-		<li>
+	<ul class="pfiles-container">
+		<li v-for="(file, index) in project.modalContent.files">
 			<article>
 				<div class="file-container">
-					<p class="calm-voice">{{ file.title }}</p>
-					<div class="line" />
-					<div>
-						<a :href="file.github" target="_blank">
-							<Icon name="mdi:github" color="var(--white)" size="30" />
-						</a>
-						<a :href="file.link" target="_blank">
-							<Icon name="bxs:send" color="var(--white)" size="30"
-						/></a>
+					<div class="file-header">
+						<h4 class="chant-voice">{{ file.title }}</h4>
+						<div class="line" />
+						<div class="file-links">
+							<a :href="file.git" target="_blank">
+								<Icon name="mdi:github" color="var(--white)" size="30" />
+							</a>
+							<a :href="file.link" target="_blank">
+								<Icon name="bxs:send" color="var(--white)" size="30"
+							/></a>
+						</div>
 					</div>
+
+					<file-content>
+						<picture v-if="file.image">
+							<img :src="file.image" alt="" />
+						</picture>
+						<p v-html="file.p"></p>
+					</file-content>
 				</div>
 			</article>
 		</li>
@@ -25,4 +34,64 @@
 	});
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	.line {
+		width: 100%;
+		height: 1px;
+		background: var(--text);
+		opacity: 0.3;
+	}
+	.pfiles-container {
+		padding: 3rem 0;
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 5rem;
+
+		@media (min-width: 980px) {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			column-gap: 3rem;
+		}
+
+		.file-header {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			h4 {
+				flex-shrink: 0;
+			}
+		}
+
+		.file-links {
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+
+			a {
+				opacity: 0.85;
+
+				&:hover {
+					opacity: 1;
+					svg {
+						color: var(--brand) !important;
+					}
+				}
+			}
+		}
+
+		.file-container {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 1.3rem;
+		}
+
+		file-content {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 1.3rem;
+		}
+	}
+</style>

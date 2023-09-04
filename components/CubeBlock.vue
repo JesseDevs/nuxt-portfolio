@@ -43,6 +43,10 @@
 		a {
 			cursor: auto;
 		}
+
+		@media (min-width: 1000px) {
+			scale: 9;
+		}
 	}
 
 	.cube {

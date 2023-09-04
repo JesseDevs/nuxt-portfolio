@@ -7,6 +7,16 @@
 		</text-content>
 
 		<MyLinks class="isAboutCard" />
+
+		<div class="image-container">
+			<img
+				v-for="card in cards"
+				:key="card"
+				:src="card.url"
+				:alt="card.title"
+				loading="lazy"
+			/>
+		</div>
 	</about-card>
 </template>
 
@@ -22,7 +32,7 @@
 			id: 1,
 		},
 		{
-			url: 'https://placehold.co/600x400',
+			url: 'https://placehold.co/400x400',
 			title: 'Title 2',
 			id: 2,
 		},
@@ -32,24 +42,9 @@
 			id: 3,
 		},
 		{
-			url: 'https://placehold.co/600x400',
+			url: 'https://placehold.co/400x400',
 			title: 'Title 4',
 			id: 4,
-		},
-		{
-			url: 'https://placehold.co/600x400',
-			title: 'Title 5',
-			id: 5,
-		},
-		{
-			url: 'https://placehold.co/600x400',
-			title: 'Title 6',
-			id: 6,
-		},
-		{
-			url: 'https://placehold.co/600x400',
-			title: 'Title 7',
-			id: 7,
 		},
 	];
 </script>
@@ -64,6 +59,7 @@
 		padding-bottom: 1.3rem;
 	}
 	.links-container {
+		padding-bottom: 1.3rem;
 		a:nth-of-type(even) {
 			div.helper {
 				top: -110%;
@@ -85,6 +81,90 @@
 			transition: opacity 0.3s ease-in-out;
 			p {
 				padding: 5px;
+			}
+		}
+	}
+
+	@keyframes FadeInOut {
+		0% {
+			opacity: 1;
+		}
+
+		17% {
+			opacity: 1;
+		}
+
+		25% {
+			opacity: 0;
+		}
+
+		92% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	.image-container {
+		aspect-ratio: 5 /6;
+		position: relative;
+		width: 100%;
+		height: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		margin: 0 auto;
+
+		img {
+			animation: FadeInOut 8s ease-in-out infinite;
+			position: absolute;
+		}
+
+		img:nth-of-type(1) {
+			// 8s
+			z-index: 10;
+		}
+
+		img:nth-of-type(2) {
+			//10s
+			animation-delay: 2s;
+			z-index: 8;
+		}
+
+		img:nth-of-type(3) {
+			//12s
+			animation-delay: 4s;
+			z-index: 6;
+		}
+
+		img:nth-of-type(4) {
+			//14s
+			animation-delay: 6s;
+			z-index: 4;
+		}
+	}
+
+	@media (min-width: 750px) {
+		img {
+			position: static;
+			aspect-ratio: 5/25;
+		}
+
+		.image-container {
+			picture {
+				display: flex;
+				gap: 10px;
+			}
+
+			img {
+				animation: initial;
 			}
 		}
 	}

@@ -5,6 +5,13 @@
 				<grid-blog class="writing-container">
 					<SectionHeader title="Writing" dir="rr" />
 
+					<p>
+						Whenever an opportunity arises, I craft engaging posts. Some delve into
+						detailed case studies that offer a profound examination of various projects,
+						while others are simply me indulging in the art of self-expression. Often,
+						you'll discover a TV or movie quote intertwined within.
+					</p>
+
 					<ul>
 						<li v-for="(content, index) in writingContent" :key="index">
 							<BlogCard :content="content" />
@@ -74,6 +81,10 @@
 	.writing-container {
 		display: flex;
 		flex-direction: column;
+
+		p {
+			padding-bottom: 2.4rem;
+		}
 
 		ul {
 			display: flex;

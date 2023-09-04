@@ -14,7 +14,10 @@
 				<Icon name="fa6-solid:quote-right" size="24" />
 			</blockquote>
 
-			<a class="standardButton" :href="content.link" target="_blank">Read More</a>
+			<a :href="content.link" target="_blank"
+				>Read More
+				<Icon name="material-symbols:arrow-right-alt" size="25" />
+			</a>
 		</text-content>
 	</blog-card>
 </template>
@@ -31,27 +34,16 @@
 		flex-direction: column;
 		width: 100%;
 
-		.standardButton {
-			outline: none;
-			border: none;
-			cursor: pointer;
+		a {
 			display: block;
+			font-weight: 400;
+			color: var(--brand);
 
-			padding: 1rem 2rem;
-			margin-top: 15px;
-			font-weight: 500;
-			max-width: fit-content;
+			cursor: pointer;
+		}
 
-			background: var(--brand);
-			color: var(--background-dark);
-			font-size: var(--step-0);
-			border-radius: 4px;
-
-			transition: 0.2s opacity;
-
-			&:hover {
-				opacity: 0.8;
-			}
+		a:hover {
+			text-decoration: underline;
 		}
 
 		picture {

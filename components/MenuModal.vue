@@ -11,7 +11,7 @@
 
 				<ul class="nav-container">
 					<li>
-						<NuxtLink to="/" @click="ui.closeMenu" class="strict-voice">
+						<NuxtLink to="/" @click="ui.closeMenu">
 							<Icon
 								name="material-symbols:other-houses"
 								size="28"
@@ -21,19 +21,19 @@
 						</NuxtLink>
 					</li>
 					<li>
-						<a href="/#ProjectSection" @click="ui.closeMenu" class="strict-voice">
+						<a href="/#ProjectSection" @click="ui.closeMenu">
 							<Icon name="iconoir:design-pencil" size="28" color="var(--white)" />
 							<span>Projects</span>
 						</a>
 					</li>
 					<li>
-						<a href="/#AboutCard" @click="ui.closeMenu" class="strict-voice">
+						<a href="/#AboutCard" @click="ui.closeMenu">
 							<Icon name="material-symbols:person" size="28" color="var(--white)" />
 							<span>About</span>
 						</a>
 					</li>
 					<li>
-						<NuxtLink href="writing" @click="ui.closeMenu" class="strict-voice">
+						<NuxtLink href="writing" @click="ui.closeMenu">
 							<Icon
 								name="streamline:interface-content-book-open-content-books-book-open"
 								size="28"
@@ -59,7 +59,7 @@
 						</a>
 					</li> -->
 					<li>
-						<a href="#ContactPage" @click="ui.closeMenu" class="strict-voice">
+						<a href="#ContactPage" @click="ui.closeMenu">
 							<Icon name="mdi:message-reply" size="28" color="var(--white)" />
 							<span>Contact</span>
 						</a>
@@ -135,6 +135,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
+			padding-left: 15px;
 
 			.box-container {
 				scale: 1;
@@ -158,7 +159,7 @@
 			display: flex;
 			align-items: center;
 			gap: 10px;
-			padding: 10px 15px;
+			padding: 8px 15px;
 			border-radius: 0.375rem;
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 			font-weight: 500;

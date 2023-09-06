@@ -72,7 +72,7 @@
 			gap: 0.5rem;
 
 			a {
-				font-size: var(--step-0);
+				font-size: var(--step--1);
 				font-weight: 300;
 				color: var(--text);
 

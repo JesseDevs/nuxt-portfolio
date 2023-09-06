@@ -1,26 +1,17 @@
 <script setup>
-	const selectedTheme = ref('dark');
-	const setSelectedTheme = (theme) => {
-		selectedTheme.value = theme;
-	};
+	import { useInterfaceStore } from '~/stores/interface';
 
-	useHead({
-		bodyAttrs: {
-			class: computed(() => {
-				return selectedTheme.value;
-			}),
-		},
-	});
+	const ui = useInterfaceStore();
 </script>
 
 <template>
-	<div :class="`theme-toggle ${selectedTheme}`">
-		<button class="light-button" @click="setSelectedTheme('light')">
+	<div :class="`theme-toggle ${ui.selectedTheme}`">
+		<button class="light-button" @click="ui.setSelectedTheme('light')">
 			<Icon name="ph:sun-bold" size="21" />
 			<span class="relative z-10">Light</span>
 		</button>
 
-		<button class="dark-button" @click="setSelectedTheme('dark')">
+		<button class="dark-button" @click="ui.setSelectedTheme('dark')">
 			<Icon name="material-symbols:dark-mode-outline" size="21" />
 			<span class="relative z-10">Dark</span>
 		</button>

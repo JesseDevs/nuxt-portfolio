@@ -61,9 +61,10 @@
 	}
 
 	.links-container.isAboutCard {
+		gap: 10px;
 		a:nth-of-type(even) {
 			div.helper {
-				top: -110%;
+				top: -120%;
 				bottom: auto;
 			}
 		}
@@ -74,9 +75,13 @@
 			}
 		}
 
+		svg {
+			scale: 1.2;
+		}
+
 		div.helper {
 			position: absolute;
-			bottom: -110%;
+			bottom: -120%;
 			left: 0;
 			opacity: 0;
 			pointer-events: none;

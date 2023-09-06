@@ -31,6 +31,19 @@ export const useInterfaceStore = defineStore('interface', function () {
 		},
 	});
 
+	const selectedTheme = ref('dark');
+	const setSelectedTheme = (theme) => {
+		selectedTheme.value = theme;
+	};
+
+	useHead({
+		bodyAttrs: {
+			class: computed(() => {
+				return selectedTheme.value;
+			}),
+		},
+	});
+
 	return {
 		mainMenuOpen,
 		menuClass,
@@ -39,5 +52,7 @@ export const useInterfaceStore = defineStore('interface', function () {
 		closeMenu,
 		projectModal,
 		closeProjectModal,
+		selectedTheme,
+		setSelectedTheme,
 	};
 });

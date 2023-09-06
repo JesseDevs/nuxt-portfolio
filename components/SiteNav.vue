@@ -6,6 +6,8 @@
 				<button class="hamburger-button icon-button" @click="ui.toggleMainMenu">
 					<Icon name="grommet-icons:menu" size="21" color="var(--text)" />
 				</button>
+
+				<NavContainer class="big-screen-nav" />
 			</nav>
 		</inner-column>
 
@@ -35,6 +37,12 @@
 				flex-direction: row;
 				align-items: center;
 				justify-content: space-between;
+
+				.icon-button {
+					&:hover {
+						background-color: rgba(166, 163, 163, 0.4);
+					}
+				}
 			}
 		}
 	}
@@ -44,12 +52,46 @@
 		border: none;
 		background-color: transparent;
 		border-radius: 4px;
-		padding: 4px;
+		padding: 6px;
 		transition: background-color 0.2s ease-in-out;
 		cursor: pointer;
 
 		&:hover {
-			background-color: rgb(47, 46, 46);
+			background-color: var(--fade);
+		}
+	}
+
+	nav.main-menu {
+		ul.big-screen-nav {
+			flex-direction: row;
+			display: none;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.2s ease;
+			padding: 0;
+			gap: 0.5rem;
+
+			a {
+				font-size: var(--step-0);
+				font-weight: 300;
+				color: var(--text);
+
+				svg {
+					display: none;
+				}
+			}
+		}
+
+		@media (min-width: 900px) {
+			ul.big-screen-nav {
+				display: flex;
+				opacity: 1;
+				pointer-events: all;
+			}
+
+			.hamburger-button {
+				display: none;
+			}
 		}
 	}
 </style>

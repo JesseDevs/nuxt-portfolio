@@ -43,6 +43,40 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		row-gap: 1.3rem;
+
+		picture {
+			width: 100%;
+			aspect-ratio: 16 / 8;
+			cursor: pointer;
+			position: relative;
+			border-radius: 1rem;
+
+			&:before {
+				content: '';
+				background-color: rgb(var(--brand-rgb) / 0.6);
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: absolute;
+				z-index: -1;
+				bottom: -1rem;
+				right: -1rem;
+				border-radius: 1rem;
+			}
+		}
+
+		img {
+			border-radius: 1rem;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+			opacity: 1;
+		}
+
+		&:hover {
+			img {
+				opacity: 0.85;
+				transform: translate(1rem, 1rem);
+			}
+		}
 		@media (min-width: 900px) {
 			grid-template-columns: 1fr 1fr;
 			column-gap: 3rem;
@@ -50,23 +84,6 @@
 
 			.fix-grid {
 				grid-column: 1/-1;
-			}
-
-			picture {
-				position: relative;
-
-				&:before {
-					content: '';
-					background-color: rgb(var(--brand-rgb) / 0.6);
-					width: 100%;
-					height: 100%;
-					display: block;
-					position: absolute;
-					z-index: -1;
-					bottom: -1rem;
-					right: -1rem;
-					border-radius: 1rem;
-				}
 			}
 
 			h3 {

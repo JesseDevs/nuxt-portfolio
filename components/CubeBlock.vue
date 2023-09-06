@@ -81,6 +81,12 @@
 		}
 	}
 
+	@media (prefers-color-scheme: light) {
+		.face {
+			border: 2px solid var(--fade);
+		}
+	}
+
 	.front {
 		transform: translateZ(12.5px);
 	}

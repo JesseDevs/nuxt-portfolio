@@ -91,7 +91,7 @@
 			flex-direction: column;
 			gap: 4rem;
 
-			@media (min-width: 980px) {
+			@media (min-width: 900px) {
 				gap: 6rem;
 			}
 		}

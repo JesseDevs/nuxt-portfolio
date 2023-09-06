@@ -63,21 +63,21 @@
 				right: -1rem;
 				border-radius: 1rem;
 			}
-		}
 
-		img {
-			border-radius: 1rem;
-			transition: transform 0.3s ease, opacity 0.3s ease;
-			opacity: 1;
-		}
-
-		&:hover {
 			img {
-				opacity: 0.85;
-				transform: translate(1rem, 1rem);
+				border-radius: 1rem;
+				transition: transform 0.3s ease, opacity 0.3s ease;
+				opacity: 1;
+			}
+
+			&:hover {
+				img {
+					opacity: 0.85;
+					transform: translate(1rem, 1rem);
+				}
 			}
 		}
-		@media (min-width: 900px) {
+		@media (min-width: 850px) {
 			grid-template-columns: 1fr 1fr;
 			column-gap: 3rem;
 			place-items: center;

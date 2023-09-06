@@ -93,7 +93,7 @@
 			}
 		}
 
-		@media (min-width: 980px) {
+		@media (min-width: 900px) {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			column-gap: 1.3rem;

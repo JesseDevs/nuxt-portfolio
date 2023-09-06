@@ -28,13 +28,14 @@
 
 		<article-grid>
 			<article v-for="(project, index) in projects" :key="index" class="project">
-				<picture class="projectImage" @click="toggleProjectModal(index)">
-					<img :src="project.imgSrc" />
-				</picture>
-				<!-- Render project information -->
+				<NuxtLink :to="`/projects/${project.slug}/#project-modal`" class="projectImage">
+					<picture>
+						<img :src="project.imgSrc" />
+					</picture>
+				</NuxtLink>
 
 				<div class="project-container">
-					<h4 class="strict-voice">{{ project.title }}</h4>
+					<h4 class="chant-voice">{{ project.title }}</h4>
 					<div class="project-title-line" />
 				</div>
 
@@ -67,30 +68,39 @@
 	}
 
 	.projectImage {
-		width: 100%;
-		aspect-ratio: 16 / 9;
-		background: rgb(var(--brand-rgb) / 0.2);
-		cursor: pointer;
-		position: relative;
-		border-radius: 0.8rem;
-		overflow: hidden;
+		padding-right: 15px;
+		padding-bottom: 15px;
+		picture {
+			width: 100%;
+			aspect-ratio: 16 / 8;
+			cursor: pointer;
+			position: relative;
+			border-radius: 1rem;
+
+			&:before {
+				content: '';
+				background-color: rgb(var(--brand-rgb) / 0.6);
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: absolute;
+				z-index: -1;
+				bottom: -1rem;
+				right: -1rem;
+				border-radius: 1rem;
+			}
+		}
 
 		img {
-			width: 85%;
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			translate: -50% 0%;
-
-			transition: 0.25s all;
-
-			border-radius: 0.4rem;
+			border-radius: 1rem;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+			opacity: 1;
 		}
 
 		&:hover {
 			img {
-				scale: 1.1;
-				translate: -50% -5%;
+				opacity: 0.85;
+				transform: translate(1rem, 1rem);
 			}
 		}
 	}
@@ -102,6 +112,7 @@
 
 		h4 {
 			flex-shrink: 0;
+			font-weight: 500;
 		}
 
 		a {

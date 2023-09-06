@@ -2,16 +2,12 @@
 	<SiteNav />
 
 	<StandardLayout />
+
 	<div class="bottom-fade-out"></div>
 </template>
 
 <script setup>
 	import StandardLayout from '~/layouts/StandardLayout.vue';
-	import { useProjectStore } from '~/stores/projects.js';
-	import { useInterfaceStore } from '~/stores/interface';
-
-	const ui = useInterfaceStore();
-	const projects = useProjectStore().projects;
 
 	// const initial = {
 	// 	x: -100,

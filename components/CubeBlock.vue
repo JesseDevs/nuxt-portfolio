@@ -54,7 +54,7 @@
 		width: 30px;
 		height: 30px;
 		transform-style: preserve-3d;
-		animation: turn 5s linear infinite;
+		animation: turn 8s linear infinite;
 	}
 	// .cube:hover {
 	// 	animation-play-state: paused;
@@ -64,7 +64,7 @@
 		width: 25px;
 		height: 25px;
 		background: rgb(var(--brand-rgb) / 0.6);
-		border: 3px solid var(--bg-opaque);
+		border: 2px solid var(--bg-opaque);
 		position: absolute;
 		opacity: 0.5;
 		display: flex;
@@ -73,6 +73,12 @@
 		font-family: Arial, sans-serif;
 		font-size: 2rem;
 		transition: transform 500ms;
+	}
+
+	body.light {
+		.face {
+			border: 2px solid var(--fade);
+		}
 	}
 
 	.front {

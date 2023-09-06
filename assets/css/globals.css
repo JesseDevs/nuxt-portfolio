@@ -21,12 +21,15 @@
 	--bg-opaque: rgba(46, 45, 45, 0.322);
 	--background-light: rgba(189, 184, 184, 0.724);
 	--background-dark: rgb(8, 8, 8);
+	--fade: rgba(166, 163, 163, 0.4);
 
 	--text: rgb(235, 236, 243);
 	--brand: rgb(146, 209, 164);
 	--brand-rgb: 146 209 164;
 	--white: #f4f0f0;
 	--black-rgb: 25 25 25;
+
+	--mode: rgb(235, 236, 243);
 }
 
 body.light {
@@ -34,10 +37,15 @@ body.light {
 	--bg-opaque: rgba(46, 45, 45, 0.322);
 	--background-light: rgba(189, 184, 184, 0.724);
 	--background-dark: rgb(8, 8, 8);
+	--fade: #6f6d6d8a;
 
 	--text: rgb(22, 22, 23);
-	--brand: rgb(169, 10, 255);
-	--brand-rgb: 169 10 255
+	--brand: rgb(0, 0, 128);
+	--brand-rgb: 0 0 128;
+	--white: #f4f0f0;
+	--black-rgb: 25 25 25;
+
+	--mode: rgb(22, 22, 23);
 }
 
 html,

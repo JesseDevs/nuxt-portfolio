@@ -8,10 +8,10 @@
 						<div class="line" />
 						<div class="file-links">
 							<a :href="file.git" target="_blank">
-								<Icon name="mdi:github" color="var(--white)" size="30" />
+								<Icon name="mdi:github" size="30" />
 							</a>
 							<a :href="file.link" target="_blank">
-								<Icon name="bxs:send" color="var(--white)" size="30"
+								<Icon name="bxs:send" size="30"
 							/></a>
 						</div>
 					</div>
@@ -70,6 +70,12 @@
 
 			a {
 				opacity: 0.85;
+				transition: opacity 0.3s ease;
+
+				svg {
+					transition: color 0.3s ease;
+					color: var(--fade);
+				}
 
 				&:hover {
 					opacity: 1;

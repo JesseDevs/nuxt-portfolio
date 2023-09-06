@@ -9,13 +9,15 @@
 		<MyLinks class="isAboutCard" />
 
 		<div class="image-container">
-			<img
-				v-for="card in cards"
-				:key="card"
-				:src="card.url"
-				:alt="card.title"
-				loading="lazy"
-			/>
+			<picture>
+				<img
+					v-for="card in cards"
+					:key="card"
+					:src="card.url"
+					:alt="card.title"
+					loading="lazy"
+				/>
+			</picture>
 		</div>
 	</about-card>
 </template>
@@ -59,7 +61,7 @@
 		padding-bottom: 1.3rem;
 	}
 	.links-container {
-		padding-bottom: 1.3rem;
+		padding-bottom: 3rem;
 		a:nth-of-type(even) {
 			div.helper {
 				top: -110%;
@@ -114,13 +116,17 @@
 	}
 
 	.image-container {
-		aspect-ratio: 5 /6;
 		position: relative;
 		width: 100%;
-		height: 300px;
 		margin-left: auto;
 		margin-right: auto;
 		margin: 0 auto;
+
+		picture {
+			position: relative;
+			aspect-ratio: 7/6;
+			min-height: 300px;
+		}
 
 		img {
 			animation: FadeInOut 8s ease-in-out infinite;
@@ -151,20 +157,17 @@
 		}
 	}
 
-	@media (min-width: 750px) {
-		img {
-			position: static;
-			aspect-ratio: 5/25;
-		}
-
+	@media (min-width: 700px) {
 		.image-container {
 			picture {
-				display: flex;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
 				gap: 10px;
-			}
 
-			img {
-				animation: initial;
+				img {
+					animation: initial;
+					position: static;
+				}
 			}
 		}
 	}

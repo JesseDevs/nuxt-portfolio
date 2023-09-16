@@ -119,6 +119,7 @@
 			aspect-ratio: 7/6;
 			min-height: 400px;
 			max-width: 300px;
+			margin-left: auto;
 		}
 
 		img {
@@ -147,7 +148,7 @@
 		}
 	}
 
-	@media (min-width: 700px) {
+	@media (min-width: 600px) {
 		.image-container {
 			picture {
 				display: grid;
@@ -155,13 +156,15 @@
 				gap: 10px;
 				width: 100%;
 				max-width: none;
-				aspect-ratio: 6/3;
+				aspect-ratio: none;
 				min-height: none;
 
 				img {
+					object-fit: cover;
 					animation: initial;
 					position: static;
-					zoom: 0.8;
+					zoom: 0.9;
+					max-height: 400px;
 				}
 			}
 		}

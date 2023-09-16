@@ -1,16 +1,14 @@
 <template>
-	<div
-		@click="handleModalContainerClick"
-		:class="`modal-container ${ui.menuClass} ${ui.projectClass}`"
-	>
+	<div @click="emit('modalEvent')" :class="`modal-container ${ui.menuClass} ${ui.projectClass}`">
 		<slot />
 	</div>
 </template>
 
 <script setup>
 	import { useInterfaceStore } from '~/stores/interface';
-
 	const ui = useInterfaceStore();
+
+	const emit = defineEmits(['modalEvent']);
 
 	const handleModalContainerClick = (event) => {
 		if (!event.target.closest('menu-modal')) {

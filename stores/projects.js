@@ -19,7 +19,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 					{
 						title: 'Legends',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/legends',
-						link: 'https://jessedevs.net/_projects/legends/',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/legends/',
 						image: '/projects/legends.png',
 						p: [
 							'The <em>‘Legends’</em> project showcases the initial ideas for approaching a CMS. It is a static data project that uses JSON, a standard lightweight data interchange format that is easy to read and write in the industry.',
@@ -29,7 +29,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 					{
 						title: 'Fighters',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/fighters-crud/',
-						link: 'https://jessedevs.net/_projects/fighters-crud/',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/fighters-crud/',
 						image: '/projects/fighters.png',
 						p: [
 							'The <em>‘Fighters’</em> project is the next level up. It is a lean PHP CRUD (create, read, update, and delete) project that enables users to create their own list of fighters according to their preferences.',
@@ -73,7 +73,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 					{
 						title: 'Workout App',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/workout-app//',
-						link: 'https://jessedevs.net/_projects/workout-app/',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/workout-app/',
 						image: '/projects/workout.png',
 						p: [
 							'My <em>‘Workout APP’</em> took a simple interface from the forms and created more than just a short answer for the user. I often have to remember the main body focus for my workout and the types of sets needed. This app is a simple way to create short lists of workouts dedicated to the muscle group. It was built using local storage and JavaScript class methods to generate app functionality, while using imports and exports to create templates for each page.',
@@ -82,7 +82,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 					{
 						title: 'Bill Split App',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/bill-app/',
-						link: 'https://jessedevs.net/_projects/bill-app/',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/bill-app/',
 						image: '/projects/bill.png',
 						p: [
 							'The <em>‘Bill Split APP’</em> was inspired by a night out with friends and the effort it took to even divide the bill. It has an interface with more personality and functionality. I used similar routing in Vanilla JavaScript to create multiple page templates.',
@@ -125,7 +125,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 					},
 					{
 						title: 'Theme Challenge',
-						link: 'https://jessedevs.net/_projects/theme-challenge/',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/theme-challenge/',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/theme-challenge',
 						image: '/projects/theme.png',
 						p: [
@@ -134,7 +134,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 					},
 					{
 						title: 'Wireframe',
-						link: 'https://jessedevs.net/_projects/wireframe/',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/wireframe/',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/wireframe',
 						image: '/projects/wireframe.png',
 						p: [

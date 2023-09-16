@@ -10,7 +10,7 @@
 
 		<div class="image-container">
 			<picture>
-				<img
+				<NuxtImg
 					v-for="card in cards"
 					:key="card"
 					:src="card.url"
@@ -29,24 +29,20 @@
 
 	const cards = [
 		{
-			url: 'https://placehold.co/600x400',
+			url: '/me-imgs/imagine.jpg',
 			title: 'Title 1',
 			id: 1,
 		},
+
 		{
-			url: 'https://placehold.co/400x400',
-			title: 'Title 2',
-			id: 2,
-		},
-		{
-			url: 'https://placehold.co/600x400',
-			title: 'Title 3',
-			id: 3,
-		},
-		{
-			url: 'https://placehold.co/400x400',
+			url: '/me-imgs/beach.jpg',
 			title: 'Title 4',
 			id: 4,
+		},
+		{
+			url: '/me-imgs/diego.jpg',
+			title: 'Title 3',
+			id: 3,
 		},
 	];
 </script>
@@ -88,10 +84,6 @@
 	}
 
 	@keyframes FadeInOut {
-		0% {
-			opacity: 1;
-		}
-
 		17% {
 			opacity: 1;
 		}
@@ -110,7 +102,7 @@
 	}
 
 	img {
-		object-fit: cover;
+		object-fit: contain;
 		width: 100%;
 		height: 100%;
 	}
@@ -125,12 +117,16 @@
 		picture {
 			position: relative;
 			aspect-ratio: 7/6;
-			min-height: 300px;
+			min-height: 400px;
+			max-width: 300px;
 		}
 
 		img {
-			animation: FadeInOut 8s ease-in-out infinite;
+			animation: FadeInOut 6s ease-in-out infinite;
 			position: absolute;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
 		}
 
 		img:nth-of-type(1) {
@@ -149,24 +145,23 @@
 			animation-delay: 4s;
 			z-index: 6;
 		}
-
-		img:nth-of-type(4) {
-			//14s
-			animation-delay: 6s;
-			z-index: 4;
-		}
 	}
 
 	@media (min-width: 700px) {
 		.image-container {
 			picture {
 				display: grid;
-				grid-template-columns: 1fr 1fr;
+				grid-template-columns: 1fr 1fr 1fr;
 				gap: 10px;
+				width: 100%;
+				max-width: none;
+				aspect-ratio: 6/3;
+				min-height: none;
 
 				img {
 					animation: initial;
 					position: static;
+					zoom: 0.8;
 				}
 			}
 		}

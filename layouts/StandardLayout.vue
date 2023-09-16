@@ -55,7 +55,7 @@
 		{
 			module: 'ContactPage',
 			heading: 'Contact',
-			text: 'You can also find me on <a href="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://twitter.com/Jesse_Devs" target="_blank" rel="nofollow">Twitter</a>. Shoot me an email if you’d rather connect directly! ',
+			text: 'You can find me on <a href="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://twitter.com/Jesse_Devs" target="_blank" rel="nofollow">Twitter</a>. Shoot me an email if you’d rather connect directly! ',
 		},
 	]);
 </script>

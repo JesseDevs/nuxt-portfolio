@@ -158,6 +158,7 @@
 				max-width: none;
 				aspect-ratio: none;
 				min-height: none;
+				max-height: 400px;
 
 				img {
 					object-fit: cover;

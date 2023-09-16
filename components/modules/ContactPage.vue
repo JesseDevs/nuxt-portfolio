@@ -92,6 +92,12 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
+			@media (min-width: 600px) {
+				p {
+					max-width: 33ch;
+				}
+			}
 		}
 	}
 </style>

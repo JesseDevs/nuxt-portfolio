@@ -38,12 +38,28 @@ export default defineNuxtConfig({
 				},
 				{
 					property: 'og:image',
-					content: 'c.jpg',
+					content: 'https://jessedevs.net/c.jpg',
+				},
+				{
+					property: 'og:image:width',
+					content: '100',
+				},
+				{
+					property: 'og:image:height',
+					content: '88',
+				},
+				{
+					property: 'og:image:type',
+					content: 'image/jpg',
 				},
 				{
 					hid: 'og:url',
 					property: 'og:url',
 					content: `https://jessedevs.net`,
+				},
+				{
+					property: 'og:locale',
+					content: 'en_US',
 				},
 			],
 			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

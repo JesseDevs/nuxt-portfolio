@@ -18,7 +18,14 @@ export default defineNuxtConfig({
 				{ charset: 'utf-8' },
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 				{
+					hid: 'description',
 					name: 'description',
+					content:
+						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
+				},
+				{
+					hid: 'og:description',
+					property: 'og:description',
 					content:
 						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
 				},
@@ -33,6 +40,11 @@ export default defineNuxtConfig({
 				{
 					property: 'og:image',
 					content: 'c.png',
+				},
+				{
+					hid: 'og:url',
+					property: 'og:url',
+					content: `https://jessedevs.net`,
 				},
 			],
 			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

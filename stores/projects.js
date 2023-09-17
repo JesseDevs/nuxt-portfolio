@@ -138,7 +138,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/wireframe',
 						image: '/projects/wireframe.png',
 						p: [
-							'A wireframe is the skeleton of a website. It is commonly used to provide structure and generate layout ideas for a product during its development. This design project aimed to showcase the ability to turn a wireframe into a presentable project with reusable components. The entire project began as a ‘Figma’ file, which I used as a guideline to turn the concept into reality. There were moments when I discovered that some components needed to be adjusted to better capture the overall product, which varied from the concept design.',
+							'Translated design blueprints into visually appealing, functional website components, maintaining a cohesive and user-friendly interface. This design project aimed to showcase the ability to turn a wireframe into a presentable project with reusable components. The entire project began as a ‘Figma’ file, which I used as a guideline to turn the concept into reality. There were moments when I discovered that some components needed to be adjusted to better capture the overall product, which varied from the concept design.',
 						],
 					},
 				],

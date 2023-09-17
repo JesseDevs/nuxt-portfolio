@@ -8,6 +8,10 @@
 	const projects = useProjectStore().projects;
 	const { slug } = useRoute().params;
 	const project = projects.find((project) => project.slug === slug);
+
+	useHead({
+		title: `Nuxt Portfolio | ${slug}`,
+	});
 </script>
 
 <style lang="scss"></style>

@@ -13,9 +13,27 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			title: 'Nuxt Portfolio',
+
 			meta: [
 				{ charset: 'utf-8' },
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+				{
+					name: 'description',
+					content:
+						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
+				},
+				{
+					name: 'keywords',
+					content: 'Nuxt.js, Vue.js, Porfolio, web development, Javascript, front-end',
+				},
+				{
+					name: 'twitter:card',
+					content: 'c.png',
+				},
+				{
+					property: 'og:image',
+					content: 'c.png',
+				},
 			],
 			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 		},

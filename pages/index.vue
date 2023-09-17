@@ -7,6 +7,9 @@
 </template>
 
 <script setup>
+	useHead({
+		title: 'Nuxt Portfolio | Home',
+	});
 	import StandardLayout from '~/layouts/StandardLayout.vue';
 
 	// const initial = {

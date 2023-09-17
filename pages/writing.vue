@@ -6,6 +6,9 @@
 </template>
 
 <script setup>
+	useHead({
+		title: 'Nuxt Portfolio | Writing',
+	});
 	import WritingLayout from '~/layouts/WritingLayout.vue';
 </script>
 

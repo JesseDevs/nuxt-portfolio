@@ -20,11 +20,13 @@ export default defineNuxtConfig({
 				{
 					hid: 'description',
 					name: 'description',
+					property: 'description',
 					content:
 						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
 				},
 				{
 					hid: 'og:description',
+					name: 'og:description',
 					property: 'og:description',
 					content:
 						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
@@ -35,11 +37,11 @@ export default defineNuxtConfig({
 				},
 				{
 					name: 'twitter:card',
-					content: 'c.png',
+					content: 'c.jpg',
 				},
 				{
 					property: 'og:image',
-					content: 'c.png',
+					content: 'c.jpg',
 				},
 				{
 					hid: 'og:url',

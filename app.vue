@@ -2,6 +2,29 @@
 	<NuxtPage />
 </template>
 
+<script setup>
+	let originalTitle;
+
+	const onBlur = () => {
+		document.title = 'I miss you...';
+	};
+
+	const onFocus = () => {
+		document.title = originalTitle;
+	};
+
+	onMounted(() => {
+		originalTitle = document.title; // Store the original title
+		window.addEventListener('blur', onBlur);
+		window.addEventListener('focus', onFocus);
+	});
+
+	onBeforeUnmount(() => {
+		window.removeEventListener('blur', onBlur);
+		window.removeEventListener('focus', onFocus);
+	});
+</script>
+
 <style lang="scss">
 	@import '~/assets/css/globals.css';
 

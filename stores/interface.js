@@ -34,13 +34,19 @@ export const useInterfaceStore = defineStore('interface', function () {
 	const selectedTheme = ref('dark');
 	const setSelectedTheme = (theme) => {
 		selectedTheme.value = theme;
+		localStorage.setItem('selectedTheme', theme);
 	};
+
+	onMounted(() => {
+		const savedTheme = localStorage.getItem('selectedTheme');
+		if (savedTheme) {
+			selectedTheme.value = savedTheme;
+		}
+	});
 
 	useHead({
 		bodyAttrs: {
-			class: computed(() => {
-				return selectedTheme.value;
-			}),
+			class: computed(() => selectedTheme.value),
 		},
 	});
 

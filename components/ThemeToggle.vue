@@ -1,6 +1,5 @@
 <script setup>
 	import { useInterfaceStore } from '~/stores/interface';
-
 	const ui = useInterfaceStore();
 </script>
 

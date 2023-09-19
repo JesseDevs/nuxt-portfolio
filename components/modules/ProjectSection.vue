@@ -58,6 +58,13 @@
 
 		@media (min-width: 768px) {
 			grid-template-columns: 1fr 1fr;
+
+			.project-container {
+				flex-direction: column;
+			}
+			project-title-line {
+				display: none;
+			}
 		}
 	}
 

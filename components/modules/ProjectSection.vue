@@ -58,8 +58,8 @@
 	}
 
 	article.project {
-		display: grid;
-		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
 		row-gap: 1.2rem;
 	}
 
@@ -114,7 +114,6 @@
 		a {
 			opacity: 0.75;
 			transition: 0.25s opacity;
-			flex-grow: 1;
 		}
 
 		a:hover {
@@ -130,8 +129,10 @@
 	}
 
 	.project-description {
+		flex-grow: 1;
+
 		a {
-			display: inline-block;
+			display: block;
 
 			font-weight: 400;
 			color: var(--brand);

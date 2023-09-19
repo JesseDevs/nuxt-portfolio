@@ -55,17 +55,6 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 5rem;
-
-		@media (min-width: 768px) {
-			grid-template-columns: 1fr 1fr;
-
-			.project-container {
-				flex-direction: column;
-			}
-			project-title-line {
-				display: none;
-			}
-		}
 	}
 
 	article.project {
@@ -152,6 +141,19 @@
 
 		a:hover {
 			text-decoration: underline;
+		}
+	}
+
+	@media (min-width: 768px) {
+		article-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+		.project-container {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.project-title-line {
+			display: none;
 		}
 	}
 </style>

@@ -29,6 +29,11 @@ export default defineNuxtConfig({
 						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
 				},
 				{
+					hid: 'og:title',
+					property: 'og:title',
+					content: 'JesseDevs | Nuxt Personal Site',
+				},
+				{
 					name: 'keywords',
 					content: 'Nuxt.js, Vue.js, Porfolio, web development, Javascript, front-end',
 				},

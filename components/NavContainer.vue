@@ -19,7 +19,7 @@
 			</a>
 		</li>
 		<li>
-			<NuxtLink href="writing" @click="ui.closeMenu">
+			<NuxtLink href="/writing" @click="ui.closeMenu">
 				<Icon
 					name="streamline:interface-content-book-open-content-books-book-open"
 					size="28"
@@ -45,7 +45,7 @@
 						</a>
 					</li> -->
 		<li>
-			<a href="#ContactPage" @click="ui.closeMenu">
+			<a href="/#ContactPage" @click="ui.closeMenu">
 				<Icon name="mdi:message-reply" size="28" color="var(--white)" />
 				<span>Contact</span>
 			</a>

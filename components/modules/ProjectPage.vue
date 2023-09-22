@@ -1,28 +1,22 @@
 <template>
-	<SiteNav />
+	<section id="project-modal">
+		<inner-column>
+			<project-modal>
+				<h3 class="loud-voice">{{ project.title }}</h3>
+				<picture class="project-thumbnail">
+					<img :src="project.imgSrc" />
+				</picture>
 
-	<main class="page-content">
-		<section id="project-modal">
-			<inner-column>
-				<project-modal>
-					<h3 class="loud-voice">{{ project.title }}</h3>
-					<picture class="project-thumbnail">
-						<img :src="project.imgSrc" />
-					</picture>
-
-					<p
-						v-for="p in project.modalContent.overview"
-						:key="p"
-						v-html="p"
-						:class="fixGrid(project.modalContent.overview)"
-					></p>
-				</project-modal>
-				<FileProjects :project="project" />
-			</inner-column>
-		</section>
-	</main>
-
-	<div class="bottom-fade-out"></div>
+				<p
+					v-for="p in project.modalContent.overview"
+					:key="p"
+					v-html="p"
+					:class="fixGrid(project.modalContent.overview)"
+				></p>
+			</project-modal>
+			<FileProjects :project="project" />
+		</inner-column>
+	</section>
 </template>
 
 <script setup>
@@ -42,7 +36,7 @@
 	project-modal {
 		display: grid;
 		grid-template-columns: 1fr;
-		row-gap: 1.3rem;
+		row-gap: 3rem;
 
 		picture {
 			width: 100%;

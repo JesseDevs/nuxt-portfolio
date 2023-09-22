@@ -1,20 +1,23 @@
 <template>
-	<landing-heading>
-		<text-content class="title">
-			<h1 class="roar-voice">{{ moduleData.heading }}</h1>
+	<section :id="moduleData.module">
+		<inner-column>
+			<landing-heading>
+				<text-content class="title">
+					<h1 class="roar-voice">{{ moduleData.heading }}</h1>
 
-			<h3 class="chant-voice">{{ moduleData.intro }}</h3>
+					<h3 class="chant-voice">{{ moduleData.intro }}</h3>
 
-			<p class="details" v-for="(detail, index) in moduleData.details" :key="index">
-				{{ detail }}
-				<a v-if="index === 2" href="#ContactPage">
-					Connect
-					<Icon name="material-symbols:arrow-right-alt" size="25" />
-				</a>
-			</p>
-		</text-content>
-		<CubeBlock />
-	</landing-heading>
+					<p class="details" v-for="(detail, index) in moduleData.details" :key="index">
+						{{ detail }}
+						<a v-if="index === 2" href="#ContactPage">
+							Connect
+							<Icon name="material-symbols:arrow-right-alt" size="25" />
+						</a>
+					</p>
+				</text-content>
+				<CubeBlock /> </landing-heading
+		></inner-column>
+	</section>
 </template>
 
 <script setup>

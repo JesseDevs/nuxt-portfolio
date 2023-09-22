@@ -10,14 +10,16 @@
 
 			<blockquote class="blockquote">
 				<Icon name="fa6-solid:quote-left" size="24" />
-				<p>{{ content.quote }}</p>
+				<p>
+					{{ content.quote }}
+
+					<a :href="content.link" target="_blank"
+						>Read More
+						<Icon name="material-symbols:arrow-right-alt" size="25" />
+					</a>
+				</p>
 				<Icon name="fa6-solid:quote-right" size="24" />
 			</blockquote>
-
-			<a :href="content.link" target="_blank"
-				>Read More
-				<Icon name="material-symbols:arrow-right-alt" size="25" />
-			</a>
 		</text-content>
 	</blog-card>
 </template>

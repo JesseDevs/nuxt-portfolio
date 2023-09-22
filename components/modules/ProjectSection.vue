@@ -23,31 +23,38 @@
 </script>
 
 <template>
-	<project-section>
-		<SectionHeader :title="moduleData.heading" dir="r" />
+	<section :id="moduleData.module">
+		<inner-column>
+			<project-section>
+				<SectionHeader :title="moduleData.heading" dir="r" />
 
-		<article-grid>
-			<article v-for="(project, index) in projects" :key="index" class="project">
-				<NuxtLink :to="`/projects/${project.slug}/#project-modal`" class="projectImage">
-					<picture>
-						<img :src="project.imgSrc" />
-					</picture>
-				</NuxtLink>
+				<article-grid>
+					<article v-for="(project, index) in projects" :key="index" class="project">
+						<NuxtLink
+							:to="`/projects/${project.slug}/#project-modal`"
+							class="projectImage"
+						>
+							<picture>
+								<img :src="project.imgSrc" />
+							</picture>
+						</NuxtLink>
 
-				<div class="project-container">
-					<h4 class="chant-voice">{{ project.title }}</h4>
-					<div class="project-title-line" />
-				</div>
+						<div class="project-container">
+							<h4 class="chant-voice">{{ project.title }}</h4>
+							<div class="project-title-line" />
+						</div>
 
-				<p class="project-description">
-					{{ project.description }}
-					<NuxtLink :to="`/projects/${project.slug}/#project-modal`"
-						>Learn More<Icon name="material-symbols:arrow-right-alt" size="25"
-					/></NuxtLink>
-				</p>
-			</article>
-		</article-grid>
-	</project-section>
+						<p class="project-description">
+							{{ project.description }}
+							<NuxtLink :to="`/projects/${project.slug}/#project-modal`"
+								>Learn More<Icon name="material-symbols:arrow-right-alt" size="25"
+							/></NuxtLink>
+						</p>
+					</article>
+				</article-grid>
+			</project-section>
+		</inner-column>
+	</section>
 </template>
 
 <style scoped lang="scss">

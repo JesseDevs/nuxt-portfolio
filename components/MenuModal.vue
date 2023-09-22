@@ -30,6 +30,16 @@
 </script>
 
 <style lang="scss" scoped>
+	@media (prefers-color-scheme: light) {
+		menu-modal {
+			background-color: rgb(35, 35, 37);
+		}
+	}
+	body.light {
+		menu-modal {
+			background-color: rgb(35, 35, 37);
+		}
+	}
 	.modal-container {
 		position: fixed;
 		overflow-y: auto;

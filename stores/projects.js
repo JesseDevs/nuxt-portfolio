@@ -3,6 +3,50 @@ import { defineStore } from 'pinia';
 export const useProjectStore = defineStore('projectStore', function () {
 	let projects = [
 		{
+			slug: 'interfaces',
+			title: 'Javascript Interfaces',
+			imgSrc: '/project-imgs/layout-image.jpg',
+			oneLiner: 'Organized and Productive',
+			tech: [''],
+			isActive: false,
+			description:
+				'Small websites interactions to full scale interactive projects. Making button clicks work and moving screens slide.',
+			modalContent: {
+				overview: [
+					"<span class='first-words'>Javascript is</span> the most widely used programming language and has become a vital tool for developers. Although it is primarily a frontend language, there have been evolutions to make backends like Node and entire Frameworks on which projects can run. This timeline demonstrates the scaling of ideas and the process of understanding what is needed to make a website properly.",
+				],
+				files: [
+					{
+						title: 'Workout App',
+						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/workout-app//',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/workout-app/',
+						image: '/projects/workout.png',
+						p: [
+							'My <em>‘Workout APP’</em> took a simple interface from the forms and created more than just a short answer for the user. I often have to remember the main body focus for my workout and the types of sets needed. This app is a simple way to create short lists of workouts dedicated to the muscle group. It was built using local storage and JavaScript class methods to generate app functionality, while using imports and exports to create templates for each page.',
+						],
+					},
+					{
+						title: 'Bill Split App',
+						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/bill-app/',
+						link: 'https://peprojects.dev/alpha-4/jesse/_projects/bill-app/',
+						image: '/projects/bill.png',
+						p: [
+							'The <em>‘Bill Split APP’</em> was inspired by a night out with friends and the effort it took to even divide the bill. It has an interface with more personality and functionality. I used similar routing in Vanilla JavaScript to create multiple page templates.',
+						],
+					},
+					{
+						title: 'Dunkin',
+						git: 'https://github.com/JesseDevs/super-shot',
+						link: 'https://calm-super-shot.surge.sh/',
+						image: '/projects/dunkin.png',
+						p: [
+							'My <em>‘Dunkin’ Donuts: Vue App’</em> is built using Vue 3, a JavaScript framework used for building user interfaces. The latest version of Vue is a versatile framework that uses stores to pass variables and data to multiple components, meaning it can be used for small one-page sites to large multi-page projects. Reactive and computed variables give me the flexibility to work with live variables. To go along with this, I used Firebase to provide a database for users, products, and their items.',
+						],
+					},
+				],
+			},
+		},
+		{
 			slug: 'systems',
 			title: 'Management Systems',
 			imgSrc: '/project-imgs/cms-image.jpg',
@@ -51,50 +95,6 @@ export const useProjectStore = defineStore('projectStore', function () {
 						image: '/projects/dunkin.png',
 						p: [
 							'In my <em>‘Dunkin’ Donuts: Vue App’</em>, I utilized Firebase, which is not a CMS but a NoSQL cloud database that offers various ways to manage aspects of a web application. To build this type of data, I made an HTTP request to the Firebase API connected to my project. It works very similarly to a giant JSON file that can hold many lists filled with many objects that are easily accessed by database features.',
-						],
-					},
-				],
-			},
-		},
-		{
-			slug: 'interfaces',
-			title: 'Javascript Interfaces',
-			imgSrc: '/project-imgs/layout-image.jpg',
-			oneLiner: 'Organized and Productive',
-			tech: [''],
-			isActive: false,
-			description:
-				'Small websites interactions to full scale interactive projects. Making button clicks work and moving screens slide.',
-			modalContent: {
-				overview: [
-					"<span class='first-words'>Javascript is</span> the most widely used programming language and has become a vital tool for developers. Although it is primarily a frontend language, there have been evolutions to make backends like Node and entire Frameworks on which projects can run. This timeline demonstrates the scaling of ideas and the process of understanding what is needed to make a website properly.",
-				],
-				files: [
-					{
-						title: 'Workout App',
-						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/workout-app//',
-						link: 'https://peprojects.dev/alpha-4/jesse/_projects/workout-app/',
-						image: '/projects/workout.png',
-						p: [
-							'My <em>‘Workout APP’</em> took a simple interface from the forms and created more than just a short answer for the user. I often have to remember the main body focus for my workout and the types of sets needed. This app is a simple way to create short lists of workouts dedicated to the muscle group. It was built using local storage and JavaScript class methods to generate app functionality, while using imports and exports to create templates for each page.',
-						],
-					},
-					{
-						title: 'Bill Split App',
-						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/bill-app/',
-						link: 'https://peprojects.dev/alpha-4/jesse/_projects/bill-app/',
-						image: '/projects/bill.png',
-						p: [
-							'The <em>‘Bill Split APP’</em> was inspired by a night out with friends and the effort it took to even divide the bill. It has an interface with more personality and functionality. I used similar routing in Vanilla JavaScript to create multiple page templates.',
-						],
-					},
-					{
-						title: 'Dunkin',
-						git: 'https://github.com/JesseDevs/super-shot',
-						link: 'https://calm-super-shot.surge.sh/',
-						image: '/projects/dunkin.png',
-						p: [
-							'My <em>‘Dunkin’ Donuts: Vue App’</em> is built using Vue 3, a JavaScript framework used for building user interfaces. The latest version of Vue is a versatile framework that uses stores to pass variables and data to multiple components, meaning it can be used for small one-page sites to large multi-page projects. Reactive and computed variables give me the flexibility to work with live variables. To go along with this, I used Firebase to provide a database for users, products, and their items.',
 						],
 					},
 				],

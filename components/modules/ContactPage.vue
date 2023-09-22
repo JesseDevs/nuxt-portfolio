@@ -1,23 +1,27 @@
 <template>
-	<contact-page>
-		<div class="heading-container">
-			<div class="line"></div>
-			<h2 class="loud-voice">{{ moduleData.heading }}<span>.</span></h2>
-			<div class="line"></div>
-		</div>
-		<text-content>
-			<h5 class="strict-voice">{{ moduleData.intro }}</h5>
+	<section :id="moduleData.module">
+		<inner-column>
+			<contact-page>
+				<div class="heading-container">
+					<div class="line"></div>
+					<h2 class="loud-voice">{{ moduleData.heading }}<span>.</span></h2>
+					<div class="line"></div>
+				</div>
+				<text-content>
+					<h5 class="strict-voice">{{ moduleData.intro }}</h5>
 
-			<p v-html="moduleData.text"></p>
-		</text-content>
+					<p v-html="moduleData.text"></p>
+				</text-content>
 
-		<div class="contactEmail">
-			<a href="mailto:jessemerge2@gmail.com" target="_blank">
-				<Icon name="material-symbols:mail" size="30" />
-				<span class="strict-voice">jessemerge2@gmail.com</span>
-			</a>
-		</div>
-	</contact-page>
+				<div class="contactEmail">
+					<a href="mailto:jessemerge2@gmail.com" target="_blank">
+						<Icon name="material-symbols:mail" size="30" />
+						<span class="strict-voice">jessemerge2@gmail.com</span>
+					</a>
+				</div>
+			</contact-page>
+		</inner-column>
+	</section>
 </template>
 
 <script setup>

@@ -1,25 +1,29 @@
 <template>
-	<about-card>
-		<text-content>
-			<SectionHeader :title="moduleData.heading" dir="rr" />
+	<section :id="moduleData.module">
+		<inner-column>
+			<about-card>
+				<text-content>
+					<SectionHeader :title="moduleData.heading" dir="rr" />
 
-			<p v-for="detail in moduleData.details" :key="detail" v-html="detail"></p>
-		</text-content>
+					<p v-for="detail in moduleData.details" :key="detail" v-html="detail"></p>
+				</text-content>
 
-		<MyLinks class="isAboutCard" />
+				<MyLinks class="isAboutCard" />
 
-		<div class="image-container">
-			<picture>
-				<NuxtImg
-					v-for="card in cards"
-					:key="card"
-					:src="card.url"
-					:alt="card.title"
-					loading="lazy"
-				/>
-			</picture>
-		</div>
-	</about-card>
+				<div class="image-container">
+					<picture>
+						<NuxtImg
+							v-for="card in cards"
+							:key="card"
+							:src="card.url"
+							:alt="card.title"
+							loading="lazy"
+						/>
+					</picture>
+				</div>
+			</about-card>
+		</inner-column>
+	</section>
 </template>
 
 <script setup>

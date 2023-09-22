@@ -80,6 +80,10 @@
 					display: none;
 				}
 			}
+
+			.big-theme-toggle {
+				display: block;
+			}
 		}
 
 		@media (min-width: 900px) {

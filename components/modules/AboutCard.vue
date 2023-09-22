@@ -124,6 +124,18 @@
 			min-height: 400px;
 			max-width: 300px;
 			margin-left: auto;
+			&:before {
+				content: '';
+				background-color: rgb(var(--brand-rgb) / 0.6);
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: absolute;
+				z-index: -1;
+				bottom: -1rem;
+				right: -1rem;
+				border-radius: 1rem;
+			}
 		}
 
 		img {
@@ -132,6 +144,7 @@
 			object-fit: cover;
 			width: 100%;
 			height: 100%;
+			border-radius: 1rem;
 		}
 
 		img:nth-of-type(1) {
@@ -163,6 +176,21 @@
 				aspect-ratio: none;
 				min-height: none;
 				max-height: 400px;
+
+				&:before {
+					content: '';
+					width: 90%;
+					height: 85%;
+					display: block;
+					position: absolute;
+					z-index: -1;
+					bottom: -1rem;
+					right: auto;
+					border-radius: 1rem;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -40%);
+				}
 
 				img {
 					object-fit: cover;

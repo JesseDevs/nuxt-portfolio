@@ -50,6 +50,9 @@
 				<span>Contact</span>
 			</a>
 		</li>
+		<li class="big-theme-toggle">
+			<BigThemeToggle />
+		</li>
 	</ul>
 </template>
 
@@ -57,12 +60,6 @@
 	import { useInterfaceStore } from '~/stores/interface';
 
 	const ui = useInterfaceStore();
-
-	const handleModalContainerClick = (event) => {
-		if (!event.target.closest('menu-modal')) {
-			ui.closeMenu();
-		}
-	};
 </script>
 
 <style lang="scss" scoped>
@@ -71,6 +68,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
+		padding-right: 5px;
 		a {
 			display: flex;
 			align-items: center;
@@ -90,6 +88,10 @@
 				background-color: rgba(121, 118, 118, 0.38);
 				opacity: 1;
 			}
+		}
+
+		.big-theme-toggle {
+			display: none;
 		}
 	}
 </style>

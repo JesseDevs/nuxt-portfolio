@@ -18,9 +18,7 @@
 			details: [
 				'I’m a Front-End Developer based in Los Angeles, California. My journey in web development has been fueled by a genuine passion for creating seamless online experiences.',
 
-				' I’ve honed my skills, from coding elegant designs to bringing user-friendly interfaces to life.',
-
-				'Feel free to reach out – I’m always up for a new challenge!',
+				'I’ve honed my skills, from coding elegant designs to bringing user-friendly interfaces to life. Feel free to reach out – I’m always up for a new challenge!',
 			],
 			image: 'images/details/comp.webp',
 		},

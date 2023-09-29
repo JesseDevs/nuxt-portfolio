@@ -24,7 +24,7 @@
 				<p class="small-voice">Instagram</p>
 			</div>
 		</a>
-		<a href="/resume-wd.pdf" target="_blank">
+		<a href="/webdev-resume-jesse.pdf" target="_blank">
 			<Icon name="pepicons-pop:cv" size="23" />
 			<div class="helper">
 				<p class="small-voice">Resume</p>

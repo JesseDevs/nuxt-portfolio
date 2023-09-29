@@ -9,11 +9,11 @@
 
 					<p class="details" v-for="(detail, index) in moduleData.details" :key="index">
 						{{ detail }}
-						<a v-if="index === 2" href="#ContactPage">
-							Connect
-							<Icon name="material-symbols:arrow-right-alt" size="25" />
-						</a>
 					</p>
+					<a href="#ContactPage">
+						Connect
+						<Icon name="material-symbols:arrow-right-alt" size="25" />
+					</a>
 				</text-content>
 				<CubeBlock /> </landing-heading
 		></inner-column>
@@ -49,19 +49,11 @@
 
 		a {
 			display: block;
-			margin-top: 20px;
-			grid-column: 2/-1;
-		}
-	}
+			color: var(--brand);
+			font-weight: 400;
 
-	@media (min-width: 750px) {
-		landing-heading {
-			text-content {
-				padding-bottom: 0;
-			}
-
-			a.action-link {
-				grid-column: 4/-1 !important;
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}

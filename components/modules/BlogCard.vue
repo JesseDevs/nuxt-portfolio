@@ -82,7 +82,6 @@
 		}
 
 		.blockquote {
-			padding: 15px;
 			display: flex;
 			gap: 1.3rem;
 

@@ -19,7 +19,7 @@
 			</a>
 		</li>
 		<li>
-			<NuxtLink href="/writing" @click="ui.closeMenu">
+			<NuxtLink to="/writing" @click="ui.closeMenu">
 				<Icon
 					name="streamline:interface-content-book-open-content-books-book-open"
 					size="28"

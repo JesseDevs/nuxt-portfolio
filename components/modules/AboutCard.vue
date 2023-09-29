@@ -33,18 +33,18 @@
 
 	const cards = [
 		{
-			url: '/me-imgs/imagine.jpg',
+			url: '/me-imgs/imagine.webp',
 			title: 'Title 1',
 			id: 1,
 		},
 
 		{
-			url: '/me-imgs/beach.jpg',
+			url: '/me-imgs/beach.webp',
 			title: 'Title 4',
 			id: 4,
 		},
 		{
-			url: '/me-imgs/diego.jpg',
+			url: '/me-imgs/diego.webp',
 			title: 'Title 3',
 			id: 3,
 		},
@@ -120,8 +120,8 @@
 
 		picture {
 			position: relative;
-			aspect-ratio: 7/6;
-			min-height: 400px;
+			aspect-ratio: 3/4;
+
 			max-width: 300px;
 			margin-left: auto;
 			&:before {

@@ -4,7 +4,8 @@
 		<main>
 			<slot />
 		</main>
-		<div class="bottom-fade-out"></div>
+		<SiteFooter />
+		<!-- <div class="bottom-fade-out"></div> -->
 	</div>
 </template>
 

@@ -30,10 +30,7 @@
 
 				<article-grid>
 					<article v-for="(project, index) in projects" :key="index" class="project">
-						<NuxtLink
-							:to="`/projects/${project.slug}/#project-modal`"
-							class="projectImage"
-						>
+						<NuxtLink :to="`/projects/${project.slug}/`" class="projectImage">
 							<picture>
 								<img :src="project.imgSrc" />
 							</picture>
@@ -46,7 +43,7 @@
 
 						<p class="project-description">
 							{{ project.description }}
-							<NuxtLink :to="`/projects/${project.slug}/#project-modal`"
+							<NuxtLink :to="`/projects/${project.slug}/`"
 								>Learn More<Icon name="material-symbols:arrow-right-alt" size="25"
 							/></NuxtLink>
 						</p>

@@ -72,7 +72,7 @@
 		padding-bottom: 15px;
 		picture {
 			width: 100%;
-			aspect-ratio: 16 / 8;
+			aspect-ratio: 16/9;
 			cursor: pointer;
 			position: relative;
 			border-radius: 1rem;
@@ -95,6 +95,8 @@
 			border-radius: 1rem;
 			transition: transform 0.3s ease, opacity 0.3s ease;
 			opacity: 1;
+			object-fit: cover;
+			height: 100%;
 		}
 
 		&:hover {

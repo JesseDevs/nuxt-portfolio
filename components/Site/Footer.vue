@@ -3,7 +3,7 @@
 		<inner-column>
 			<nav>
 				<ul class="nav-container page">
-					<h3>Page Routes</h3>
+					<h3>Pages</h3>
 
 					<li>
 						<NuxtLink to="/" @click="ui.closeMenu">
@@ -49,25 +49,28 @@
 					</li>
 					<li><a href="/webdev-resume-jesse.pdf" target="_blank"> Resume </a></li>
 				</ul>
-				<div class="footnote">
-					<div class="frame-con">
-						<iframe
-							allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-							frameborder="0"
-							style="
-								width: 100%;
-								max-width: 300px;
-								overflow: hidden;
-								border-radius: 10px;
-								background-color: black;
-							"
-							sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-							src="https://embed.music.apple.com/us/album/ferxxo-151/1704049454?i=1704050427"
-						></iframe>
-					</div>
+			</nav>
+			<div class="footnote">
+				<div class="frame-con">
+					<iframe
+						allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+						frameborder="0"
+						style="
+							width: 100%;
+							max-width: 300px;
+							overflow: hidden;
+							border-radius: 10px;
+							background-color: black;
+						"
+						sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+						src="https://embed.music.apple.com/us/album/ferxxo-151/1704049454?i=1704050427"
+					></iframe>
+				</div>
+				<div class="support-box">
+					<MyLinks />
 					<p>© 2023 • Jesse Felix</p>
 				</div>
-			</nav>
+			</div>
 		</inner-column>
 	</site-footer>
 </template>
@@ -86,6 +89,12 @@
 		background: linear-gradient(180deg, var(--background), rgb(var(--brand-rgb) / 0.2));
 		backdrop-filter: brightness(0.7);
 
+		inner-column {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+		}
+
 		* {
 			font-size: inherit;
 		}
@@ -94,46 +103,54 @@
 			border-top: 1px solid rgba(246, 244, 244, 0.301);
 			padding-top: 2rem;
 			display: flex;
-			flex-direction: column;
-			gap: 4rem;
+			column-gap: 2rem;
+
+			@media (min-width: 770px) {
+				column-gap: 5rem;
+			}
 
 			h3 {
 				font-size: var(--step-0);
-				text-decoration: underline;
 				font-weight: 500;
 			}
 
 			ul {
-				@media (min-width: 500px) {
-					padding: 0 5rem;
-				}
 				display: flex;
-				flex-wrap: wrap;
+				flex-direction: column;
+				width: 100%;
 				column-gap: 1rem;
-				row-gap: 1rem;
+				row-gap: 15px;
+
+				@media (min-width: 770px) {
+					flex-direction: row;
+					flex-wrap: wrap;
+					column-gap: 2rem;
+					h3 {
+						width: 100%;
+					}
+					li {
+						flex-grow: 0;
+					}
+					a {
+						padding: 0 1.2rem 0 0;
+					}
+				}
 
 				h3 {
-					flex-grow: 1;
-					flex-shrink: 0;
-					flex-basis: 100%;
+					font-weight: 500;
 				}
 				li {
-					flex-grow: 1;
-					text-align: center;
+					text-align: left;
 
 					a {
-						padding: 10px;
-						font-weight: 400;
+						width: 100%;
+
+						font-weight: 300;
 						display: block;
 						transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 						border-radius: 0.375rem;
 						opacity: 0.85;
 						color: var(--white);
-
-						&:hover {
-							background-color: rgb(var(--black-rgb) / 0.7);
-							opacity: 1;
-						}
 					}
 				}
 			}
@@ -145,10 +162,30 @@
 			align-items: flex-end;
 			flex-wrap: wrap;
 			column-gap: 5rem;
-			row-gap: 2rem;
+			row-gap: 1rem;
 
 			p {
 				flex-shrink: 0;
+			}
+
+			@media (min-width: 770px) {
+				flex-wrap: nowrap;
+				.frame-con {
+					flex-shrink: 0;
+				}
+			}
+		}
+
+		.support-box {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			row-gap: 1rem;
+			justify-content: space-between;
+
+			@media (min-width: 770px) {
+				flex-direction: column;
+				max-width: fit-content;
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 <template>
-	<site-footer class="small-voice">
+	<footer class="site-footer small-voice">
 		<inner-column>
 			<nav>
 				<ul class="nav-container page">
@@ -72,7 +72,7 @@
 				</div>
 			</div>
 		</inner-column>
-	</site-footer>
+	</footer>
 </template>
 
 <script setup>
@@ -82,7 +82,7 @@
 </script>
 
 <style lang="scss" scoped>
-	site-footer {
+	.site-footer {
 		display: block;
 		width: 100%;
 		position: relative;

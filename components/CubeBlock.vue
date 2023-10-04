@@ -77,13 +77,13 @@
 
 	body.light {
 		.face {
-			border: 2px solid var(--fade);
+			border: 2px solid rgb(208, 205, 205);
 		}
 	}
 
 	@media (prefers-color-scheme: light) {
 		.face {
-			border: 2px solid var(--fade);
+			border: 2px solid black;
 		}
 	}
 

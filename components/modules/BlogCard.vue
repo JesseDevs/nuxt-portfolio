@@ -68,7 +68,8 @@
 			font-weight: 500;
 			width: 100%;
 			padding: 1rem;
-			background-color: rgb(var(--black-rgb) / 0.7);
+			background-color: rgba(0, 0, 0, 0.905);
+			color: var(--white);
 		}
 
 		text-content {
@@ -76,7 +77,6 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			color: white;
 			padding-top: 20px;
 			background-color: transparent;
 		}

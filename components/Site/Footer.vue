@@ -55,13 +55,7 @@
 					<iframe
 						allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
 						frameborder="0"
-						style="
-							width: 100%;
-							max-width: 300px;
-							overflow: hidden;
-							border-radius: 10px;
-							background-color: black;
-						"
+						style="width: 100%; max-width: 400px; overflow: hidden; border-radius: 10px"
 						sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
 						src="https://embed.music.apple.com/us/album/ferxxo-151/1704049454?i=1704050427"
 					></iframe>
@@ -121,6 +115,10 @@
 				column-gap: 1rem;
 				row-gap: 15px;
 
+				a:hover {
+					text-decoration: underline;
+				}
+
 				@media (min-width: 770px) {
 					flex-direction: row;
 					flex-wrap: wrap;
@@ -150,7 +148,6 @@
 						transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 						border-radius: 0.375rem;
 						opacity: 0.85;
-						color: var(--white);
 					}
 				}
 			}
@@ -172,6 +169,10 @@
 				flex-wrap: nowrap;
 				.frame-con {
 					flex-shrink: 0;
+				}
+
+				iframe {
+					width: 400px !important;
 				}
 			}
 		}

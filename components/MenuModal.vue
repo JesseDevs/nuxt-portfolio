@@ -99,15 +99,6 @@
 		}
 	}
 
-	@media (prefers-color-scheme: light) {
-		.box-container {
-			filter: brightness(160%);
-		}
-	}
-	body.light .box-container {
-		filter: brightness(160%);
-	}
-
 	.modal-container.menu-open {
 		menu-modal {
 			left: 0;

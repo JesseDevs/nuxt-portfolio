@@ -18,7 +18,7 @@
 
 					<file-content>
 						<picture v-if="file.image">
-							<img :src="file.image" alt="" />
+							<NuxtImg :src="file.image" alt="" />
 						</picture>
 						<p v-html="file.p"></p>
 					</file-content>
@@ -101,6 +101,8 @@
 
 			picture {
 				aspect-ratio: 6/4;
+				border-radius: 1rem;
+				overflow: hidden;
 				img {
 					object-fit: cover;
 					width: 100%;

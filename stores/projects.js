@@ -43,6 +43,15 @@ export const useProjectStore = defineStore('projectStore', function () {
 							'My <em>‘Dunkin’ Donuts: Vue App’</em> is built using Vue 3, a JavaScript framework used for building user interfaces. The latest version of Vue is a versatile framework that uses stores to pass variables and data to multiple components, meaning it can be used for small one-page sites to large multi-page projects. Reactive and computed variables give me the flexibility to work with live variables. To go along with this, I used Firebase to provide a database for users, products, and their items.',
 						],
 					},
+					{
+						title: 'SecondWave: Resell Shop',
+						git: 'https://github.com/JesseDevs/second-wave',
+						link: 'https://second-wave.vercel.app/',
+						image: '/projects/wave.webp',
+						p: [
+							'<em>‘SecondWave: Resell Shop’</em> is a cutting-edge web application using Nuxt 3 framework, leveraging the power of Supabase as the robust database solution for seamless product management. This substantial undertaking demanded rapid learning and a high degree of adaptability to master emerging technologies and deliver a scalable, high-performance solution. Achievements include proficiently integrating advanced features and optimizing database operations to ensure a streamlined user experience.',
+						],
+					},
 				],
 			},
 		},
@@ -97,6 +106,15 @@ export const useProjectStore = defineStore('projectStore', function () {
 							'In my <em>‘Dunkin’ Donuts: Vue App’</em>, I utilized Firebase, which is not a CMS but a NoSQL cloud database that offers various ways to manage aspects of a web application. To build this type of data, I made an HTTP request to the Firebase API connected to my project. It works very similarly to a giant JSON file that can hold many lists filled with many objects that are easily accessed by database features.',
 						],
 					},
+					{
+						title: 'SecondWave: Resell Shop',
+						git: 'https://github.com/JesseDevs/second-wave',
+						link: 'https://second-wave.vercel.app/',
+						image: '/projects/wave.webp',
+						p: [
+							'<em>‘SecondWave: Resell Shop’</em> is a cutting-edge web application using Nuxt 3 framework, leveraging the power of Supabase as the robust database solution for seamless product management. This substantial undertaking demanded rapid learning and a high degree of adaptability to master emerging technologies and deliver a scalable, high-performance solution. Achievements include proficiently integrating advanced features and optimizing database operations to ensure a streamlined user experience.',
+						],
+					},
 				],
 			},
 		},
@@ -139,6 +157,15 @@ export const useProjectStore = defineStore('projectStore', function () {
 						image: '/projects/wireframe.webp',
 						p: [
 							'Translated design blueprints into visually appealing, functional website components, maintaining a cohesive and user-friendly interface. This design project aimed to showcase the ability to turn a wireframe into a presentable project with reusable components. The entire project began as a ‘Figma’ file, which I used as a guideline to turn the concept into reality. There were moments when I discovered that some components needed to be adjusted to better capture the overall product, which varied from the concept design.',
+						],
+					},
+					{
+						title: 'SecondWave: Resell Shop',
+						git: 'https://github.com/JesseDevs/second-wave',
+						link: 'https://second-wave.vercel.app/',
+						image: '/projects/wave.webp',
+						p: [
+							'<em>‘SecondWave: Resell Shop’</em> is a cutting-edge web application using Nuxt 3 framework, leveraging the power of Supabase as the robust database solution for seamless product management. This substantial undertaking demanded rapid learning and a high degree of adaptability to master emerging technologies and deliver a scalable, high-performance solution. Achievements include proficiently implementing dynamic layouts in design to enhance user experience and optimizing database operations to ensure a streamlined user experience.',
 						],
 					},
 				],

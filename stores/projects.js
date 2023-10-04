@@ -44,7 +44,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 						],
 					},
 					{
-						title: 'SecondWave: Resell Shop',
+						title: 'SecondWave',
 						git: 'https://github.com/JesseDevs/second-wave',
 						link: 'https://second-wave.vercel.app/',
 						image: '/projects/wave.webp',

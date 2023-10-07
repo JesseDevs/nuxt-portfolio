@@ -4,7 +4,7 @@
 			<project-modal>
 				<h3 class="loud-voice">{{ project.title }}</h3>
 				<picture class="project-thumbnail">
-					<NuxtImg :src="project.imgSrc" />
+					<NuxtImg :src="project.imgSrc" loading="lazy" />
 				</picture>
 
 				<p

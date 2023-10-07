@@ -6,14 +6,14 @@
 
 
 :root {
-	--step--2: clamp(0.70rem, calc(0.72rem + -0.02vw), 0.72rem);
-	--step--1: clamp(0.86rem, calc(0.83rem + 0.15vw), 0.94rem);
-	--step-0: clamp(1.03rem, calc(0.95rem + 0.42vw), 1.25rem);
-	--step-1: clamp(1.24rem, calc(1.07rem + 0.83vw), 1.67rem);
-	--step-2: clamp(1.49rem, calc(1.20rem + 1.42vw), 2.22rem);
-	--step-3: clamp(1.78rem, calc(1.33rem + 2.27vw), 2.96rem);
-	--step-4: clamp(2.14rem, calc(1.44rem + 3.49vw), 3.95rem);
-	--step-5: clamp(2.57rem, calc(1.53rem + 5.19vw), 5.26rem);
+	--step--2: clamp(0.7381rem, 0.7297rem + 0.0422vw, 0.76rem);
+	--step--1: clamp(0.8856rem, 0.8608rem + 0.1241vw, 0.95rem);
+	--step-0: clamp(1.0625rem, 1.0143rem + 0.241vw, 1.1875rem);
+	--step-1: clamp(1.275rem, 1.1943rem + 0.4036vw, 1.4844rem);
+	--step-2: clamp(1.53rem, 1.4045rem + 0.6277vw, 1.8556rem);
+	--step-3: clamp(1.8363rem, 1.65rem + 0.9313vw, 2.3194rem);
+	--step-4: clamp(2.2031rem, 1.9347rem + 1.3422vw, 2.8994rem);
+	--step-5: clamp(2.6438rem, 2.2659rem + 1.8892vw, 3.6238rem);
 }
 
 :root {
@@ -153,7 +153,7 @@ a {
 
 p {
 	line-height: 1.5;
-	max-width: 53ch;
+	max-width: 49ch;
 }
 
 p a {

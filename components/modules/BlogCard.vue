@@ -1,7 +1,7 @@
 <template>
 	<blog-card>
 		<picture class="blog-thumbnail">
-			<img :src="content.thumbnail" alt="blog-image" loading="lazy" />
+			<NuxtImg :src="content.thumbnail" alt="blog-image" loading="lazy" />
 			<h4 class="title chant-voice" v-html="content.title"></h4>
 		</picture>
 

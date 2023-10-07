@@ -18,7 +18,7 @@
 
 					<file-content>
 						<picture v-if="file.image">
-							<NuxtImg :src="file.image" alt="" />
+							<NuxtImg :src="file.image" alt="" loading="lazy" />
 						</picture>
 						<p v-html="file.p"></p>
 					</file-content>

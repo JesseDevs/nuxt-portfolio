@@ -32,7 +32,7 @@
 					<article v-for="(project, index) in projects" :key="index" class="project">
 						<NuxtLink :to="`/projects/${project.slug}/`" class="projectImage">
 							<picture>
-								<img :src="project.imgSrc" />
+								<NuxtImg :src="project.imgSrc" loading="lazy" />
 							</picture>
 						</NuxtLink>
 

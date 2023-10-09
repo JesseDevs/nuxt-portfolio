@@ -26,3 +26,12 @@ p a {
 .brand-highlight {
 	color: var(--brand);
 }
+
+form {
+
+	label,
+	input,
+	textarea {
+		display: block;
+	}
+}

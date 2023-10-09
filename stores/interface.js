@@ -12,19 +12,31 @@ export const useInterfaceStore = defineStore('interface', function () {
 		mainMenuOpen.value = false;
 	};
 
-	const projectModal = ref(false);
-	const projectClass = computed(() =>
-		projectModal.value ? 'project-modal-open' : 'project-modal-close',
-	);
+	// modal
 
-	const closeProjectModal = () => {
-		projectModal.value = false;
+	const modal = computed(() => {
+		if (formModal.value) {
+			return true;
+		}
+
+		return false;
+	});
+
+	const formModal = ref(false);
+	const toggleFormModal = () => {
+		formModal.value = !formModal.value;
 	};
+
+	const forceModalClose = () => {
+		formModal.value = false;
+	};
+
+	//
 
 	useHead({
 		bodyAttrs: {
 			class: computed(() => {
-				if (mainMenuOpen.value || projectModal.value) return 'overflow';
+				if (mainMenuOpen.value || formModal.value) return 'overflow';
 
 				return '';
 			}),
@@ -53,12 +65,13 @@ export const useInterfaceStore = defineStore('interface', function () {
 	return {
 		mainMenuOpen,
 		menuClass,
-		projectClass,
 		toggleMainMenu,
 		closeMenu,
-		projectModal,
-		closeProjectModal,
 		selectedTheme,
 		setSelectedTheme,
+		modal,
+		formModal,
+		toggleFormModal,
+		forceModalClose,
 	};
 });

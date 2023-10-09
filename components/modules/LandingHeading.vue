@@ -51,6 +51,7 @@
 			display: block;
 			color: var(--brand);
 			font-weight: 400;
+			max-width: fit-content;
 
 			&:hover {
 				text-decoration: underline;

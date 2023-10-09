@@ -82,4 +82,10 @@ export default defineNuxtConfig({
 	},
 
 	components: true,
+	pinia: {
+		autoImports: ['defineStore'],
+	},
+	imports: {
+		dirs: ['./stores'],
+	},
 });

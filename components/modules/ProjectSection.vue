@@ -10,16 +10,6 @@
 	});
 
 	const selectedProject = ref(null);
-
-	const toggleProjectModal = (index) => {
-		projects.forEach((project) => {
-			project.isActive = false;
-		});
-
-		projects[index].isActive = !projects[index].isActive;
-
-		ui.projectModal = projects[index].isActive;
-	};
 </script>
 
 <template>

@@ -5,14 +5,10 @@
 			<slot />
 		</main>
 		<SiteFooter />
-		<!-- <div class="bottom-fade-out"></div> -->
 	</div>
 </template>
 
-<script setup>
-	import { useInterfaceStore } from '~/stores/interface';
-	const ui = useInterfaceStore();
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 	.app-container {
@@ -22,6 +18,7 @@
 
 		main {
 			flex-grow: 1;
+			min-height: 80vh;
 		}
 	}
 </style>

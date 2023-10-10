@@ -10,12 +10,12 @@
 
 <style lang="scss">
 	.button-24 {
-		background: var(--brand);
+		background: var(--brand-dark);
 		border: 1px solid var(--brand);
 		border-radius: 6px;
 		box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
 		box-sizing: border-box;
-		color: #ffffff;
+		color: rgb(239, 233, 233);
 		cursor: pointer;
 		display: inline-block;
 		text-transform: uppercase;

@@ -41,8 +41,7 @@
 		}
 		const randomIndex = Math.floor(Math.random() * messages.value.length);
 		message.value = messages.value[randomIndex];
-		console.log(message.value);
-		question.value = '';
+		question.value = null;
 	};
 </script>
 

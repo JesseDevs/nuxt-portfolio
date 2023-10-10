@@ -3,14 +3,14 @@
 		<h2 v-if="pokemonNames.length > 0" class="strict-voice">
 			Pokemon Names: {{ pokemonNames.length }}
 		</h2>
-		<ol v-if="pokemonNames.length > 0">
+		<ul v-if="pokemonNames.length > 0">
 			<li v-for="(name, index) in pokemonNames" :key="name">
 				<p class="p-name">
 					<span>{{ index + 1 }}.</span>
 					{{ utils.capitalizeWords(name) }}
 				</p>
 			</li>
-		</ol>
+		</ul>
 
 		<form action="" @submit.prevent="runSubmit">
 			<label class="calm-voice" for="pName">Write a name to remove from the list.</label>
@@ -70,7 +70,7 @@
 	}
 
 	form-box {
-		ol {
+		ul {
 			min-height: 133px;
 		}
 	}

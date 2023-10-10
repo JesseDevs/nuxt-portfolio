@@ -46,12 +46,23 @@
 							Pokémon Removal
 						</button>
 					</li>
+					<li>
+						<button class="icon-button" @click="toggleSpecificForm('contest')">
+							<Icon
+								name="icon-park-outline:gold-medal"
+								size="21"
+								color="var(--text)"
+							/>
+							Pick a Winner
+						</button>
+					</li>
 				</ul>
 			</forms-showcase>
 
 			<LazyModalContainer>
 				<LazyModalELR v-if="ui.formModal && selectedFormType === 'elr'" />
 				<LazyModalMagic8 v-if="ui.formModal && selectedFormType === 'magic8'" />
+				<LazyModalContest v-if="ui.formModal && selectedFormType === 'contest'" />
 			</LazyModalContainer>
 		</inner-column>
 	</section>
@@ -96,13 +107,13 @@
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 5px;
+			gap: 8px;
 			padding-right: 5px;
 			button {
 				display: flex;
 				align-items: center;
 				gap: 10px;
-				padding: 8px 15px;
+				padding: 12px 15px;
 				border-radius: 0.375rem;
 				transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 				font-weight: 500;

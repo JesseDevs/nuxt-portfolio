@@ -90,7 +90,7 @@
 		border-left: none;
 		height: 80vh;
 		@media (min-width: 500px) {
-			height: 87vh;
+			height: 85vh;
 		}
 		transition: 0.4s left ease;
 		margin: 0 auto;

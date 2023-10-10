@@ -28,11 +28,12 @@ p a {
 }
 
 form {
-
-	label,
-	input,
-	textarea {
-		display: block;
+	form-field {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		width: 100%;
+		max-width: 400px;
 	}
 }
 
@@ -58,11 +59,17 @@ form-box {
 		resize: none;
 	}
 
+	label,
+	input,
+	textarea {
+		display: block;
+	}
+
 	textarea {
 		min-height: 100px;
 	}
 
-	input[type='text']:focus,
+	input:focus,
 	textarea:focus {
 		outline: 2px solid var(--brand);
 	}
@@ -78,4 +85,14 @@ form-box {
 			margin-top: 20px;
 		}
 	}
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
 }

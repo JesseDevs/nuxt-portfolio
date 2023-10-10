@@ -11,14 +11,14 @@
 						</NuxtLink>
 					</li>
 					<li>
-						<a href="/#ProjectSection" @click="ui.closeMenu">
+						<NuxtLink to="/#ProjectSection" @click="ui.closeMenu">
 							<span>Projects</span>
-						</a>
+						</NuxtLink>
 					</li>
 					<li>
-						<a href="/#AboutCard" @click="ui.closeMenu">
+						<NuxtLink to="/#AboutCard" @click="ui.closeMenu">
 							<span>About</span>
-						</a>
+						</NuxtLink>
 					</li>
 					<li>
 						<NuxtLink to="/writing" @click="ui.closeMenu">
@@ -27,27 +27,50 @@
 					</li>
 
 					<li>
-						<a href="#ContactPage" @click="ui.closeMenu">
+						<NuxtLink to="#ContactPage" @click="ui.closeMenu">
 							<span>Contact</span>
-						</a>
+						</NuxtLink>
 					</li>
 				</ul>
 
 				<ul class="socials">
 					<h3>Socials</h3>
-					<li><a href="https://github.com/JesseDevs" target="_blank"> Github </a></li>
 					<li>
-						<a href="https://www.linkedin.com/in/felix-jesser/" target="_blank">
+						<NuxtLink to="https://github.com/JesseDevs" target="_blank" rel="noopener">
+							Github
+						</NuxtLink>
+					</li>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/felix-jesser/"
+							target="_blank"
+							rel="noopener"
+						>
 							LinkedIn
 						</a>
 					</li>
-					<li><a href="https://twitter.com/Jesse_Dude" target="_blank"> Twitter </a></li>
 					<li>
-						<a href="https://www.instagram.com/jessedude2/" target="_blank"
+						<NuxtLink
+							to="https://twitter.com/Jesse_Dude"
+							target="_blank"
+							rel="noopener"
+						>
+							Twitter
+						</NuxtLink>
+					</li>
+					<li>
+						<a
+							href="https://www.instagram.com/jessedude2/"
+							target="_blank"
+							rel="noopener"
 							>Instagram</a
 						>
 					</li>
-					<li><a href="/webdev-resume-jesse.pdf" target="_blank"> Resume </a></li>
+					<li>
+						<NuxtLink to="/webdev-resume-jesse.pdf" target="_blank" rel="noopener">
+							Resume
+						</NuxtLink>
+					</li>
 				</ul>
 			</nav>
 			<div class="footnote">

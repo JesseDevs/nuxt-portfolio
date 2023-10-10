@@ -88,9 +88,9 @@
 		box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.5);
 		border-radius: 0rem 1rem 1rem 0;
 		border-left: none;
-		height: 70vh;
+		height: 80vh;
 		@media (min-width: 500px) {
-			height: 77vh;
+			height: 87vh;
 		}
 		transition: 0.4s left ease;
 		margin: 0 auto;

@@ -26,7 +26,7 @@
 		align-items: center;
 		border-radius: 9999px;
 		width: fit-content;
-		margin: 50px auto;
+		margin: 30px auto;
 
 		button {
 			pointer-events: all;

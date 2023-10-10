@@ -1,35 +1,35 @@
 <template>
 	<div class="links-container">
-		<a href="https://github.com/JesseDevs" target="_blank">
+		<NuxtLink to="https://github.com/JesseDevs" target="_blank" rel="noopener">
 			<Icon name="fa6-brands:square-github" size="24" />
 			<div class="helper">
 				<p class="small-voice">Github</p>
 			</div>
-		</a>
-		<a href="https://www.linkedin.com/in/felix-jesser/" target="_blank">
+		</NuxtLink>
+		<NuxtLink to="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="noopener">
 			<Icon name="fa6-brands:linkedin" size="24" />
 			<div class="helper">
 				<p class="small-voice">LinkedIn</p>
 			</div>
-		</a>
-		<a href="https://twitter.com/Jesse_Dude" target="_blank">
+		</NuxtLink>
+		<NuxtLink to="https://twitter.com/Jesse_Dude" target="_blank" rel="noopener">
 			<Icon name="fa6-brands:square-x-twitter" size="24" />
 			<div class="helper">
 				<p class="small-voice">Twitter</p>
 			</div>
-		</a>
-		<a href="https://www.instagram.com/jessedude2/" target="_blank">
+		</NuxtLink>
+		<NuxtLink to="https://www.instagram.com/jessedude2/" target="_blank" rel="noopener">
 			<Icon name="fa6-brands:square-instagram" size="24" />
 			<div class="helper">
 				<p class="small-voice">Instagram</p>
 			</div>
-		</a>
-		<a href="/webdev-resume-jesse.pdf" target="_blank">
+		</NuxtLink>
+		<NuxtLink to="/webdev-resume-jesse.pdf" target="_blank" rel="noopener">
 			<Icon name="pepicons-pop:cv" size="23" />
 			<div class="helper">
 				<p class="small-voice">Resume</p>
 			</div>
-		</a>
+		</NuxtLink>
 	</div>
 </template>
 

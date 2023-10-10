@@ -16,7 +16,7 @@
 			<label class="calm-voice" for="pName">Write a name to remove from the list.</label>
 			<input v-model="pNameToRemove" type="text" name="pName" />
 
-			<button class="button-24" role="button">Submit</button>
+			<Button24 role="button">Submit</Button24>
 		</form>
 
 		<Transition>
@@ -24,7 +24,7 @@
 				<p>You deleted {{ recentlyDeletedName }}!</p>
 				<p>Hit a reload to get'em back on the list.</p>
 
-				<button @click="reloadWindow" class="button-24" role="button">Reload Window</button>
+				<Button24 :onClick="reloadWindow" role="button">Reload Window</Button24>
 			</div>
 		</Transition>
 	</form-box>
@@ -37,9 +37,16 @@
 	const pokemonNames = ref(['pikachu', 'charizard', 'bulbasaur', 'eevee', 'snorlax']);
 	const pNameToRemove = ref('');
 	const recentlyDeletedName = ref('');
+	const errMessage = ref('');
 
 	const runSubmit = () => {
 		const deletedName = pNameToRemove.value.toLowerCase();
+
+		if (!pokemonNames.value.includes(deletedName)) {
+			errMessage.value = `${deletedName} does not exist in the list of Pokemon names.`;
+			return;
+		}
+
 		pokemonNames.value = pokemonNames.value.filter((pName) => pName !== deletedName);
 		pNameToRemove.value = '';
 		recentlyDeletedName.value = utils.capitalizeWords(deletedName);
@@ -63,77 +70,8 @@
 	}
 
 	form-box {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		gap: 1rem;
-
 		ol {
 			min-height: 133px;
-		}
-
-		form {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-			max-width: 400px;
-		}
-
-		input {
-			padding: 8px 14px;
-			border: none;
-		}
-
-		input[type='text']:focus {
-			outline: 2px solid var(--brand);
-		}
-
-		.button-24 {
-			background: var(--brand);
-			border: 1px solid var(--brand);
-			border-radius: 6px;
-			box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-			box-sizing: border-box;
-			color: #ffffff;
-			cursor: pointer;
-			display: inline-block;
-			text-transform: uppercase;
-
-			font-weight: 700;
-			line-height: 16px;
-			min-height: 40px;
-			outline: 0;
-			letter-spacing: 0.4px;
-			padding: 12px 14px;
-			text-align: center;
-			text-rendering: geometricprecision;
-			user-select: none;
-			-webkit-user-select: none;
-			touch-action: manipulation;
-			vertical-align: middle;
-			transition: background-color 0.3s ease;
-		}
-
-		.button-24:hover,
-		.button-24:active {
-			background-color: initial;
-			background-position: 0 0;
-			color: var(--brand);
-		}
-
-		.button-24:active {
-			opacity: 0.5;
-		}
-
-		.flex-box {
-			display: flex;
-			width: 100%;
-			flex-direction: column;
-			max-width: 400px;
-			padding-top: 2rem;
-			button {
-				margin-top: 20px;
-			}
 		}
 	}
 

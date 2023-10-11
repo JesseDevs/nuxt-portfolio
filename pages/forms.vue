@@ -36,7 +36,7 @@
 				<LazyModalMagic8 v-if="ui.formModal && selectedFormType === 'magic8'" />
 				<LazyModalContest v-if="ui.formModal && selectedFormType === 'contest'" />
 				<LazyModalFiltering v-if="ui.formModal && selectedFormType === 'filtering'" />
-				<LazyModalRPG v-if="ui.formModal && selectedFormType === 'rpg '" />
+				<!-- <LazyModalRPG v-if="ui.formModal && selectedFormType === 'rpg '" /> -->
 			</LazyModalContainer>
 		</inner-column>
 	</section>
@@ -75,12 +75,12 @@
 			iconName: 'solar:filters-line-duotone',
 			buttonText: 'Filter Values',
 		},
-		{
-			component: 'ModalRPG',
-			slug: 'rpg',
-			iconName: 'icon-park-outline:gold-medal',
-			buttonText: 'Random Password',
-		},
+		// {
+		// 	component: 'ModalRPG',
+		// 	slug: 'rpg',
+		// 	iconName: 'icon-park-outline:gold-medal',
+		// 	buttonText: 'Random Password',
+		// },
 	];
 
 	const selectedFormType = ref('');

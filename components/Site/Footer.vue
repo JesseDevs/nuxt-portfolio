@@ -2,7 +2,7 @@
 	<footer class="site-footer small-voice">
 		<inner-column>
 			<nav>
-				<ul class="nav-container page">
+				<ul class="pages">
 					<h3>Pages</h3>
 
 					<li>
@@ -29,6 +29,11 @@
 					<li>
 						<NuxtLink to="#ContactPage" @click="ui.closeMenu">
 							<span>Contact</span>
+						</NuxtLink>
+					</li>
+					<li>
+						<NuxtLink to="#ContactPage" @click="ui.closeMenu">
+							<span>Form Interactions</span>
 						</NuxtLink>
 					</li>
 				</ul>

@@ -17,6 +17,12 @@ export const useProjectStore = defineStore('projectStore', function () {
 				],
 				files: [
 					{
+						title: 'Form Interactions',
+						git: 'https://github.com/JesseDevs/nuxt-portfolio/blob/main/pages/forms.vue',
+						link: '/forms',
+						p: 'On my personal website, under the <em>Forms</em> tab, you’ll find various interactive forms designed for user input. These forms were originally crafted using PHP for server-side rendering, inspired by challenges from ‘Exercises for Programmers.’ With the integration of JavaScript, I’ve enhanced the frontend experience, showcasing a range of additional features that activate when users interact with these elements. To elevate this experience even further, I’ve incorporated Vue to create a more dynamic and engaging environment for users to interact with the forms on my site.',
+					},
+					{
 						title: 'Workout App',
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/workout-app//',
 						link: 'https://peprojects.dev/alpha-4/jesse/_projects/workout-app/',

@@ -5,5 +5,9 @@ export const useUtilitiesStore = defineStore('utils', function () {
 		return str.replace(/\b\w/g, (char) => char.toUpperCase());
 	}
 
-	return { capitalizeWords };
+	function removeDuplicates(arr) {
+		return arr.filter((item, index) => arr.indexOf(item) === index);
+	}
+
+	return { capitalizeWords, removeDuplicates };
 });

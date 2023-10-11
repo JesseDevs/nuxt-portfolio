@@ -67,7 +67,7 @@ export default defineNuxtConfig({
 					content: 'en_US',
 				},
 			],
-			link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+			link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
 		},
 	},
 	css: ['~/assets/css/globals.css'],

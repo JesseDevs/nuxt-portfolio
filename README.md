@@ -60,5 +60,5 @@ The idea is to be able to create a similar structure using NUXT and access all t
 
 -   npx nuxi@latest init **nuxt-portfolio**
 -   npm install [Install dependencies]
--   npm i @pinia/nuxt @vite-pwa/nuxt nuxt-icon uuid
+-   npm i @pinia/nuxt nuxt-icon uuid
 -   npm i pinia -f

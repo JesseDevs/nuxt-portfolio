@@ -108,6 +108,7 @@
 		}
 
 		a {
+			font-weight: 600;
 			opacity: 0.75;
 			transition: 0.25s opacity;
 		}
@@ -130,7 +131,7 @@
 		a {
 			display: block;
 
-			font-weight: 400;
+			font-weight: 600;
 			color: var(--brand);
 
 			cursor: pointer;

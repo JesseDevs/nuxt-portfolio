@@ -75,13 +75,14 @@
 	menu-modal {
 		display: block;
 		overflow: hidden;
+		overflow-y: scroll;
 		width: 95vw;
 		max-width: 950px;
 		padding: 4rem 2rem;
 		pointer-events: all;
 		position: fixed;
 		left: -100%;
-		top: 10vh;
+		top: 5vh;
 
 		backdrop-filter: saturate(180%) blur(3rem);
 		background-color: rgb(24, 24, 27);

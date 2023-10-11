@@ -50,7 +50,7 @@
 		a {
 			display: block;
 			color: var(--brand);
-			font-weight: 400;
+			font-weight: 600;
 			max-width: fit-content;
 
 			&:hover {

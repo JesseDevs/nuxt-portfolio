@@ -35,7 +35,7 @@
 			</NuxtLink>
 		</li>
 		<li>
-			<NuxtLink to="/forms" @click="ui.closeMenu">
+			<NuxtLink to="/forms" class="big-theme-toggle" @click="ui.closeMenu">
 				<Icon name="mdi:message-reply" size="28" color="var(--white)" />
 				<span>Forms</span>
 			</NuxtLink>

@@ -63,9 +63,7 @@
 		border: 2px solid var(--brand);
 		left: 50%;
 		top: 33px;
-		@media (min-width: 500px) {
-			top: 83px;
-		}
+
 		height: 175px;
 		width: 175px;
 		transform: translate(-50%, 20%);

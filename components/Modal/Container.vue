@@ -96,9 +96,6 @@
 			height: 85vh;
 
 			div.modal-content {
-				display: flex;
-				place-items: center;
-				/* place-content: center; */
 				width: 100%;
 				height: 100%;
 			}

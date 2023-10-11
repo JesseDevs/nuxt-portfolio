@@ -7,16 +7,16 @@
 			</NuxtLink>
 		</li>
 		<li>
-			<a href="/#ProjectSection" @click="ui.closeMenu">
+			<NuxtLink to="/#ProjectSection" @click="ui.closeMenu">
 				<Icon name="iconoir:design-pencil" size="28" color="var(--white)" />
 				<span>Projects</span>
-			</a>
+			</NuxtLink>
 		</li>
 		<li>
-			<a href="/#AboutCard" @click="ui.closeMenu">
+			<NuxtLink to="/#AboutCard" @click="ui.closeMenu">
 				<Icon name="material-symbols:person" size="28" color="var(--white)" />
 				<span>About</span>
-			</a>
+			</NuxtLink>
 		</li>
 		<li>
 			<NuxtLink to="/writing" @click="ui.closeMenu">
@@ -28,27 +28,11 @@
 				<span>Writing</span>
 			</NuxtLink>
 		</li>
-		<!-- <li>
-						<a href="#" @click="ui.closeMenu">
-							<Icon name="lucide:layout-grid" size="28" color="var(--white)" />
-							<span>Layout</span>
-						</a>
-					</li> -->
-		<!-- <li>
-						<a href="#" @click="ui.closeMenu">
-							<Icon
-								name="icon-park-outline:form-one"
-								size="28"
-								color="var(--white)"
-							/>
-							<span>Forms</span>
-						</a>
-					</li> -->
 		<li>
-			<a href="/#ContactPage" @click="ui.closeMenu">
+			<NuxtLink to="/#ContactPage" @click="ui.closeMenu">
 				<Icon name="mdi:message-reply" size="28" color="var(--white)" />
 				<span>Contact</span>
-			</a>
+			</NuxtLink>
 		</li>
 		<li class="big-theme-toggle">
 			<BigThemeToggle />
@@ -62,7 +46,7 @@
 	const ui = useInterfaceStore();
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	ul.nav-container {
 		padding-top: 2rem;
 		display: flex;

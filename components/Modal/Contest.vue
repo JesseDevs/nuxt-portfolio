@@ -1,39 +1,49 @@
 <template>
 	<form-box>
-		<h2 class="strict-voice">Let’s Pick a Winner!<br /></h2>
+		<h2 class="chant-voice">Let’s Pick a Winner!<br /></h2>
 
-		<Transition name="fade" mode="out-in">
-			<ul v-if="totalCompetitors.length > 0">
-				<li v-for="(comp, index) in totalCompetitors" :key="comp">
-					<p class="p-name">
-						<span>{{ index + 1 }}.</span>
-						{{ utils.capitalizeWords(comp) }}
-					</p>
-				</li>
-			</ul>
-		</Transition>
+		<form autocomplete="off" action="" @submit.prevent="runSubmit">
+			<label class="calm-voice" for="arr">Who is competing?</label>
+			<input type="text" v-model="newCompetitor" name="arr" />
 
-		<Transition name="fade" mode="out-in">
-			<form action="" @submit.prevent="runSubmit">
-				<label class="calm-voice" for="arr">Who is competing?</label>
-				<input type="text" v-model="newCompetitor" name="arr" />
-
-				<Button24 role="button" @click.prevent="addToCompetition"
-					>Add to Competition</Button24
+			<Button24 role="button" @click.prevent="addToCompetition">{{ compWord }}</Button24>
+			<Transition name="insert-button">
+				<Button24 class="winner" v-if="totalCompetitors.length >= 2" role="button"
+					>Find Winner</Button24
 				>
-				<!-- <Button24 role="button">Find Winner</Button24> -->
-			</form>
+			</Transition>
+		</form>
+		<TransitionGroup name="list" tag="ul">
+			<li v-for="(comp, index) in totalCompetitors" :key="comp">
+				<p class="p-name">
+					<span>{{ index + 1 }}.</span>
+					{{ utils.capitalizeWords(comp) }}
+				</p>
+			</li>
+		</TransitionGroup>
+
+		<Transition name="list">
+			<p class="announcement" v-if="winner">
+				<span>{{ utils.capitalizeWords(winner) }}</span> is the winner!!
+			</p>
 		</Transition>
 	</form-box>
 </template>
 
 <script setup>
-	import { useUtilitiesStore } from '~/stores/utils';
+	import { useUtilitiesStore } from '@/stores/utils';
 	const utils = useUtilitiesStore();
 
 	const totalCompetitors = ref([]);
 	const newCompetitor = ref('');
 	const winner = ref('');
+	const compWord = ref('Start a Competition');
+
+	watch(totalCompetitors.value, (newVal) => {
+		if (newVal.length >= 1) {
+			compWord.value = 'Add Another Competitor';
+		}
+	});
 
 	const addToCompetition = () => {
 		if (newCompetitor.value.trim() !== '') {
@@ -43,14 +53,42 @@
 	};
 
 	const runSubmit = () => {
-		// const randomIndex = Math.floor(Math.random() * messages.value.length);
-		// message.value = messages.value[randomIndex];
-		// question.value = null;
+		const randomIndex = Math.floor(Math.random() * totalCompetitors.value.length);
+		winner.value = totalCompetitors.value[randomIndex];
 	};
 </script>
 <style lang="scss" scoped>
-	.p-name span {
-		display: inline-block;
-		min-width: 14px;
+	.insert-button-move,
+	.insert-button-enter-active,
+	.insert-button-leave-active {
+		transition: all 0.3s ease;
+	}
+
+	.insert-button-enter-from,
+	.insert-button-leave-to {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+
+	.insert-button-leave-active {
+		position: absolute;
+	}
+
+	form {
+		position: relative;
+	}
+	.winner {
+		margin-top: 10px;
+	}
+
+	.announcement {
+		text-align: center;
+		max-width: fit-content;
+		margin: 0 auto;
+		font-size: var(--step-1);
+		span {
+			font-weight: 700;
+			color: var(--brand);
+		}
 	}
 </style>

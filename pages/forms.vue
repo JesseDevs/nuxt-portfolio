@@ -20,40 +20,12 @@
 					information. While simple programs may rely on variables, more complex
 					applications benefit from structured data storage.
 				</p>
-				<!-- <p>
-					These next programs will showcase ways to think about storing data in lists or
-					name/value pairs, or even a combination of the two
-				</p> -->
 
 				<ul class="display-forms">
-					<li>
-						<button class="icon-button" @click="toggleSpecificForm('magic8')">
-							<Icon
-								name="material-symbols:counter-8-outline"
-								size="21"
-								color="var(--text)"
-							/>
-							Magic 8 Ball
-						</button>
-					</li>
-					<li>
-						<button class="icon-button" @click="toggleSpecificForm('elr')">
-							<Icon
-								name="ic:twotone-catching-pokemon"
-								size="21"
-								color="var(--text)"
-							/>
-							Pokémon Removal
-						</button>
-					</li>
-					<li>
-						<button class="icon-button" @click="toggleSpecificForm('contest')">
-							<Icon
-								name="icon-park-outline:gold-medal"
-								size="21"
-								color="var(--text)"
-							/>
-							Pick a Winner
+					<li v-for="formVue in formVues" :key="formVue.slug">
+						<button class="icon-button" @click="toggleSpecificForm(formVue.slug)">
+							<Icon :name="formVue.iconName" size="21" color="var(--text)" />
+							{{ formVue.buttonText }}
 						</button>
 					</li>
 				</ul>
@@ -63,20 +35,56 @@
 				<LazyModalELR v-if="ui.formModal && selectedFormType === 'elr'" />
 				<LazyModalMagic8 v-if="ui.formModal && selectedFormType === 'magic8'" />
 				<LazyModalContest v-if="ui.formModal && selectedFormType === 'contest'" />
+				<LazyModalFiltering v-if="ui.formModal && selectedFormType === 'filtering'" />
+				<LazyModalRPG v-if="ui.formModal && selectedFormType === 'rpg '" />
 			</LazyModalContainer>
 		</inner-column>
 	</section>
 </template>
 
 <script setup>
+	import { useInterfaceStore } from '~/stores/interface';
+	const ui = useInterfaceStore();
+
 	useHead({
 		title: 'Nuxt Portfolio | Forms for Developers',
 	});
 
-	import { useInterfaceStore } from '~/stores/interface';
-	const ui = useInterfaceStore();
+	const formVues = [
+		{
+			component: 'ModalMagic8',
+			slug: 'magic8',
+			iconName: 'material-symbols:counter-8-outline',
+			buttonText: 'Magic 8 Ball',
+		},
+		{
+			component: 'ModalELR',
+			slug: 'elr',
+			iconName: 'ic:twotone-catching-pokemon',
+			buttonText: 'Pokémon Removal',
+		},
+		{
+			component: 'ModalContest',
+			slug: 'contest',
+			iconName: 'icon-park-outline:gold-medal',
+			buttonText: 'Pick a Winner',
+		},
+		{
+			component: 'ModalFiltering',
+			slug: 'filtering',
+			iconName: 'solar:filters-line-duotone',
+			buttonText: 'Filter Values',
+		},
+		{
+			component: 'ModalRPG',
+			slug: 'rpg',
+			iconName: 'icon-park-outline:gold-medal',
+			buttonText: 'Random Password',
+		},
+	];
 
 	const selectedFormType = ref('');
+
 	const toggleSpecificForm = (formType) => {
 		ui.toggleFormModal();
 		selectedFormType.value = formType;

@@ -7,7 +7,7 @@
 				<p v-else class="message small-voice">{{ message }}</p>
 			</Transition>
 		</floating-traingle>
-		<form action="" @submit.prevent="shakeBall">
+		<form action="" autocomplete="off" @submit.prevent="shakeBall">
 			<label class="calm-voice" for="question"
 				>Recieve an answer from the great Magic 8 ball.</label
 			>
@@ -63,6 +63,9 @@
 		border: 2px solid var(--brand);
 		left: 50%;
 		top: 33px;
+		@media (min-width: 500px) {
+			top: 83px;
+		}
 		height: 175px;
 		width: 175px;
 		transform: translate(-50%, 20%);

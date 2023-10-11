@@ -1,6 +1,6 @@
 <template>
 	<dev-box>
-		<p>Are you a devloper? Explore!</p>
+		<p>Are you a devloper? Explore more!</p>
 		<p class="small-voice"><em>...if not thats cool too.</em></p>
 
 		<ul class="nav-container">
@@ -10,12 +10,12 @@
 					<span>Form Interactions</span>
 				</NuxtLink>
 			</li>
-			<li>
+			<!-- <li>
 				<NuxtLink to="#" @click="ui.closeMenu">
 					<Icon name="lucide:layout-grid" size="28" color="var(--white)" />
 					<span>Design Layouts</span>
 				</NuxtLink>
-			</li>
+			</li> -->
 		</ul>
 	</dev-box>
 </template>

@@ -1,18 +1,18 @@
 <template>
 	<form-box>
-		<h2 v-if="pokemonNames.length > 0" class="strict-voice">
+		<h2 v-if="pokemonNames.length > 0" class="chant-voice">
 			Pokemon Names: {{ pokemonNames.length }}
 		</h2>
-		<ul v-if="pokemonNames.length > 0">
+		<TransitionGroup name="list" tag="ul">
 			<li v-for="(name, index) in pokemonNames" :key="name">
 				<p class="p-name">
 					<span>{{ index + 1 }}.</span>
 					{{ utils.capitalizeWords(name) }}
 				</p>
 			</li>
-		</ul>
+		</TransitionGroup>
 
-		<form action="" @submit.prevent="runSubmit">
+		<form action="" autocomplete="off" @submit.prevent="runSubmit">
 			<label class="calm-voice" for="pName">Write a name to remove from the list.</label>
 			<input v-model="pNameToRemove" type="text" name="pName" />
 
@@ -71,7 +71,7 @@
 
 	form-box {
 		ul {
-			min-height: 133px;
+			min-height: 120px;
 		}
 	}
 

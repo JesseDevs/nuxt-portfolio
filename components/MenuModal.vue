@@ -1,7 +1,7 @@
 <template>
 	<div @click="handleModalContainerClick" :class="`modal-container ${ui.menuClass}`">
-		<menu-modal>
-			<div class="modal-content">
+		<site-menu-modal>
+			<div class="menu-modal-content">
 				<nav class="main-menu">
 					<CubeBlock />
 					<button class="icon-button x" @click="ui.closeMenu">
@@ -15,7 +15,7 @@
 				<div class="line"></div>
 				<DevBox />
 			</div>
-		</menu-modal>
+		</site-menu-modal>
 	</div>
 </template>
 
@@ -33,12 +33,12 @@
 
 <style lang="scss" scoped>
 	@media (prefers-color-scheme: light) {
-		menu-modal {
+		site-menu-modal {
 			background-color: rgb(35, 35, 37);
 		}
 	}
 	body.light {
-		menu-modal {
+		site-menu-modal {
 			background-color: rgb(35, 35, 37);
 		}
 	}
@@ -69,7 +69,7 @@
 		pointer-events: all;
 	}
 
-	menu-modal {
+	site-menu-modal {
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
@@ -83,7 +83,7 @@
 		transition: left 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.3s ease-in-out;
 
 		left: -100%;
-		.modal-content {
+		.menu-modal-content {
 			padding: 1.5rem;
 		}
 
@@ -102,7 +102,7 @@
 	}
 
 	.modal-container.menu-open {
-		menu-modal {
+		site-menu-modal {
 			left: 0;
 		}
 	}

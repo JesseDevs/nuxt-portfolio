@@ -46,6 +46,8 @@
 
 		@media (min-width: 1000px) {
 			scale: 9;
+			top: 25%;
+			right: 15%;
 		}
 	}
 
@@ -56,9 +58,9 @@
 		transform-style: preserve-3d;
 		animation: turn 8s linear infinite;
 	}
-	// .cube:hover {
-	// 	animation-play-state: paused;
-	// }
+	.cube:hover {
+		animation-play-state: paused;
+	}
 
 	.face {
 		width: 25px;

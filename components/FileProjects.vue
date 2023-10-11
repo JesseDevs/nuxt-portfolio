@@ -57,7 +57,9 @@
 			display: flex;
 			align-items: center;
 			gap: 10px;
-
+			a {
+				cursor: pointer;
+			}
 			h4 {
 				flex-shrink: 0;
 			}

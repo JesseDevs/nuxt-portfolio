@@ -29,7 +29,7 @@
 	};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.modal-container {
 		position: fixed;
 		overflow-y: auto;
@@ -81,7 +81,7 @@
 		pointer-events: all;
 		position: fixed;
 		left: -100%;
-		top: 13vh;
+		top: 10vh;
 
 		backdrop-filter: saturate(180%) blur(3rem);
 		background-color: rgb(24, 24, 27);
@@ -89,10 +89,19 @@
 		border-radius: 0rem 1rem 1rem 0;
 		border-left: none;
 		height: 80vh;
-		@media (min-width: 500px) {
-			height: 85vh;
-		}
 		transition: 0.4s left ease;
 		margin: 0 auto;
+
+		@media (min-width: 500px) {
+			height: 85vh;
+
+			div.modal-content {
+				display: flex;
+				place-items: center;
+				/* place-content: center; */
+				width: 100%;
+				height: 100%;
+			}
+		}
 	}
 </style>

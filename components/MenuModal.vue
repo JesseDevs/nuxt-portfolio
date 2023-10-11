@@ -12,6 +12,8 @@
 				<NavContainer />
 				<div class="line"></div>
 				<ThemeToggle />
+				<div class="line"></div>
+				<DevBox />
 			</div>
 		</menu-modal>
 	</div>

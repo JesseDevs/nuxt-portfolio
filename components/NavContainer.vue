@@ -69,6 +69,7 @@
 			font-weight: 500;
 			color: var(--white);
 			opacity: 0.85;
+			width: 100%;
 
 			svg {
 				pointer-events: none;

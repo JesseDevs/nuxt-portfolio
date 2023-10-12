@@ -33,7 +33,7 @@
 	--mode: rgb(235, 236, 243);
 }
 
-body.light {
+.light-mode body {
 	--background: #e9e3d3;
 	--bg-opaque: rgba(46, 45, 45, 0.322);
 	--background-light: rgba(189, 184, 184, 0.724);

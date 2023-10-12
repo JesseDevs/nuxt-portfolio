@@ -8,7 +8,10 @@
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+	import { useInterfaceStore } from '~/stores/interface';
+	const ui = useInterfaceStore();
+</script>
 
 <style lang="scss" scoped>
 	.app-container {

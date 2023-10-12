@@ -21,7 +21,6 @@
 
 <script setup>
 	import { useInterfaceStore } from '~/stores/interface';
-
 	const ui = useInterfaceStore();
 
 	const handleModalContainerClick = (event) => {
@@ -37,7 +36,7 @@
 			background-color: rgb(35, 35, 37);
 		}
 	}
-	body.light {
+	.light-mode body {
 		site-menu-modal {
 			background-color: rgb(35, 35, 37);
 		}

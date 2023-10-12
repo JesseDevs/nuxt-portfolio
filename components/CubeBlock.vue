@@ -77,7 +77,7 @@
 		transition: transform 500ms;
 	}
 
-	body.light {
+	.light-mode body {
 		.face {
 			border: 2px solid rgb(208, 205, 205);
 		}

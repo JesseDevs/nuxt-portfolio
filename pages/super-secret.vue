@@ -54,6 +54,23 @@
 				</bigger-box>
 			</div>
 		</column-container>
+
+		<div>
+			<h1>Color mode: {{ $colorMode.value }}</h1>
+			<div :class="`theme-toggle ${$colorMode.value}`">
+				<button class="light-button" @click="$colorMode.preference = 'light'">
+					<Icon name="ph:sun-bold" size="21" />
+					<span class="relative z-10">Light</span>
+				</button>
+
+				<button class="dark-button" @click="$colorMode.preference = 'dark'">
+					<Icon name="material-symbols:dark-mode-outline" size="21" />
+					<span class="relative z-10">Dark</span>
+				</button>
+			</div>
+		</div>
+		{{ colorMode }}
+		{{ $colorMode }}
 	</section>
 </template>
 
@@ -61,6 +78,10 @@
 	useHead({
 		title: 'Nuxt Portfolio | Home',
 	});
+
+	const colorMode = useColorMode();
+
+	console.log(colorMode.preference);
 </script>
 
 <style lang="scss" scoped>

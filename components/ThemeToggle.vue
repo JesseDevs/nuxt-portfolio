@@ -1,6 +1,10 @@
 <script setup>
 	import { useInterfaceStore } from '~/stores/interface';
 	const ui = useInterfaceStore();
+
+	const colorMode = useColorMode({
+		initialValue: 'dark',
+	});
 </script>
 
 <template>

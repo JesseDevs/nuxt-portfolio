@@ -1,10 +1,14 @@
 <script setup>
 	import { useInterfaceStore } from '~/stores/interface';
 	const ui = useInterfaceStore();
+
+	const colorMode = useColorMode({
+		initialValue: 'dark',
+	});
 </script>
 
 <template>
-	<div :class="`big-theme-toggle ${ui.selectedTheme}`">
+	<div :class="`big-theme-toggle  ${ui.selectedTheme}`">
 		<button class="light-button" @click="ui.setSelectedTheme('light')">
 			<Icon name="ph:sun-bold" size="21" />
 		</button>

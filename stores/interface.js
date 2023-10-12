@@ -1,6 +1,10 @@
 import { defineStore } from 'pinia';
 
 export const useInterfaceStore = defineStore('interface', function () {
+	const colorMode = useColorMode({
+		initialValue: 'dark',
+	});
+
 	const mainMenuOpen = ref(false);
 	const menuClass = computed(() => (mainMenuOpen.value ? 'menu-open' : 'menu-close'));
 
@@ -42,25 +46,24 @@ export const useInterfaceStore = defineStore('interface', function () {
 			}),
 		},
 	});
-
-	const selectedTheme = ref('dark');
-	const setSelectedTheme = (theme) => {
-		selectedTheme.value = theme;
-		localStorage.setItem('selectedTheme', theme);
-	};
+	const selectedTheme = ref(null);
 
 	onMounted(() => {
-		const savedTheme = localStorage.getItem('selectedTheme');
+		const savedTheme = localStorage.getItem('nuxt-color-mode');
 		if (savedTheme) {
 			selectedTheme.value = savedTheme;
+		} else {
+			selectedTheme.value = 'dark';
 		}
 	});
 
-	useHead({
-		bodyAttrs: {
-			class: computed(() => selectedTheme.value),
-		},
-	});
+	const setSelectedTheme = (theme) => {
+		if (theme !== selectedTheme.value) {
+			colorMode.preference = theme;
+			selectedTheme.value = theme;
+			localStorage.setItem('nuxt-color-mode', theme);
+		}
+	};
 
 	return {
 		mainMenuOpen,

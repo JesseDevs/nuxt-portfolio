@@ -9,18 +9,19 @@
 				</text-content>
 
 				<MyLinks class="isAboutCard" />
-
-				<div class="image-container">
-					<picture>
-						<NuxtImg
-							v-for="card in cards"
-							:key="card"
-							:src="card.url"
-							:alt="card.title"
-							loading="lazy"
-						/>
-					</picture>
-				</div>
+				<FadeIn>
+					<div class="image-container">
+						<picture>
+							<NuxtImg
+								v-for="card in cards"
+								:key="card"
+								:src="card.url"
+								:alt="card.title"
+								loading="lazy"
+							/>
+						</picture>
+					</div>
+				</FadeIn>
 			</about-card>
 		</inner-column>
 	</section>

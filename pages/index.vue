@@ -1,8 +1,16 @@
 <template>
-	<ModulesLandingHeading :moduleData="sections[0]" />
-	<ModulesProjectSection :moduleData="sections[1]" />
-	<ModulesAboutCard :moduleData="sections[2]" />
-	<ModulesContactPage :moduleData="sections[3]" />
+	<FadeIn>
+		<ModulesLandingHeading :moduleData="sections[0]" />
+	</FadeIn>
+	<FadeIn>
+		<ModulesProjectSection :moduleData="sections[1]" />
+	</FadeIn>
+	<FadeIn>
+		<ModulesAboutCard :moduleData="sections[2]" />
+	</FadeIn>
+	<FadeIn>
+		<ModulesContactPage :moduleData="sections[3]" />
+	</FadeIn>
 </template>
 
 <script setup>

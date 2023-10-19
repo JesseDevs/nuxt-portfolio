@@ -9,6 +9,7 @@ export default defineNuxtConfig({
 		'@vueuse/motion/nuxt',
 		'@nuxt/image-edge',
 		'@nuxtjs/color-mode',
+		'@kevinmarrec/nuxt-pwa',
 	],
 	vue: {
 		compilerOptions: {
@@ -41,7 +42,8 @@ export default defineNuxtConfig({
 				},
 				{
 					name: 'keywords',
-					content: 'Nuxt.js, Vue.js, Porfolio, web development, Javascript, front-end',
+					content:
+						'Nuxt.js, Vue.js, Porfolio, web development, Javascript, front-end',
 				},
 				{
 					name: 'twitter:card',

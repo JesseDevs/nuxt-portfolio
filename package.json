@@ -9,6 +9,7 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
+		"@kevinmarrec/nuxt-pwa": "^0.17.0",
 		"@nuxt/devtools": "latest",
 		"@nuxtjs/color-mode": "^3.3.0",
 		"@nuxtjs/style-resources": "^1.2.1",

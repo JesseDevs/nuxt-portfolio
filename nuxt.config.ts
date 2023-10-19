@@ -25,12 +25,7 @@ export default defineNuxtConfig({
 				{ charset: 'utf-8' },
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 				{
-					name: 'description',
-					content:
-						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
-				},
-				{
-					hid: 'og:description',
+					hid: 'og-desc',
 					property: 'og:description',
 					content:
 						'Welcome to my personal site! Take a look around and find something to peak your interest.. or mine.',
@@ -41,35 +36,27 @@ export default defineNuxtConfig({
 					content: 'JesseDevs | Nuxt Personal Site',
 				},
 				{
+					hid: 'og-image',
+					property: 'og:image',
+					content: '/green.jpg',
+				},
+				{
 					name: 'keywords',
 					content:
 						'Nuxt.js, Vue.js, Porfolio, web development, Javascript, front-end',
 				},
 				{
 					name: 'twitter:card',
-					content: 'c.jpg',
+					content: 'icon.jpg',
 				},
-				{
-					property: 'og:image',
-					content: 'https://jessedevs.net/c.jpg',
-				},
-				{
-					property: 'og:image:width',
-					content: '88',
-				},
-				{
-					property: 'og:image:height',
-					content: '88',
-				},
-				{
-					property: 'og:image:type',
-					content: 'image/jpg',
-				},
+				{ hid: 'og-type', property: 'og:type', content: 'website' },
+
 				{
 					hid: 'og:url',
 					property: 'og:url',
 					content: `https://jessedevs.net`,
 				},
+				{ hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
 				{
 					property: 'og:locale',
 					content: 'en_US',

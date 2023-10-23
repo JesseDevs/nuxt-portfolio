@@ -5,7 +5,11 @@
 				<text-content>
 					<SectionHeader :title="moduleData.heading" dir="rr" />
 
-					<p v-for="detail in moduleData.details" :key="detail" v-html="detail"></p>
+					<p
+						v-for="detail in moduleData.details"
+						:key="detail"
+						v-html="detail"
+					></p>
 				</text-content>
 
 				<MyLinks class="isAboutCard" />
@@ -18,6 +22,7 @@
 								:src="card.url"
 								:alt="card.title"
 								loading="lazy"
+								quality="60"
 							/>
 						</picture>
 					</div>

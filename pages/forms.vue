@@ -5,8 +5,9 @@
 
 			<text-content>
 				<p>
-					Forms play a vital role in user interaction, don't they? They are an integral
-					part of many web applications, allowing users to interact with data.
+					Forms play a vital role in user interaction, don't they? They are an
+					integral part of many web applications, allowing users to interact
+					with data.
 				</p>
 				<p>
 					Below you’ll find topics with small programs, that display ways
@@ -16,15 +17,23 @@
 			<forms-showcase>
 				<h1 class="chant-voice">Data Structures</h1>
 				<p>
-					Effective use of data structures is crucial for managing and organizing
-					information. While simple programs may rely on variables, more complex
-					applications benefit from structured data storage.
+					Effective use of data structures is crucial for managing and
+					organizing information. While simple programs may rely on variables,
+					more complex applications benefit from structured data storage.
 				</p>
 
 				<ul class="display-forms">
 					<li v-for="formVue in formVues" :key="formVue.slug">
-						<button class="icon-button" @click="toggleSpecificForm(formVue.slug)">
-							<Icon :name="formVue.iconName" size="21" color="var(--text)" />
+						<button
+							class="icon-button"
+							@click="toggleSpecificForm(formVue.slug)"
+							aria-label="open form"
+						>
+							<Icon
+								:name="formVue.iconName"
+								size="21"
+								color="var(--text)"
+							/>
 							{{ formVue.buttonText }}
 						</button>
 					</li>
@@ -35,7 +44,9 @@
 				<LazyModalELR v-if="ui.formModal && selectedFormType === 'elr'" />
 				<LazyModalMagic8 v-if="ui.formModal && selectedFormType === 'magic8'" />
 				<LazyModalContest v-if="ui.formModal && selectedFormType === 'contest'" />
-				<LazyModalFiltering v-if="ui.formModal && selectedFormType === 'filtering'" />
+				<LazyModalFiltering
+					v-if="ui.formModal && selectedFormType === 'filtering'"
+				/>
 				<!-- <LazyModalRPG v-if="ui.formModal && selectedFormType === 'rpg '" /> -->
 			</LazyModalContainer>
 		</inner-column>

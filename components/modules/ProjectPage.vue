@@ -4,7 +4,11 @@
 			<project-modal>
 				<h3 class="loud-voice">{{ project.title }}</h3>
 				<picture class="project-thumbnail">
-					<NuxtImg :src="project.imgSrc" loading="lazy" />
+					<NuxtImg
+						:src="project.imgSrc"
+						loading="lazy"
+						alt="Project container's image"
+					/>
 				</picture>
 
 				<p

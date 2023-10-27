@@ -41,7 +41,11 @@
 				<ul class="socials">
 					<h3>Socials</h3>
 					<li>
-						<NuxtLink to="https://github.com/JesseDevs" target="_blank" rel="noopener">
+						<NuxtLink
+							to="https://github.com/JesseDevs"
+							target="_blank"
+							rel="noopener"
+						>
 							Github
 						</NuxtLink>
 					</li>
@@ -72,7 +76,11 @@
 						>
 					</li>
 					<li>
-						<NuxtLink to="/webdev-resume-jesse.pdf" target="_blank" rel="noopener">
+						<NuxtLink
+							to="/webdev-resume-jesse.pdf"
+							target="_blank"
+							rel="noopener"
+						>
 							Resume
 						</NuxtLink>
 					</li>
@@ -86,7 +94,6 @@
 						width="100%"
 						height="152"
 						frameBorder="0"
-						allowfullscreen=""
 						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 						loading="lazy"
 					></iframe>
@@ -111,7 +118,11 @@
 		display: block;
 		width: 100%;
 		position: relative;
-		background: linear-gradient(180deg, var(--background), rgb(var(--brand-rgb) / 0.2));
+		background: linear-gradient(
+			180deg,
+			var(--background),
+			rgb(var(--brand-rgb) / 0.2)
+		);
 		backdrop-filter: brightness(0.7);
 
 		inner-column {
@@ -176,7 +187,8 @@
 
 						font-weight: 300;
 						display: block;
-						transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+						transition: background-color 0.2s ease-in-out,
+							opacity 0.2s ease-in-out;
 						border-radius: 0.375rem;
 						opacity: 0.85;
 					}

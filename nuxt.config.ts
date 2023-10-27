@@ -86,6 +86,7 @@ export default defineNuxtConfig({
 		classSuffix: '-mode',
 		storageKey: 'nuxt-color-mode',
 	},
+	ssr: true,
 
 	components: true,
 	pinia: {

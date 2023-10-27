@@ -1,16 +1,18 @@
 <template>
-	<FadeIn>
-		<ModulesLandingHeading :moduleData="sections[0]" />
-	</FadeIn>
-	<FadeIn>
-		<ModulesProjectSection :moduleData="sections[1]" />
-	</FadeIn>
-	<FadeIn>
-		<ModulesAboutCard :moduleData="sections[2]" />
-	</FadeIn>
-	<FadeIn>
-		<ModulesContactPage :moduleData="sections[3]" />
-	</FadeIn>
+	<div class="contents">
+		<FadeIn>
+			<ModulesLandingHeading :moduleData="sections[0]" />
+		</FadeIn>
+		<FadeIn>
+			<ModulesProjectSection :moduleData="sections[1]" />
+		</FadeIn>
+		<FadeIn>
+			<ModulesAboutCard :moduleData="sections[2]" />
+		</FadeIn>
+		<FadeIn>
+			<ModulesContactPage :moduleData="sections[3]" />
+		</FadeIn>
+	</div>
 </template>
 
 <script setup>
@@ -88,4 +90,8 @@
 	// });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+	div.contents {
+		display: contents;
+	}
+</style>

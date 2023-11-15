@@ -7,12 +7,12 @@
 						<h4 class="chant-voice">{{ file.title }}</h4>
 						<div class="line" />
 						<div class="file-links">
-							<a :href="file.git" target="_blank">
+							<NuxtLink :to="file.git" target="_blank">
 								<Icon name="mdi:github" size="30" />
-							</a>
-							<a :href="file.link" target="_blank">
+							</NuxtLink>
+							<NuxtLink :to="file.link" target="_blank">
 								<Icon name="bxs:send" size="30"
-							/></a>
+							/></NuxtLink>
 						</div>
 					</div>
 

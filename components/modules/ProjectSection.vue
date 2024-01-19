@@ -19,12 +19,16 @@
 				<SectionHeader :title="moduleData.heading" dir="r" />
 
 				<article-grid>
-					<article v-for="(project, index) in projects" :key="index" class="project">
-						<NuxtLink :to="`/projects/${project.slug}/`" class="projectImage">
+					<article
+						v-for="(project, index) in projects"
+						:key="index"
+						class="project"
+					>
+						<a :href="`/projects/${project.slug}/`" class="projectImage">
 							<picture>
 								<NuxtImg :src="project.imgSrc" loading="lazy" />
 							</picture>
-						</NuxtLink>
+						</a>
 
 						<div class="project-container">
 							<h4 class="chant-voice">{{ project.title }}</h4>
@@ -34,7 +38,9 @@
 						<p class="project-description">
 							{{ project.description }}
 							<NuxtLink :to="`/projects/${project.slug}/`"
-								>Learn More<Icon name="material-symbols:arrow-right-alt" size="25"
+								>Learn More<Icon
+									name="material-symbols:arrow-right-alt"
+									size="25"
 							/></NuxtLink>
 						</p>
 					</article>

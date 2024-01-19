@@ -33,8 +33,8 @@ export const useProjectStore = defineStore('projectStore', function () {
 					},
 					{
 						title: 'Bill Split App',
-						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/bill-app/',
-						link: 'https://peprojects.dev/alpha-4/jesse/_projects/bill-app/',
+						git: 'https://github.com/JesseDevs/bill-split',
+						link: 'https://bill-splitmate.vercel.app/',
 						image: '/projects/bill.webp',
 						p: [
 							'The <em>‘Bill Split APP’</em> was inspired by a night out with friends and the effort it took to even divide the bill. It has an interface with more personality and functionality. I used similar routing in Vanilla JavaScript to create multiple page templates.',

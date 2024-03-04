@@ -20,7 +20,7 @@ export default defineNuxtConfig({
 	app: {
 		pageTransition: { name: 'page', mode: 'out-in' },
 		head: {
-			title: 'Nuxt Portfolio',
+			title: 'Portfolio',
 
 			meta: [
 				{ charset: 'utf-8' },
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 				{
 					hid: 'og:title',
 					property: 'og:title',
-					content: 'JesseDevs | Nuxt Personal Site',
+					content: 'JesseDevs | Personal Site',
 				},
 				{
 					hid: 'og-image',

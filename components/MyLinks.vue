@@ -6,7 +6,11 @@
 				<p class="small-voice">Github</p>
 			</div>
 		</NuxtLink>
-		<NuxtLink to="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="noopener">
+		<NuxtLink
+			to="https://www.linkedin.com/in/felix-jesser/"
+			target="_blank"
+			rel="noopener"
+		>
 			<Icon name="fa6-brands:linkedin" size="24" />
 			<div class="helper">
 				<p class="small-voice">LinkedIn</p>
@@ -18,18 +22,22 @@
 				<p class="small-voice">Twitter</p>
 			</div>
 		</NuxtLink>
-		<NuxtLink to="https://www.instagram.com/jessedude2/" target="_blank" rel="noopener">
+		<NuxtLink
+			to="https://www.instagram.com/jessedude2/"
+			target="_blank"
+			rel="noopener"
+		>
 			<Icon name="fa6-brands:square-instagram" size="24" />
 			<div class="helper">
 				<p class="small-voice">Instagram</p>
 			</div>
 		</NuxtLink>
-		<NuxtLink to="/webdev-resume-jesse.pdf" target="_blank" rel="noopener">
+		<!-- <NuxtLink to="/webdev-resume-jesse.pdf" target="_blank" rel="noopener">
 			<Icon name="pepicons-pop:cv" size="23" />
 			<div class="helper">
 				<p class="small-voice">Resume</p>
 			</div>
-		</NuxtLink>
+		</NuxtLink> -->
 	</div>
 </template>
 

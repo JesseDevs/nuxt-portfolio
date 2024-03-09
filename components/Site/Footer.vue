@@ -75,7 +75,7 @@
 							>Instagram</a
 						>
 					</li>
-					<li>
+					<!-- <li>
 						<NuxtLink
 							to="/webdev-resume-jesse.pdf"
 							target="_blank"
@@ -83,7 +83,7 @@
 						>
 							Resume
 						</NuxtLink>
-					</li>
+					</li> -->
 				</ul>
 			</nav>
 			<div class="footnote">

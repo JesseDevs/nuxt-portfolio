@@ -17,7 +17,7 @@
 
 <script setup>
 	useHead({
-		title: 'Nuxt Portfolio | Home',
+		title: 'Home',
 	});
 
 	const sections = ref([

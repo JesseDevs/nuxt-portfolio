@@ -4,13 +4,13 @@
 			<ModulesLandingHeading :moduleData="sections[0]" />
 		</FadeIn>
 		<FadeIn>
-			<ModulesProjectSection :moduleData="sections[1]" />
+			<LazyModulesProjectSection :moduleData="sections[1]" />
 		</FadeIn>
 		<FadeIn>
-			<ModulesAboutCard :moduleData="sections[2]" />
+			<LazyModulesAboutCard :moduleData="sections[2]" />
 		</FadeIn>
 		<FadeIn>
-			<ModulesContactPage :moduleData="sections[3]" />
+			<LazyModulesContactPage :moduleData="sections[3]" />
 		</FadeIn>
 	</div>
 </template>

@@ -67,6 +67,7 @@
 	}
 	article {
 		position: relative;
+		height: 100%;
 	}
 	.pfiles-container {
 		padding: 3rem 0;
@@ -156,6 +157,7 @@
 
 		.file-container {
 			display: flex;
+			height: 100%;
 			flex-direction: column;
 			width: 100%;
 			gap: 1.3rem;
@@ -168,6 +170,7 @@
 				border-top: 1px solid rgb(95 94 96);
 				border-bottom: 1px solid rgb(95 94 96);
 				padding: 5px 10px;
+				flex-grow: 1;
 
 				p.list-header {
 					font-weight: 600;
@@ -197,6 +200,7 @@
 			flex-direction: column;
 			width: 100%;
 			gap: 1.3rem;
+			height: 100%;
 
 			picture {
 				border-top: 1px solid rgb(95 94 96);

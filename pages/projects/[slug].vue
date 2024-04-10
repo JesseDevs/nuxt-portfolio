@@ -9,7 +9,7 @@
 	const project = projects.find((project) => project.slug === slug);
 
 	useHead({
-		title: `Nuxt Portfolio | ${slug}`,
+		title: `Portfolio | ${slug.toUpperCase()}`,
 	});
 </script>
 

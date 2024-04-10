@@ -1,12 +1,16 @@
 <template>
 	<dev-box>
 		<p>Are you a devloper? Explore more!</p>
-		<p class="small-voice"><em>...if not thats cool too.</em></p>
+		<p class="small-voice"><em>... if not, thats cool too.</em></p>
 
 		<ul class="nav-container">
 			<li>
 				<NuxtLink to="/forms" @click="ui.closeMenu">
-					<Icon name="icon-park-outline:form-one" size="28" color="var(--white)" />
+					<Icon
+						name="icon-park-outline:form-one"
+						size="28"
+						color="var(--white)"
+					/>
 					<span>Form Interactions</span>
 				</NuxtLink>
 			</li>

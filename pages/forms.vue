@@ -58,7 +58,7 @@
 	const ui = useInterfaceStore();
 
 	useHead({
-		title: 'Nuxt Portfolio | Forms for Developers',
+		title: 'Portfolio | Forms for Developers',
 	});
 
 	const formVues = [

@@ -13,23 +13,16 @@ export const useProjectStore = defineStore('projectStore', function () {
 				'Small websites interactions to full scale interactive projects. Making button clicks work and moving screens slide.',
 			modalContent: {
 				overview: [
-					"<span class='first-words'>Javascript is</span> the most widely used programming language and has become a vital tool for developers. Although it is primarily a frontend language, there have been evolutions to make backends like Node and entire Frameworks on which projects can run. This timeline demonstrates the scaling of ideas and the process of understanding what is needed to make a website properly.",
+					'This timeline demonstrates the scaling of ideas and the process of prioritizing user interactions. It showcases how far JavaScript can go...',
 				],
 				files: [
 					{
 						title: 'Form Interactions',
 						git: 'https://github.com/JesseDevs/nuxt-portfolio/blob/main/pages/forms.vue',
 						link: '/forms',
-						p: 'On my personal website, under the <em>Forms</em> tab, you’ll find various interactive forms designed for user input. These forms were originally crafted using PHP for server-side rendering, inspired by challenges from ‘Exercises for Programmers.’ With the integration of JavaScript, I’ve enhanced the frontend experience, showcasing a range of additional features that activate when users interact with these elements. To elevate this experience even further, I’ve incorporated Vue to create a more dynamic and engaging environment for users to interact with the forms on my site.',
-					},
-					{
-						title: 'Workout App',
-						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/workout-app//',
-						link: 'https://peprojects.dev/alpha-4/jesse/_projects/workout-app/',
-						image: '/projects/workout.webp',
-						p: [
-							'My <em>‘Workout APP’</em> took a simple interface from the forms and created more than just a short answer for the user. I often have to remember the main body focus for my workout and the types of sets needed. This app is a simple way to create short lists of workouts dedicated to the muscle group. It was built using local storage and JavaScript class methods to generate app functionality, while using imports and exports to create templates for each page.',
-						],
+						image: '/projects/forms.jpg',
+						p: 'Simple user interactions. Using forms to generate immediate feedback. Challenges were adapted from the ‘Exercises for Programmers’ book.',
+						tech: ['HTML', 'CSS', 'Javascript', 'Vue'],
 					},
 					{
 						title: 'Bill Split App',
@@ -37,8 +30,9 @@ export const useProjectStore = defineStore('projectStore', function () {
 						link: 'https://bill-splitmate.vercel.app/',
 						image: '/projects/bill.webp',
 						p: [
-							'The <em>‘Bill Split APP’</em> was inspired by a night out with friends and the effort it took to even divide the bill. It has an interface with more personality and functionality. I used similar routing in Vanilla JavaScript to create multiple page templates.',
+							'Crafting a fully functional interface with personality, designed for repeated use to streamline the user‘s experience. Need to split the bill?',
 						],
+						tech: ['HTML', 'CSS', 'Javascript', 'Vue'],
 					},
 					{
 						title: 'Dunkin',
@@ -46,8 +40,9 @@ export const useProjectStore = defineStore('projectStore', function () {
 						link: 'https://calm-super-shot.surge.sh/',
 						image: '/projects/dunkin.webp',
 						p: [
-							'My <em>‘Dunkin’ Donuts: Vue App’</em> is built using Vue 3, a JavaScript framework used for building user interfaces. The latest version of Vue is a versatile framework that uses stores to pass variables and data to multiple components, meaning it can be used for small one-page sites to large multi-page projects. Reactive and computed variables give me the flexibility to work with live variables. To go along with this, I used Firebase to provide a database for users, products, and their items.',
+							'Constructing a robust and dynamic ecommerce platform. Leveraging the scalability and real-time capabilities of Firebase for seamless data management. Inspired by Dunkin Donuts.',
 						],
+						tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'Firebase', 'Shopify'],
 					},
 					{
 						title: 'SecondWave',
@@ -55,8 +50,28 @@ export const useProjectStore = defineStore('projectStore', function () {
 						link: 'https://second-wave.vercel.app/',
 						image: '/projects/wave.webp',
 						p: [
-							'<em>‘SecondWave: Resell Shop’</em> is a cutting-edge web application using Nuxt 3 framework, leveraging the power of Supabase as the robust database solution for seamless product management. This substantial undertaking demanded rapid learning and a high degree of adaptability to master emerging technologies and deliver a scalable, high-performance solution. Achievements include proficiently integrating advanced features and optimizing database operations to ensure a streamlined user experience.',
+							'Crafting a cutting-edge web application to elevate ecommerce to new heights, our focus is on user experience excellence at every level. We aim to deliver a seamless journey for users while ensuring our platform is primed for future growth and design enhancements.',
 						],
+						tech: [
+							'HTML',
+							'CSS',
+							'Javascript',
+							'Vue',
+							'NUXT',
+							'Supabase',
+							'Prisma',
+						],
+					},
+					{
+						title: 'ECHO: The Blog Site',
+						git: 'https://github.com/JesseDevs/blog-app',
+						link: 'https://echo-waves.vercel.app/',
+						image: '/projects/echo.jpg',
+						p: [
+							'Introducing my passion project: a cutting-edge web application that serves as a fully scalable blog site. This platform empowers users to tailor their experience to their liking, drawing inspiration from the user-friendly interfaces of Twitter, Instagram, and Tumblr.',
+						],
+						tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'NUXT', 'Supabase'],
+						star: true,
 					},
 				],
 			},
@@ -80,10 +95,8 @@ export const useProjectStore = defineStore('projectStore', function () {
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/legends',
 						link: 'https://peprojects.dev/alpha-4/jesse/_projects/legends/',
 						image: '/projects/legends.webp',
-						p: [
-							'The <em>‘Legends’</em> project showcases the initial ideas for approaching a CMS. It is a static data project that uses JSON, a standard lightweight data interchange format that is easy to read and write in the industry.',
-							'Since static data is never changing, this project can only render the data onto a page. If any user wants to change the data, they would need to access the JSON file directly in the project. This enables a web page to be generated quickly as the server does not need to query a database for every page load.',
-						],
+						p: ['Showcasing a simple collection of data for the user.'],
+						tech: ['HTML', 'CSS', 'PHP'],
 					},
 					{
 						title: 'Fighters',
@@ -91,35 +104,38 @@ export const useProjectStore = defineStore('projectStore', function () {
 						link: 'https://peprojects.dev/alpha-4/jesse/_projects/fighters-crud/',
 						image: '/projects/fighters.webp',
 						p: [
-							'The <em>‘Fighters’</em> project is the next level up. It is a lean PHP CRUD (create, read, update, and delete) project that enables users to create their own list of fighters according to their preferences.',
-							"Besides displaying the items on the frontend, there is also a form on the website that accepts a POST request on the backend to push the user's inputted data into the JSON index file. The user can then choose to delete the created item or update it if there are any mistakes.",
+							'Crafting an extra dimension to the collection of data. Offering CRUD capabilities for seamless data management. Embracing purposeful design to elevate user experience',
 						],
+						tech: ['HTML', 'CSS', 'Javascript', 'PHP'],
 					},
 					{
-						title: 'Music: WP',
-						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/music-wordpress/',
-						p: [
-							'Some people consider WordPress the pinnacle of CMSs as it powers about 40% of all websites on the internet. In my <em>‘Music: WordPress’</em> project, I gained a proper idea of why that is. The admin panel allows you to manage backend data with various plugins, making it efficient and simple for users and creators to maintain the overall quality.',
-							'Advanced Custom Fields (ACF) is an excellent plugin that enables the addition of custom content to our system. I discovered that creating many modules and themes can generate a quick workflow to output production-ready websites in a flash.',
-						],
-					},
-					{
-						title: 'Dunkin',
-						git: 'https://github.com/JesseDevs/super-shot',
-						link: 'https://calm-super-shot.surge.sh/',
-						image: '/projects/dunkin.webp',
-						p: [
-							'In my <em>‘Dunkin’ Donuts: Vue App’</em>, I utilized Firebase, which is not a CMS but a NoSQL cloud database that offers various ways to manage aspects of a web application. To build this type of data, I made an HTTP request to the Firebase API connected to my project. It works very similarly to a giant JSON file that can hold many lists filled with many objects that are easily accessed by database features.',
-						],
-					},
-					{
-						title: 'SecondWave: Resell Shop',
+						title: 'SecondWave',
 						git: 'https://github.com/JesseDevs/second-wave',
 						link: 'https://second-wave.vercel.app/',
 						image: '/projects/wave.webp',
 						p: [
-							'<em>‘SecondWave: Resell Shop’</em> is a cutting-edge web application using Nuxt 3 framework, leveraging the power of Supabase as the robust database solution for seamless product management. This substantial undertaking demanded rapid learning and a high degree of adaptability to master emerging technologies and deliver a scalable, high-performance solution. Achievements include proficiently integrating advanced features and optimizing database operations to ensure a streamlined user experience.',
+							'Crafting a cutting-edge web application to elevate ecommerce to new heights, our focus is on user experience excellence at every level. We aim to deliver a seamless journey for users while ensuring our platform is primed for future growth and design enhancements.',
 						],
+						tech: [
+							'HTML',
+							'CSS',
+							'Javascript',
+							'Vue',
+							'NUXT',
+							'Supabase',
+							'Prisma',
+						],
+					},
+					{
+						title: 'ECHO: The Blog Site',
+						git: 'https://github.com/JesseDevs/blog-app',
+						link: 'https://echo-waves.vercel.app/',
+						image: '/projects/echo.jpg',
+						p: [
+							'Introducing my passion project: a cutting-edge web application that serves as a fully scalable blog site. This platform empowers users to tailor their experience to their liking, drawing inspiration from the user-friendly interfaces of Twitter, Instagram, and Tumblr.',
+						],
+						tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'NUXT', 'Supabase'],
+						star: true,
 					},
 				],
 			},
@@ -135,7 +151,7 @@ export const useProjectStore = defineStore('projectStore', function () {
 				'A collection of responsive layouts. Building out the internet is complicated... so let’s start a module at a time.',
 			modalContent: {
 				overview: [
-					'<span class="first-words">Design is</span> an essential part of building a visually appealing and user-friendly website. Creating proper modules and layouts can make your website stand out and increase engagement with your audience. Modules are reusable components that can be used throughout your website to ensure consistency and improve the user experience.',
+					'Design is an essential part of building a visually appealing and user-friendly website. Creating proper modules and layouts can make your website stand out and increase engagement with your audience. Modules are reusable components that can be used throughout your website to ensure consistency and improve the user experience.',
 				],
 				files: [
 					// {
@@ -153,8 +169,9 @@ export const useProjectStore = defineStore('projectStore', function () {
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/theme-challenge',
 						image: '/projects/theme.webp',
 						p: [
-							'The ‘Theme’ project was created with the intent of using a standard template and shaping it to match an industry standard. The idea was to be able to take influences from a well-known site in a specific category and using that to shape our template. To make the project stand out, I had to be able to capture the professional style and imply skill through my design.',
+							'Capturing the essence of a reputable website’s design involves more than just replicating its visual elements. It requires understanding the principles that underpin its credibility and appeal.  The essence of design.',
 						],
+						tech: ['HTML', 'CSS', 'PHP'],
 					},
 					{
 						title: 'Wireframe',
@@ -162,17 +179,38 @@ export const useProjectStore = defineStore('projectStore', function () {
 						git: 'https://github.com/JesseDevs/pe-projects/tree/main/_projects/wireframe',
 						image: '/projects/wireframe.webp',
 						p: [
-							'Translated design blueprints into visually appealing, functional website components, maintaining a cohesive and user-friendly interface. This design project aimed to showcase the ability to turn a wireframe into a presentable project with reusable components. The entire project began as a ‘Figma’ file, which I used as a guideline to turn the concept into reality. There were moments when I discovered that some components needed to be adjusted to better capture the overall product, which varied from the concept design.',
+							'Converting a Figma design into a responsive website. Turning static visuals into an interactive, responsive layout. Creating modular components helps build a consistent design and makes it easier to reuse elements across different parts of the website.',
 						],
+						tech: ['HTML', 'CSS', 'PHP', 'Figma'],
 					},
 					{
-						title: 'SecondWave: Resell Shop',
+						title: 'SecondWave',
 						git: 'https://github.com/JesseDevs/second-wave',
 						link: 'https://second-wave.vercel.app/',
 						image: '/projects/wave.webp',
 						p: [
-							'<em>‘SecondWave: Resell Shop’</em> is a cutting-edge web application using Nuxt 3 framework, leveraging the power of Supabase as the robust database solution for seamless product management. This substantial undertaking demanded rapid learning and a high degree of adaptability to master emerging technologies and deliver a scalable, high-performance solution. Achievements include proficiently implementing dynamic layouts in design to enhance user experience and optimizing database operations to ensure a streamlined user experience.',
+							'Crafting a cutting-edge web application to elevate ecommerce to new heights, our focus is on user experience excellence at every level. We aim to deliver a seamless journey for users while ensuring our platform is primed for future growth and design enhancements.',
 						],
+						tech: [
+							'HTML',
+							'CSS',
+							'Javascript',
+							'Vue',
+							'NUXT',
+							'Supabase',
+							'Prisma',
+						],
+					},
+					{
+						title: 'ECHO: The Blog Site',
+						git: 'https://github.com/JesseDevs/blog-app',
+						link: 'https://echo-waves.vercel.app/',
+						image: '/projects/echo.jpg',
+						p: [
+							'Introducing my passion project: a cutting-edge web application that serves as a fully scalable blog site. This platform empowers users to tailor their experience to their liking, drawing inspiration from the user-friendly interfaces of Twitter, Instagram, and Tumblr.',
+						],
+						tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'NUXT', 'Supabase'],
+						star: true,
 					},
 				],
 			},

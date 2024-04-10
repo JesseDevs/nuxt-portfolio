@@ -2,14 +2,7 @@
 	<section id="project-modal">
 		<inner-column>
 			<project-modal>
-				<h3 class="loud-voice">{{ project.title }}</h3>
-				<picture class="project-thumbnail">
-					<NuxtImg
-						:src="project.imgSrc"
-						loading="lazy"
-						alt="Project container's image"
-					/>
-				</picture>
+				<h3 class="loud-voice">{{ project.title }}<span>.</span></h3>
 
 				<p
 					v-for="p in project.modalContent.overview"
@@ -41,6 +34,10 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		row-gap: 3rem;
+
+		h3 span {
+			color: var(--brand);
+		}
 
 		picture {
 			width: 100%;
@@ -87,6 +84,11 @@
 			}
 
 			h3 {
+				grid-column: 1/-1;
+			}
+
+			p {
+				margin: 0 auto;
 				grid-column: 1/-1;
 			}
 		}

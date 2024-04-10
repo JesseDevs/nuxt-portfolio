@@ -71,7 +71,8 @@
 			aspect-ratio: 16/9;
 			cursor: pointer;
 			position: relative;
-			border-radius: 1rem;
+			max-height: 270px;
+			max-width: fit-content;
 
 			&:before {
 				content: '';
@@ -83,12 +84,11 @@
 				z-index: -1;
 				bottom: -1rem;
 				right: -1rem;
-				border-radius: 1rem;
+				transition: transform 0.3s ease, opacity 0.3s ease;
 			}
 		}
 
 		img {
-			border-radius: 1rem;
 			transition: transform 0.3s ease, opacity 0.3s ease;
 			opacity: 1;
 			object-fit: cover;
@@ -97,8 +97,12 @@
 
 		&:hover {
 			img {
-				opacity: 0.85;
-				transform: translate(1rem, 1rem);
+				opacity: 0.7;
+				transform: translate(0.5rem, 0.5rem);
+			}
+
+			picture:before {
+				transform: translate(-0.5rem, -0.5rem);
 			}
 		}
 	}

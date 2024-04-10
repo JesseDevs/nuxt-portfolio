@@ -49,8 +49,12 @@
 					<Icon name="ic:outline-arrow-right-alt" size="21" />
 				</a>
 				<bigger-box>
-					<p class="small-voice sub">Subcription status: <span>Inactive</span></p>
-					<a href="#" class="small-voice big-mid-size"> Join The Tribe today! </a>
+					<p class="small-voice sub">
+						Subcription status: <span>Inactive</span>
+					</p>
+					<a href="#" class="small-voice big-mid-size">
+						Join The Tribe today!
+					</a>
 				</bigger-box>
 			</div>
 		</column-container>
@@ -59,7 +63,7 @@
 
 <script setup>
 	useHead({
-		title: 'Nuxt Portfolio | Home',
+		title: 'Portfolio | Home',
 	});
 
 	const colorMode = useColorMode();

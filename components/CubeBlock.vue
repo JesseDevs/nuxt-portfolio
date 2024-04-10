@@ -58,9 +58,9 @@
 		transform-style: preserve-3d;
 		animation: turn 8s linear infinite;
 	}
-	.cube:hover {
-		animation-play-state: paused;
-	}
+	// .cube:hover {
+	// 	animation-play-state: paused;
+	// }
 
 	.face {
 		width: 25px;

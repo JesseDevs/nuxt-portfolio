@@ -5,10 +5,11 @@
 				<SectionHeader title="Writing" dir="rr" />
 
 				<p>
-					Whenever an opportunity arises, I craft engaging posts. Some delve into detailed
-					case studies that offer a profound examination of various projects, while others
-					are simply me indulging in the art of self-expression. Often, you'll discover a
-					TV or movie quote intertwined within.
+					Whenever an opportunity arises, I craft engaging posts. Some delve
+					into detailed case studies that offer a profound examination of
+					various projects, while others are simply me indulging in the art of
+					self-expression. Often, you'll discover a TV or movie quote
+					intertwined within.
 				</p>
 
 				<ul>
@@ -23,7 +24,7 @@
 
 <script setup>
 	useHead({
-		title: 'Nuxt Portfolio | Writing',
+		title: 'Portfolio | Writing',
 	});
 
 	const writingContent = [

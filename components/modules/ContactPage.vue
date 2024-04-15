@@ -227,9 +227,8 @@
 
 	#fs-frm input,
 	#fs-frm textarea {
-		color: inherit;
+		color: var(--black);
 		resize: none;
-		color: var(--opposite-text-color);
 	}
 
 	#fs-frm label,
@@ -240,6 +239,10 @@
 		padding-top: 0.2rem;
 		display: flex;
 		align-items: baseline;
+	}
+
+	#fs-frm ::placeholder {
+		color: rgb(80, 78, 78);
 	}
 
 	/* border, padding, margin, width */

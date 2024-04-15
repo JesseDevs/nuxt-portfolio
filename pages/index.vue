@@ -44,22 +44,23 @@
 			heading: 'About',
 			intro: 'Here is a little more...',
 			details: [
-				"I'm a graduate with a Bachelor's degree in Business Finance, but my true passion lies in the world of computers and web development.",
-				"Right now, I'm lucky enough to be under the mentorship of <a href='https://perpetual.education/' target='_blank'>Perpetual Education</a> where I'm experimenting with a wide range of coding and design disciplines. I'm constantly pushing myself to learn and grow, and I'm excited to see where this journey will take me.",
-				"But hey, I'm not all about work! When I'm not busy coding, you'll find me indulging in my other passions. I love playing games, hitting the gym to stay active, and checking out the latest music.",
+				"At Steady Studio, I'm deeply engaged in diverse projects, constantly exploring new horizons. Simultaneously, I collaborate with <a href='https://perpetual.education/' target='_blank'>Perpetual Education</a>, where I'm immersed in the world of software engineering. My background in business finance gives me a unique perspective, blending analytical thinking with creative problem-solving, which adds an exciting twist to my software engineering journey.",
+
+				"When I'm not coding, I'm all about staying active and keeping things lively. You'll often find me hitting the gym or getting into a game of sports. I'm also big on staying tuned in to the latest music trends, always looking for that next great track to keep me going!",
 				'Let’s connect! Check out some of my links.',
 			],
 			images: [
-				'images/details/methree.jpg',
-				'images/details/me.jpg',
-				'images/details/metoo.jpg',
-				'images/details/mefour.jpg',
+				'images/details/diego.webp',
+				'images/details/boat.webp',
+				'images/details/workout.jpeg',
+				'images/details/imagine.webp',
 			],
 		},
 		{
 			module: 'ContactPage',
 			heading: 'Contact',
-			text: 'You can find me on <a href="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://twitter.com/Jesse_Devs" target="_blank" rel="nofollow">Twitter</a>. Shoot me an email if you’d rather connect directly! ',
+			intro: 'Here is a little more...',
+			text: 'You can also find me on <a href="https://www.linkedin.com/in/felix-jesser/" target="_blank" rel="nofollow">Linkedin</a> or <a href="https://twitter.com/Jesse_Devs" target="_blank" rel="nofollow">Twitter</a>. ',
 		},
 	]);
 	// const initial = {

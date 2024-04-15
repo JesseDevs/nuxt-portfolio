@@ -49,7 +49,7 @@
 		},
 
 		{
-			url: '/me-imgs/workout.jpeg',
+			url: '/me-imgs/workout.jpg',
 			title: 'Title 4',
 			id: 4,
 		},

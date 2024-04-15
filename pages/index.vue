@@ -52,7 +52,7 @@
 			images: [
 				'images/details/diego.webp',
 				'images/details/boat.webp',
-				'images/details/workout.jpeg',
+				'images/details/workout.jpg',
 				'images/details/imagine.webp',
 			],
 		},

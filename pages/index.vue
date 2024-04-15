@@ -46,7 +46,7 @@
 			details: [
 				"At Steady Studio, I'm deeply engaged in diverse projects, constantly exploring new horizons. Simultaneously, I collaborate with <a href='https://perpetual.education/' target='_blank'>Perpetual Education</a>, where I'm immersed in the world of software engineering. My background in business finance gives me a unique perspective, blending analytical thinking with creative problem-solving, which adds an exciting twist to my software engineering journey.",
 
-				"When I'm not coding, I'm all about staying active and keeping things lively. You'll often find me hitting the gym or getting into a game of sports. I'm also big on staying tuned in to the latest music trends, always looking for that next great track to keep me going!",
+				"When I'm not coding, I'm all about staying active and keeping things lively. You'll often find me hitting the gym or some other physical activity. I'm also big on staying tuned in to the latest music trends, always looking for that next great track to keep me going!",
 				'Let’s connect! Check out some of my links.',
 			],
 			images: [

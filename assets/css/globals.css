@@ -214,6 +214,6 @@ inner-column {
 
 @media (max-width: 768px) {
 	inner-column {
-		padding: 7.2rem 2rem;
+		padding: 7.2rem 1.4rem;
 	}
 }

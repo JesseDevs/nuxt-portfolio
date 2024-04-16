@@ -14,7 +14,7 @@
 
 				<MyLinks class="isAboutCard" />
 				<FadeIn>
-					<div class="image-container">
+					<div class="about-image-container">
 						<picture v-for="card in cards">
 							<NuxtImg
 								:key="card"
@@ -103,9 +103,10 @@
 		height: 100%;
 	}
 
-	.image-container {
+	.about-image-container {
 		position: relative;
 		width: 100%;
+		height: 300px;
 		margin-left: auto;
 		margin-right: auto;
 		margin: 0 auto;
@@ -113,49 +114,23 @@
 		gap: 5px;
 
 		picture {
-			aspect-ratio: 3/4;
+			width: 25%;
 			max-height: 300px;
-		}
+			transition: width 0.5s ease;
+			animation: slideInOut 4s linear infinite;
 
-		img {
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 
-	// @media (min-width: 600px) {
-	// 	.image-container {
-	// 		picture {
-	// 			display: grid;
-	// 			grid-template-columns: 1fr 1fr 1fr;
-	// 			gap: 10px;
-	// 			width: 100%;
-	// 			max-width: none;
-	// 			aspect-ratio: none;
-	// 			min-height: none;
-	// 			max-height: 400px;
-
-	// 			&:before {
-	// 				content: '';
-	// 				background-color: rgb(var(--brand-rgb) / 0.6);
-	// 				width: 100%;
-	// 				height: 100%;
-	// 				display: block;
-	// 				position: absolute;
-	// 				z-index: -1;
-	// 				bottom: -1rem;
-	// 				right: -1rem;
-	// 			}
-
-	// 			img {
-	// 				object-fit: cover;
-	// 				animation: initial;
-	// 				position: static;
-	// 				zoom: 0.9;
-	// 				max-height: 400px;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	@media (max-width: 500px) {
+		picture {
+			animation: none;
+			width: 25%;
+		}
+	}
 </style>

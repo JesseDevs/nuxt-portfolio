@@ -9,7 +9,6 @@ export default defineNuxtConfig({
 		'@vueuse/motion/nuxt',
 		'@nuxt/image-edge',
 		'@nuxtjs/color-mode',
-		'@kevinmarrec/nuxt-pwa',
 	],
 	vue: {
 		compilerOptions: {

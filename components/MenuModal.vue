@@ -85,7 +85,7 @@
 
 		left: -100%;
 		.menu-modal-content {
-			padding: 1.5rem;
+			padding: 1.5rem 1.4rem;
 		}
 
 		.main-menu {

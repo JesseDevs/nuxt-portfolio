@@ -2,7 +2,11 @@
 	<ul class="nav-container">
 		<li>
 			<NuxtLink to="/" @click="ui.closeMenu">
-				<Icon name="material-symbols:other-houses" size="28" color="var(--white)" />
+				<Icon
+					name="material-symbols:other-houses"
+					size="28"
+					color="var(--white)"
+				/>
 				<span>Home</span>
 			</NuxtLink>
 		</li>
@@ -40,9 +44,9 @@
 				<span>Forms</span>
 			</NuxtLink>
 		</li>
-		<li class="big-theme-toggle">
+		<!-- <li class="big-theme-toggle">
 			<BigThemeToggle />
-		</li>
+		</li> -->
 	</ul>
 </template>
 

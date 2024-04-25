@@ -57,7 +57,7 @@
 
 	.index-display {
 		position: absolute;
-		right: -25px;
+		right: 0;
 		top: -25px;
 		z-index: 11;
 		color: var(--brand);

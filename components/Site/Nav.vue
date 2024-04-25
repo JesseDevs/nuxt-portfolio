@@ -31,7 +31,7 @@
 		box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.5);
 
 		inner-column {
-			padding: 1.5rem 2rem;
+			padding: 1.5rem 1.4rem;
 
 			.main-menu {
 				display: flex;

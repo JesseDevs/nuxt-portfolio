@@ -66,7 +66,7 @@
 		width: 25px;
 		height: 25px;
 		background: rgb(var(--brand-rgb) / 0.6);
-		border: 2px solid var(--bg-opaque);
+		border: 2px solid rgba(46, 45, 45, 0.322);
 		position: absolute;
 		opacity: 0.5;
 		display: flex;

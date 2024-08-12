@@ -31,11 +31,11 @@
 </script>
 
 <style lang="scss" scoped>
-	@media (prefers-color-scheme: light) {
-		site-menu-modal {
-			background-color: rgb(35, 35, 37);
-		}
-	}
+	// @media (prefers-color-scheme: light) {
+	// 	site-menu-modal {
+	// 		background-color: rgb(35, 35, 37);
+	// 	}
+	// }
 	.light-mode body {
 		site-menu-modal {
 			background-color: rgb(35, 35, 37);

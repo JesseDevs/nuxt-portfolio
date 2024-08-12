@@ -83,11 +83,11 @@
 		}
 	}
 
-	@media (prefers-color-scheme: light) {
-		.face {
-			border: 2px solid black;
-		}
-	}
+	// @media (prefers-color-scheme: light) {
+	// 	.face {
+	// 		border: 2px solid black;
+	// 	}
+	// }
 
 	.front {
 		transform: translateZ(12.5px);
